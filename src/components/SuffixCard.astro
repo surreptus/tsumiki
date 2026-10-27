@@ -1,11 +1,10 @@
 ---
-// Header block for a suffix page: kana, romaji, English meaning, types, examples.
+// Header block for a suffix page: reading, attach point, meaning, construction, notes, examples.
 // Everything searchable about a suffix is rendered here so Pagefind indexes it.
 import { getEntry, getCollection } from 'astro:content';
 import { suffixHref, stemHref } from '../lib/paths';
 import { suffixName } from '../lib/names';
 import Ja from './Ja.astro';
-import TypeChip from './TypeChip.astro';
 import Construction from './Construction.astro';
 
 interface Props {
@@ -22,16 +21,14 @@ const nameOf = (id: string) => {
   const r = allSuffixes.find((x) => x.id === id)!;
   return suffixName(r);
 };
-const related = (await getCollection('suffixes')).map((e) => e.data).filter((r) => s.related.includes(r.id));
+const compared = new Set(s.compare.map((c) => c.id));
+const related = allSuffixes.filter((r) => s.related.includes(r.id) && !compared.has(r.id));
 ---
 <div class="suffix-card">
   <dl>
     <div>
-      <dt>Form</dt>
-      <dd>
-        <span class="suffix-form" lang="ja">{s.display ?? s.written ?? (s.form || '(zero suffix)')}</span>
-        <small>{s.form && s.form !== (s.display ?? s.written ?? s.form) && <><span lang="ja">{s.form}</span> · </>}{s.romaji}</small>
-      </dd>
+      <dt>Reading</dt>
+      <dd>{s.form && s.form !== (s.display ?? s.written ?? s.form) && <><span lang="ja">{s.form}</span> · </>}{s.romaji}</dd>
     </div>
     <div>
       <dt>Attaches to</dt>
@@ -39,14 +36,6 @@ const related = (await getCollection('suffixes')).map((e) => e.data).filter((r) 
         {attach
           ? <><a href={stemHref(attach.id)}><span lang="ja">{attach.name}</span></a> ({attach.label})</>
           : s.attaches_to === 'dictionary' ? 'the dictionary form' : 'a plain clause'}
-      </dd>
-    </div>
-    <div>
-      <dt>Type</dt>
-      <dd>
-        {s.input_type.map((t) => <TypeChip type={t} />)}
-        <span aria-label="gives"> → </span>
-        {s.output_type === 'same' ? <small>same type as the input</small> : <TypeChip type={s.output_type} />}
       </dd>
     </div>
     <div><dt>Meaning</dt><dd>{s.meaning}</dd></div>

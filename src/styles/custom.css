@@ -203,7 +203,6 @@ td a.fn-stem { text-decoration: underline dotted; text-underline-offset: 3px; }
 .suffix-card dl > div:last-child { border-bottom: 0; }
 .suffix-card dt { font-size: var(--text-xs); font-weight: 700; color: var(--sl-color-gray-3); padding-top: var(--s-1); }
 .suffix-card dd { margin: 0; }
-.suffix-form { font-size: var(--text-xl); font-weight: 700; }
 .examples, .compare { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-3); }
 .sl-markdown-content :is(.examples, .compare) { padding: 0; }
 .examples li, .compare li { margin: 0; padding: var(--s-3) var(--s-4); border: var(--outline); border-radius: var(--radius); }
