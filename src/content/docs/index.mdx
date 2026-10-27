@@ -1,25 +1,38 @@
 ---
 title: Functional Japanese Grammar
-description: Japanese verb and adjective morphology as typed function composition.
+description: Long Japanese verb and adjective forms are a few small pieces clicked together. Learn the pieces once, then build any form yourself.
 tableOfContents: false
 ---
 
 import Derivation from '../../components/Derivation.astro';
 
-A verb has a few stems. A suffix takes one stem and gives back a typed result. A long form is those steps chained, and every step has a type.
+Long Japanese forms look like one hard word to memorise. They are not. 食べさせられたくなかった ("did not want to be made to eat") is five small pieces, each with one job, clicked together like building blocks (積み木, *tsumiki*).
+
+| Step | Add | Meaning added | Result |
+| --- | --- | --- | --- |
+| 0 | | the verb | 食べる, eat |
+| 1 | させ | make someone do it | 食べさせる, make eat |
+| 2 | られ | it happens to you | 食べさせられる, be made to eat |
+| 3 | たい | want | 食べさせられたい, want to be made to eat |
+| 4 | ない | not | 食べさせられたくない, do not want to be made to eat |
+| 5 | た | in the past | 食べさせられたくなかった, did not want to be made to eat |
+
+Every piece works the same way everywhere. Learn it once and you can read, and build, any longer form. The guide writes each step as a small function, so the whole word reads from the inside out:
 
 <Derivation verb="食べる" chain={["causative", "passive", "tai", "neg", "past"]} />
 
-[Start with the idea](/overview/idea/) · [Try the conjugator](/reference/conjugator/)
+No programming is needed. Every function comes with a plain table, and the idea is only something goes in and something comes out.
 
-## [Overview](/overview/idea/)
+## What you get
 
-What stems and suffixes are, and how they fit together. Start here.
+- **Build forms yourself.** Instead of memorising a table per verb, you learn a few stem shapes and a set of small endings, then combine them.
+- **See why a form is wrong.** 食べたいない fails for a reason you can read: ない gives an adjective, and たい only attaches to a verb.
+- **Look up any ending.** Each page shows how the ending attaches, examples, and how it differs from the endings learners confuse it with.
+- **Check your own forms.** The conjugator builds a chain step by step and explains any error.
 
-## [Reference](/reference/stems/renyokei/)
+## Where to start
 
-Every stem and suffix, the order they stack in, and the irregulars.
-
-## [Guides](/guides/particles/)
-
-Where the model stops: particles, keigo, casual speech and set phrases.
+- **New here?** Read [the idea](/overview/idea/). It is short, and everything else builds on it.
+- **Looking up an ending?** Go to the [Reference](/reference/stems/renyokei/), organised by the stem each ending attaches to.
+- **Want to try it?** Open the [conjugator](/reference/conjugator/).
+- **Past the endings?** Not everything combines. [The Guides](/guides/particles/) cover particles, keigo, conditionals and casual speech, and each one starts by saying where the building-block view stops.

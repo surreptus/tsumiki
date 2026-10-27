@@ -1,19 +1,19 @@
 # Content plan
 
-Phase 1 (scaffold, data model, engine) is done. This file is the agreed inventory for Phase 2 and
-Phase 3. Items marked **new** were added after comparing against Genki I and II.
+This file is the agreed inventory for Phases 2 and 3, now written. Items marked **new** were added after comparing against Genki I and II.
 
-## Phase 2 progress
+## Status
 
-Batches 1 and 2 are written: 98 suffix pages, each with at least three examples, usage notes and comparisons, plus the composition rules page (layer table and mnemonics).
+Phases 1 to 3 are drafted and live. Remaining work is review, not writing.
 
-Engine work done for batch 2: a sixth type, `adverb`; suffixes that attach to 語幹 (adjective and noun predicates); a `prefix` field and honorific/humble whole-form irregulars (お〜になる, お〜する); `display` names; a sentence-level か that covers ませんか and ましょうか.
+- **Phase 1:** scaffold, data model and conjugation engine.
+- **Phase 2:** 101 suffix pages (three or more examples each, plus usage notes and comparisons), the stem pages, the composition rules and the irregulars. Engine additions: the `adverb` type, 語幹-attached suffixes, the `prefix` field with honorific and humble irregulars, `display` names, a sentence-level か, and noun-attached ばかり, の後に and の後で. Hearsay そうだ has no past form, so there is nothing to add.
+- **Phase 3:** seven guides: particles, sentence-ending particles, keigo, casual speech, clauses, special expressions and conditionals.
 
 Still to do:
 
-- **Prose pass:** the stem pages, the irregulars page intro, and a native-speaker review of every `usage` and `compare` note.
-- **Small gaps:** closed. ばかり "only", の後に and の後で are now noun-attaching suffixes on the plain-clause attach point. Hearsay そうだ has no past form, so there is nothing to add.
-- **Guides (Phase 3):** Particles, sentence-ending particles, keigo, casual speech, clauses and special expressions written. All six guides are drafted, plus a Conditionals guide (と, ば, たら, なら).
+- **Native-speaker review** of every example and every `usage` and `compare` note, and of the guides.
+- **Kikimi link:** a mapping from MeCab/IPADIC tokens to Tsumiki page ids.
 
 ## Phase 2: suffix inventory, grouped by attach point
 
@@ -76,6 +76,7 @@ Each guide opens with a note on where the function model stops. Additions from t
 6. **Special expressions:** the rest of Tae Kim's special expressions, plus **new:**
    comparison (より, ほうが, 一番, の中で), giving and receiving usage (あげる / くれる / もらう in context),
    transitive and intransitive verb pairs (a lexical table, since the pairs are not rule-governed).
+7. **Conditionals:** と, ば, たら and なら compared.
 
 ## Explicitly out of scope
 
