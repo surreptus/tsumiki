@@ -1,0 +1,48 @@
+{
+  "id": "you_ni_suru",
+  "form": "ようにする",
+  "romaji": "younisuru",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "suru",
+  "aux_verb": "suru",
+  "related": [
+    "you_ni_naru",
+    "koto_ni_suru"
+  ],
+  "meaning": "Make an effort to do.",
+  "examples": [
+    {
+      "japanese": "毎日運動するようにしている。",
+      "reading": "まいにちうんどうするようにしている。",
+      "gloss": "I make a point of exercising every day."
+    },
+    {
+      "japanese": "遅れないようにする。",
+      "reading": "おくれないようにする。",
+      "gloss": "I will make sure not to be late."
+    },
+    {
+      "japanese": "野菜を食べるようにしてください。",
+      "reading": "やさいをたべるようにしてください。",
+      "gloss": "Please try to eat vegetables."
+    }
+  ],
+  "usage": [
+    "Try to, or make sure to, do something. It is about effort, not a one-off decision.",
+    "ようにしている describes a habit you are keeping up."
+  ],
+  "compare": [
+    {
+      "id": "koto_ni_suru",
+      "difference": "ことにする is a decision you make. ようにする is an ongoing effort."
+    },
+    {
+      "id": "you_ni_naru",
+      "difference": "ようになる is the change. ようにする is the effort."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "you_da",
+  "form": "ようだ",
+  "romaji": "youda",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "na-adj",
+  "output_class": "na-adj",
+  "noun_link": "na-no",
+  "related": [
+    "mitai"
+  ],
+  "meaning": "Seems like / is like (neutral or formal).",
+  "examples": [
+    {
+      "japanese": "誰かいるようだ。",
+      "reading": "だれかいるようだ。",
+      "gloss": "It seems someone is there."
+    },
+    {
+      "japanese": "彼は忙しいようだ。",
+      "reading": "かれはいそがしいようだ。",
+      "gloss": "He seems busy."
+    },
+    {
+      "japanese": "まるで夢のようだ。",
+      "reading": "まるでゆめのようだ。",
+      "gloss": "It is just like a dream."
+    }
+  ],
+  "usage": [
+    "Based on what you can perceive. It is also the formal way to say \"like\".",
+    "Nouns link with の and な-adjectives with な: 夢のよう, 静かなよう."
+  ],
+  "compare": [
+    {
+      "id": "mitai",
+      "difference": "みたい is casual. ようだ is neutral and used in writing."
+    },
+    {
+      "id": "rashii",
+      "difference": "らしい adds hearsay. ようだ is the speaker's own judgement."
+    }
+  ]
+}

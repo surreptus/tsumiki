@@ -1,0 +1,63 @@
+{
+  "id": "adverb",
+  "form": "に",
+  "romaji": "ni",
+  "attaches_to": "gokan",
+  "input_type": [
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "adverb",
+  "display": "く・に",
+  "variants": [
+    {
+      "when": {
+        "types": [
+          "i-adj"
+        ]
+      },
+      "attaches_to": "renyokei",
+      "form": "",
+      "input_type": [
+        "i-adj"
+      ]
+    }
+  ],
+  "related": [
+    "naru_change",
+    "suru_change"
+  ],
+  "meaning": "Adverb form: 高く, 静かに.",
+  "examples": [
+    {
+      "japanese": "この本は安く買った。",
+      "reading": "このほんはやすくかった。",
+      "gloss": "I bought this book cheaply."
+    },
+    {
+      "japanese": "静かに歩いてください。",
+      "reading": "しずかにあるいてください。",
+      "gloss": "Please walk quietly."
+    },
+    {
+      "japanese": "部屋をきれいに掃除した。",
+      "reading": "へやをきれいにそうじした。",
+      "gloss": "I cleaned the room thoroughly."
+    }
+  ],
+  "usage": [
+    "い-adjectives drop い and add く: 高い → 高く. な-adjectives and nouns add に: 静か → 静かに.",
+    "いい becomes よく, because いい only exists in the dictionary form.",
+    "The adverb form is a dead end: nothing attaches to it except a verb in the sentence. It is also the stem that くなる, くする and くない build on."
+  ],
+  "compare": [
+    {
+      "id": "naru_change",
+      "difference": "なる and する use the same form, 高く, to say that something becomes or is made so."
+    },
+    {
+      "id": "you_ni",
+      "difference": "ように is \"so that\" or \"like\". The adverb form describes how an action is done."
+    }
+  ]
+}

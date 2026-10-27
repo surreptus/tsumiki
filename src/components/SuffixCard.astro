@@ -1,0 +1,94 @@
+---
+// Header block for a suffix page: kana, romaji, English meaning, types, examples.
+// Everything searchable about a suffix is rendered here so Pagefind indexes it.
+import { getEntry, getCollection } from 'astro:content';
+import { suffixHref, stemHref } from '../lib/paths';
+import { suffixName } from '../lib/names';
+import Ja from './Ja.astro';
+import TypeChip from './TypeChip.astro';
+import Construction from './Construction.astro';
+
+interface Props {
+  id: string;
+}
+const entry = await getEntry('suffixes', Astro.props.id);
+if (!entry) throw new Error(`<SuffixCard>: unknown suffix "${Astro.props.id}"`);
+const s = entry.data;
+
+const stems = new Map((await getCollection('stems')).map((e) => [e.id, e.data]));
+const attach = stems.get(s.attaches_to);
+const allSuffixes = (await getCollection('suffixes')).map((e) => e.data);
+const nameOf = (id: string) => {
+  const r = allSuffixes.find((x) => x.id === id)!;
+  return suffixName(r);
+};
+const related = (await getCollection('suffixes')).map((e) => e.data).filter((r) => s.related.includes(r.id));
+---
+<div class="suffix-card">
+  <dl>
+    <div>
+      <dt>Form</dt>
+      <dd>
+        <span class="suffix-form" lang="ja">{s.display ?? s.written ?? (s.form || '(zero suffix)')}</span>
+        <small>{s.form && s.form !== (s.display ?? s.written ?? s.form) && <><span lang="ja">{s.form}</span> · </>}{s.romaji}</small>
+      </dd>
+    </div>
+    <div>
+      <dt>Attaches to</dt>
+      <dd>
+        {attach
+          ? <><a href={stemHref(attach.id)}><span lang="ja">{attach.name}</span></a> ({attach.label})</>
+          : s.attaches_to === 'dictionary' ? 'the dictionary form' : 'a plain clause'}
+      </dd>
+    </div>
+    <div>
+      <dt>Type</dt>
+      <dd>
+        {s.input_type.map((t) => <TypeChip type={t} />)}
+        <span aria-label="gives"> → </span>
+        {s.output_type === 'same' ? <small>same type as the input</small> : <TypeChip type={s.output_type} />}
+      </dd>
+    </div>
+    <div><dt>Meaning</dt><dd>{s.meaning}</dd></div>
+    {s.register && <div><dt>Register</dt><dd>{s.register}</dd></div>}
+    {related.length > 0 && (
+      <div>
+        <dt>See also</dt>
+        <dd>{related.map((r, i) => <>{i > 0 && ', '}<a href={suffixHref(r)} lang="ja">{suffixName(r)}</a></>)}</dd>
+      </div>
+    )}
+  </dl>
+
+  <h2 id="construction">Construction</h2>
+  <Construction id={s.id} />
+
+  {s.usage.length > 0 && (
+    <>
+      <h2 id="notes">Notes</h2>
+      <ul class="usage">{s.usage.map((u) => <li>{u}</li>)}</ul>
+    </>
+  )}
+
+  {s.compare.length > 0 && (
+    <>
+      <h2 id="compare">Compared with</h2>
+      <ul class="compare">
+        {s.compare.map((c) => (
+          <li>
+            <strong lang="ja">
+              {c.id ? <a href={suffixHref(allSuffixes.find((x) => x.id === c.id)!)}>{nameOf(c.id)}</a> : c.label}
+            </strong>
+            {' '}{c.difference}
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <h2 id="examples">Examples</h2>
+  <ul class="examples">
+    {s.examples.map((ex) => (
+      <li><Ja text={ex.japanese} /><br /><span class="gloss">{ex.gloss}</span></li>
+    ))}
+  </ul>
+</div>

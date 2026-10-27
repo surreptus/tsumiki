@@ -1,0 +1,48 @@
+{
+  "id": "nakereba_naranai",
+  "form": "なければならない",
+  "romaji": "nakerebanaranai",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "output_class": "i-adj",
+  "related": [
+    "nakereba_ikenai",
+    "nakute_wa_ikenai"
+  ],
+  "meaning": "Must do.",
+  "examples": [
+    {
+      "japanese": "薬を飲まなければならない。",
+      "reading": "くすりをのまなければならない。",
+      "gloss": "I must take my medicine."
+    },
+    {
+      "japanese": "明日は早く起きなければならない。",
+      "reading": "あしたははやくおきなければならない。",
+      "gloss": "I have to get up early tomorrow."
+    },
+    {
+      "japanese": "宿題をしなければならなかった。",
+      "reading": "しゅくだいをしなければならなかった。",
+      "gloss": "I had to do my homework."
+    }
+  ],
+  "usage": [
+    "Obligation. The result is an い-adjective, so the past is なければならなかった.",
+    "Sounds stiff and general, closer to a rule.",
+    "The casual contraction is なきゃ (see the casual speech guide)."
+  ],
+  "compare": [
+    {
+      "id": "nakereba_ikenai",
+      "difference": "なければいけない is the conversational partner of なければならない. They mean the same."
+    },
+    {
+      "id": "nakute_wa_ikenai",
+      "difference": "なくてはいけない is nearly the same with a slightly softer feel."
+    }
+  ]
+}

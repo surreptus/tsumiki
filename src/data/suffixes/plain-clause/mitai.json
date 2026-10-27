@@ -1,0 +1,50 @@
+{
+  "id": "mitai",
+  "form": "みたい",
+  "romaji": "mitai",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "na-adj",
+  "output_class": "na-adj",
+  "noun_link": "bare",
+  "related": [
+    "you_da"
+  ],
+  "meaning": "Seems like / is like (casual).",
+  "examples": [
+    {
+      "japanese": "雨が降るみたいだ。",
+      "reading": "あめがふるみたいだ。",
+      "gloss": "It looks like it will rain."
+    },
+    {
+      "japanese": "彼は疲れているみたいだ。",
+      "reading": "かれはつかれているみたいだ。",
+      "gloss": "He seems tired."
+    },
+    {
+      "japanese": "子供みたいに笑う。",
+      "reading": "こどもみたいにわらう。",
+      "gloss": "He laughs like a child."
+    }
+  ],
+  "usage": [
+    "A casual judgement, or a comparison (\"like a child\").",
+    "Nouns and な-adjectives attach directly: 学生みたい, 静かみたい."
+  ],
+  "compare": [
+    {
+      "id": "you_da",
+      "difference": "ようだ is the more formal equivalent of みたい."
+    },
+    {
+      "id": "rashii",
+      "difference": "らしい depends on evidence or hearsay. みたい is the speaker's impression or a comparison."
+    }
+  ]
+}

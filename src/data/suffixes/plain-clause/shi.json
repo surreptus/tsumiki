@@ -1,0 +1,47 @@
+{
+  "id": "shi",
+  "form": "し",
+  "romaji": "shi",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "da",
+  "meaning": "And what is more (listing reasons).",
+  "examples": [
+    {
+      "japanese": "安いし、おいしいし、よく行く。",
+      "reading": "やすいし、おいしいし、よくいく。",
+      "gloss": "It is cheap and tasty, so I go often."
+    },
+    {
+      "japanese": "天気もいいし、散歩に行こう。",
+      "reading": "てんきもいいし、さんぽにいこう。",
+      "gloss": "The weather is good, so let us go for a walk."
+    },
+    {
+      "japanese": "この店は静かだし、広いし、便利だ。",
+      "reading": "このみせはしずかだし、ひろいし、べんりだ。",
+      "gloss": "This shop is quiet, spacious and convenient."
+    }
+  ],
+  "usage": [
+    "Lists reasons or qualities, often with a hint that there are more.",
+    "Can be used with a single clause to give a gentle reason.",
+    "Often paired with も for \"also\"."
+  ],
+  "compare": [
+    {
+      "id": "te",
+      "difference": "て simply links clauses in order. し gives each item as a reason."
+    },
+    {
+      "id": "kara_reason",
+      "difference": "から gives one reason. し piles up several."
+    }
+  ]
+}

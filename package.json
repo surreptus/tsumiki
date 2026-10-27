@@ -1,0 +1,30 @@
+{
+  "name": "tsumiki",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/markdown-remark": "^7.3.4",
+    "@astrojs/preact": "^6.1.1",
+    "@astrojs/starlight": "^0.42.7",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/zen-maru-gothic": "^5.3.1",
+    "astro": "^7.4.2",
+    "preact": "^11.0.2",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "axe-core": "^4.14.0",
+    "vitest": "^5.0.5"
+  },
+  "license": "CC-BY-SA-4.0"
+}

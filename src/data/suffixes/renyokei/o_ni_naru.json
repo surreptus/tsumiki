@@ -1,0 +1,63 @@
+{
+  "id": "o_ni_naru",
+  "form": "になる",
+  "romaji": "oninaru",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "display": "お〜になる",
+  "prefix": "お",
+  "output_class": "godan",
+  "variants": [
+    {
+      "when": {
+        "classes": [
+          "suru"
+        ]
+      },
+      "attaches_to": "gokan",
+      "prefix": "ご",
+      "input_type": [
+        "verb"
+      ]
+    }
+  ],
+  "related": [
+    "o_suru"
+  ],
+  "meaning": "Honorific: お + stem + になる.",
+  "examples": [
+    {
+      "japanese": "先生はもうお帰りになった。",
+      "reading": "せんせいはもうおかえりになった。",
+      "gloss": "The teacher has already gone home."
+    },
+    {
+      "japanese": "部長がこの本をお読みになった。",
+      "reading": "ぶちょうがこのほんをおよみになった。",
+      "gloss": "The department head read this book."
+    },
+    {
+      "japanese": "社長がお待ちになっている。",
+      "reading": "しゃちょうがおまちになっている。",
+      "gloss": "The president is waiting."
+    }
+  ],
+  "usage": [
+    "Raises the person doing the action. The speaker is never the subject.",
+    "Some verbs have their own honorific verb instead: 食べる → 召し上がる, 行く → いらっしゃる, 見る → ご覧になる. See the irregulars page.",
+    "Verbs with a one-syllable stem, such as 見る and 寝る, do not take this frame."
+  ],
+  "compare": [
+    {
+      "id": "o_suru",
+      "difference": "おする lowers the speaker. おになる raises the other person."
+    },
+    {
+      "id": "passive",
+      "difference": "The passive られる can also be honorific, and is plainer. お〜になる is more respectful."
+    }
+  ]
+}

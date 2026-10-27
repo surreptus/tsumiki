@@ -1,0 +1,44 @@
+{
+  "id": "te_kudasai",
+  "form": "ください",
+  "romaji": "tekudasai",
+  "display": "てください",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "meaning": "Please do (polite request).",
+  "examples": [
+    {
+      "japanese": "ちょっと待ってください。",
+      "reading": "ちょっとまってください。",
+      "gloss": "Please wait a moment."
+    },
+    {
+      "japanese": "窓を開けてください。",
+      "reading": "まどをあけてください。",
+      "gloss": "Please open the window."
+    },
+    {
+      "japanese": "ゆっくり話してください。",
+      "reading": "ゆっくりはなしてください。",
+      "gloss": "Please speak slowly."
+    }
+  ],
+  "usage": [
+    "The standard polite request. It is direct but not rude.",
+    "For \"please do not\", use the ないで form: 心配しないでください.",
+    "Among friends, drop ください and use the て-form alone: ちょっと待って."
+  ],
+  "compare": [
+    {
+      "id": "nasai",
+      "difference": "なさい is an instruction from someone in authority, such as a parent or teacher. ください is a request to anyone."
+    },
+    {
+      "id": "te_itadaku",
+      "difference": "ていただけませんか is more deferential and sounds softer than ください."
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "renyokei",
+  "name": "連用形",
+  "romaji": "ren'yōkei",
+  "label": "The ます-stem",
+  "etymology": {
+    "reading": "れんようけい",
+    "literal": "connecting-use form",
+    "parts": [
+      {
+        "char": "連",
+        "reading": "ren",
+        "meaning": "link, connect, take along"
+      },
+      {
+        "char": "用",
+        "reading": "yō",
+        "meaning": "use, employ"
+      },
+      {
+        "char": "形",
+        "reading": "kei",
+        "meaning": "form, shape"
+      }
+    ],
+    "mnemonic": "The stem that links a verb to whatever comes next. 書き hooks onto ます, たい or ながら, so think of 連 as a chain joining the verb to its follower."
+  },
+  "order": 1,
+  "description": "The form before ます, たい and ながら. Godan verbs shift to the い-row; ichidan verbs drop る.",
+  "rules": {
+    "ichidan": {
+      "drop": 1,
+      "add": ""
+    },
+    "godan": {
+      "う": {
+        "drop": 1,
+        "add": "い"
+      },
+      "く": {
+        "drop": 1,
+        "add": "き"
+      },
+      "ぐ": {
+        "drop": 1,
+        "add": "ぎ"
+      },
+      "す": {
+        "drop": 1,
+        "add": "し"
+      },
+      "つ": {
+        "drop": 1,
+        "add": "ち"
+      },
+      "ぬ": {
+        "drop": 1,
+        "add": "に"
+      },
+      "ぶ": {
+        "drop": 1,
+        "add": "び"
+      },
+      "む": {
+        "drop": 1,
+        "add": "み"
+      },
+      "る": {
+        "drop": 1,
+        "add": "り"
+      }
+    },
+    "suru": {
+      "drop": 2,
+      "add": "し"
+    },
+    "kuru": {
+      "drop": 1,
+      "add": "",
+      "reading": {
+        "drop": 2,
+        "add": "き"
+      }
+    },
+    "i-adj": {
+      "drop": 1,
+      "add": "く"
+    }
+  },
+  "exceptions": [
+    "honorific-renyokei",
+    "gozaru-renyokei",
+    "ii-lemma"
+  ]
+}

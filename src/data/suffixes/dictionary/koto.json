@@ -1,0 +1,48 @@
+{
+  "id": "koto",
+  "form": "こと",
+  "romaji": "koto",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb",
+    "i-adj"
+  ],
+  "output_type": "noun",
+  "output_class": "noun",
+  "related": [
+    "kata"
+  ],
+  "meaning": "Nominalizer: the act of doing.",
+  "examples": [
+    {
+      "japanese": "泳ぐことが好きです。",
+      "reading": "およぐことがすきです。",
+      "gloss": "I like swimming."
+    },
+    {
+      "japanese": "食べることは楽しい。",
+      "reading": "たべることはたのしい。",
+      "gloss": "Eating is fun."
+    },
+    {
+      "japanese": "見ることが大切だ。",
+      "reading": "みることがたいせつだ。",
+      "gloss": "Seeing for yourself is important."
+    }
+  ],
+  "usage": [
+    "Turns a clause into a noun: 'the act of ...'. 泳ぐことが好きです.",
+    "Found in fixed expressions: ことがある, ことができる, ことにする, ことになる.",
+    "い-adjectives work too: 高いことが問題だ."
+  ],
+  "compare": [
+    {
+      "label": "の",
+      "difference": "の is more concrete and conversational: 泳ぐのが好き. こと is more abstract and more formal."
+    },
+    {
+      "id": "kata",
+      "difference": "方 means 'the way of'. こと means 'the act of'."
+    }
+  ]
+}

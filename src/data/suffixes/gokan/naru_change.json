@@ -1,0 +1,63 @@
+{
+  "id": "naru_change",
+  "form": "になる",
+  "romaji": "naruchange",
+  "attaches_to": "gokan",
+  "input_type": [
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "verb",
+  "display": "くなる・になる",
+  "output_class": "godan",
+  "variants": [
+    {
+      "when": {
+        "types": [
+          "i-adj"
+        ]
+      },
+      "attaches_to": "renyokei",
+      "form": "なる",
+      "input_type": [
+        "i-adj"
+      ]
+    }
+  ],
+  "related": [
+    "suru_change",
+    "adverb"
+  ],
+  "meaning": "Become (an adjective or noun).",
+  "examples": [
+    {
+      "japanese": "寒くなった。",
+      "reading": "さむくなった。",
+      "gloss": "It got cold."
+    },
+    {
+      "japanese": "部屋が静かになった。",
+      "reading": "へやがしずかになった。",
+      "gloss": "The room became quiet."
+    },
+    {
+      "japanese": "医者になりたい。",
+      "reading": "いしゃになりたい。",
+      "gloss": "I want to become a doctor."
+    }
+  ],
+  "usage": [
+    "い-adjectives use く: 高くなる. な-adjectives and nouns use に: 静かになる, 医者になる.",
+    "Describes change without saying who caused it. For a deliberate change, use する."
+  ],
+  "compare": [
+    {
+      "id": "suru_change",
+      "difference": "する changes something on purpose. なる says it changed."
+    },
+    {
+      "id": "you_ni_naru",
+      "difference": "ようになる is a change in what a verb does. くなる is a change in an adjective."
+    }
+  ]
+}

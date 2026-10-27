@@ -1,0 +1,43 @@
+{
+  "id": "zu",
+  "form": "ず",
+  "romaji": "zu",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "register": "Written or formal; the spoken equivalent is ないで.",
+  "related": [
+    "neg"
+  ],
+  "meaning": "Literary negative: without doing.",
+  "examples": [
+    {
+      "japanese": "朝ご飯を食べずに学校へ行った。",
+      "reading": "あさごはんをたべずにがっこうへいった。",
+      "gloss": "I went to school without eating breakfast."
+    },
+    {
+      "japanese": "傘を持たずに出かけた。",
+      "reading": "かさをもたずにでかけた。",
+      "gloss": "I went out without an umbrella."
+    },
+    {
+      "japanese": "勉強せずに遊んでいる。",
+      "reading": "べんきょうせずにあそんでいる。",
+      "gloss": "He plays without studying."
+    }
+  ],
+  "usage": [
+    "A literary negative. Mostly seen as ずに ('without doing') or in set phrases: 思わず, 知らず知らず.",
+    "する becomes せず: 勉強せずに.",
+    "It is formal or written. Speech uses ないで."
+  ],
+  "compare": [
+    {
+      "id": "neg",
+      "difference": "ない is the everyday negative and works in any position. ず is stiff and mainly means 'without'."
+    }
+  ]
+}

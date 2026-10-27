@@ -1,0 +1,44 @@
+{
+  "id": "te_wa_ikenai",
+  "form": "はいけない",
+  "romaji": "tewaikenai",
+  "display": "てはいけない",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "meaning": "Must not do (prohibition).",
+  "examples": [
+    {
+      "japanese": "ここで写真を撮ってはいけません。",
+      "reading": "ここでしゃしんをとってはいけません。",
+      "gloss": "You must not take photos here."
+    },
+    {
+      "japanese": "授業中に寝てはいけない。",
+      "reading": "じゅぎょうちゅうにねてはいけない。",
+      "gloss": "You must not sleep during class."
+    },
+    {
+      "japanese": "嘘をついてはいけません。",
+      "reading": "うそをついてはいけません。",
+      "gloss": "You must not tell lies."
+    }
+  ],
+  "usage": [
+    "States a rule or a prohibition. It sounds like a general rule, not a personal order.",
+    "Said to a person, it is mild and polite with ません: いけません.",
+    "Casual speech contracts it to ちゃいけない / ちゃだめ (see the casual speech guide)."
+  ],
+  "compare": [
+    {
+      "id": "na_prohibitive",
+      "difference": "な is a blunt command used mostly by men to close friends. てはいけない is a rule."
+    },
+    {
+      "id": "te_mo_ii",
+      "difference": "てもいい grants permission. てはいけない is its opposite."
+    }
+  ]
+}

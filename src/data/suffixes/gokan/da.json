@@ -1,0 +1,47 @@
+{
+  "id": "da",
+  "form": "だ",
+  "romaji": "da",
+  "attaches_to": "gokan",
+  "input_type": [
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "related": [
+    "desu"
+  ],
+  "meaning": "Plain copula: is / am / are.",
+  "examples": [
+    {
+      "japanese": "彼は学生だ。",
+      "reading": "かれはがくせいだ。",
+      "gloss": "He is a student."
+    },
+    {
+      "japanese": "この町は静かだ。",
+      "reading": "このまちはしずかだ。",
+      "gloss": "This town is quiet."
+    },
+    {
+      "japanese": "今日は雨だ。",
+      "reading": "きょうはあめだ。",
+      "gloss": "It is rainy today."
+    }
+  ],
+  "usage": [
+    "Closes a sentence about a noun or a な-adjective in the plain style. Verbs and い-adjectives already end the sentence by themselves.",
+    "The polite form is です. The past だった comes from the た-form, not from だ.",
+    "Drops before の in noun-modifying: 学生の, not 学生だの."
+  ],
+  "compare": [
+    {
+      "id": "desu",
+      "difference": "です is the polite version."
+    },
+    {
+      "id": "darou",
+      "difference": "だろう is the guess: \"probably is\"."
+    }
+  ]
+}

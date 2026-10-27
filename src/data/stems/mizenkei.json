@@ -1,0 +1,95 @@
+{
+  "id": "mizenkei",
+  "name": "未然形",
+  "romaji": "mizenkei",
+  "label": "The ない-stem",
+  "etymology": {
+    "reading": "みぜんけい",
+    "literal": "not-yet-so form",
+    "parts": [
+      {
+        "char": "未",
+        "reading": "mi",
+        "meaning": "not yet"
+      },
+      {
+        "char": "然",
+        "reading": "zen",
+        "meaning": "so, thus, being that way"
+      },
+      {
+        "char": "形",
+        "reading": "kei",
+        "meaning": "form, shape"
+      }
+    ],
+    "mnemonic": "The form for things that are \"not yet so\": not happening (ない), not done by you (られる), not yet caused (させる). Picture an action that has not become real."
+  },
+  "order": 2,
+  "description": "The form before ない, せる and れる. Godan verbs shift to the あ-row (う becomes わ); ichidan verbs drop る.",
+  "rules": {
+    "ichidan": {
+      "drop": 1,
+      "add": ""
+    },
+    "godan": {
+      "う": {
+        "drop": 1,
+        "add": "わ"
+      },
+      "く": {
+        "drop": 1,
+        "add": "か"
+      },
+      "ぐ": {
+        "drop": 1,
+        "add": "が"
+      },
+      "す": {
+        "drop": 1,
+        "add": "さ"
+      },
+      "つ": {
+        "drop": 1,
+        "add": "た"
+      },
+      "ぬ": {
+        "drop": 1,
+        "add": "な"
+      },
+      "ぶ": {
+        "drop": 1,
+        "add": "ば"
+      },
+      "む": {
+        "drop": 1,
+        "add": "ま"
+      },
+      "る": {
+        "drop": 1,
+        "add": "ら"
+      }
+    },
+    "suru": {
+      "drop": 2,
+      "add": "し"
+    },
+    "kuru": {
+      "drop": 1,
+      "add": "",
+      "reading": {
+        "drop": 2,
+        "add": "こ"
+      }
+    },
+    "masu": {
+      "drop": 1,
+      "add": "せ"
+    }
+  },
+  "exceptions": [
+    "suru-passive",
+    "suru-causative",
+    "suru-zu"
+  ]
+}

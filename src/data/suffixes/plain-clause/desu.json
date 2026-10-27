@@ -1,0 +1,66 @@
+{
+  "id": "desu",
+  "form": "です",
+  "romaji": "desu",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "same",
+  "output_class": "desu-i",
+  "effects": {
+    "polite": true
+  },
+  "layer": 70,
+  "noun_link": "bare",
+  "variants": [
+    {
+      "when": {
+        "types": [
+          "na-adj",
+          "noun"
+        ]
+      },
+      "accepts": [
+        "lemma"
+      ],
+      "output_class": "desu"
+    }
+  ],
+  "register": "Polite.",
+  "related": [
+    "masu"
+  ],
+  "meaning": "Polite copula.",
+  "examples": [
+    {
+      "japanese": "この本は高いです。",
+      "reading": "このほんはたかいです。",
+      "gloss": "This book is expensive."
+    },
+    {
+      "japanese": "ここは静かです。",
+      "reading": "ここはしずかです。",
+      "gloss": "It is quiet here."
+    },
+    {
+      "japanese": "私は学生です。",
+      "reading": "わたしはがくせいです。",
+      "gloss": "I am a student."
+    }
+  ],
+  "usage": [
+    "The polite copula. It makes the sentence polite without changing its meaning.",
+    "After nouns and な-adjectives it carries tense: です, でした. 学生でした.",
+    "After an い-adjective it only adds politeness, so tense and negation go inside: 高かったです, 高くないです. 高いでした is wrong.",
+    "It does not follow verbs. 食べるです is wrong. For verbs use ます, or のです for explanations."
+  ],
+  "compare": [
+    {
+      "id": "masu",
+      "difference": "ます is the polite form for verbs. です is for い-adjectives, な-adjectives and nouns."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "tagaru",
+  "form": "たがる",
+  "romaji": "tagaru",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "layer": 40,
+  "related": [
+    "tai"
+  ],
+  "meaning": "Show signs of wanting to (about someone else).",
+  "examples": [
+    {
+      "japanese": "子供は外で遊びたがる。",
+      "reading": "こどもはそとであそびたがる。",
+      "gloss": "Children want to play outside."
+    },
+    {
+      "japanese": "彼は何でも知りたがる。",
+      "reading": "かれはなんでもしりたがる。",
+      "gloss": "He wants to know everything."
+    },
+    {
+      "japanese": "妹が犬を飼いたがっている。",
+      "reading": "いもうとがいぬをかいたがっている。",
+      "gloss": "My younger sister wants to keep a dog."
+    }
+  ],
+  "usage": [
+    "Describes what a third person seems to want, based on their behaviour.",
+    "Often seen as たがっている for a present state.",
+    "For your own wish, and in questions to the listener, use たい."
+  ],
+  "compare": [
+    {
+      "id": "tai",
+      "difference": "たい is the speaker's own wish. たがる is a wish observed in someone else."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "passive",
+  "form": "られる",
+  "romaji": "rareru",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "allomorphs": [
+    {
+      "after": [
+        "a"
+      ],
+      "form": "れる"
+    }
+  ],
+  "output_class": "ichidan",
+  "layer": 20,
+  "related": [
+    "causative",
+    "potential"
+  ],
+  "meaning": "Passive: be done to. Also honorific.",
+  "examples": [
+    {
+      "japanese": "先生にほめられた。",
+      "reading": "せんせいにほめられた。",
+      "gloss": "I was praised by the teacher."
+    },
+    {
+      "japanese": "雨に降られた。",
+      "reading": "あめにふられた。",
+      "gloss": "I got rained on."
+    },
+    {
+      "japanese": "財布を盗まれた。",
+      "reading": "さいふをぬすまれた。",
+      "gloss": "My wallet was stolen."
+    }
+  ],
+  "usage": [
+    "One form, three jobs. Direct passive: 先生にほめられた (I was praised). Adversity passive: 雨に降られた (I was rained on, to my annoyance). Honorific: 先生が来られる.",
+    "The doer is marked with に: 犬にかまれた."
+  ],
+  "compare": [
+    {
+      "id": "potential",
+      "difference": "For ichidan verbs the shapes are identical (食べられる). For godan verbs the potential uses the え-row instead (書ける)."
+    },
+    {
+      "id": "causative",
+      "difference": "The causative makes someone act. The passive describes what happens to you. They combine as 食べさせられる, 'be made to eat'."
+    }
+  ]
+}

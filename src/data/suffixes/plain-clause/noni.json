@@ -1,0 +1,48 @@
+{
+  "id": "noni",
+  "form": "のに",
+  "romaji": "noni",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "na",
+  "meaning": "Even though (with a sense of surprise or complaint).",
+  "examples": [
+    {
+      "japanese": "勉強したのに分からない。",
+      "reading": "べんきょうしたのにわからない。",
+      "gloss": "I studied, and still I do not understand."
+    },
+    {
+      "japanese": "静かなのに眠れない。",
+      "reading": "しずかなのにねむれない。",
+      "gloss": "It is quiet, and still I cannot sleep."
+    },
+    {
+      "japanese": "安いのに買わなかった。",
+      "reading": "やすいのにかわなかった。",
+      "gloss": "It was cheap, yet I did not buy it."
+    }
+  ],
+  "usage": [
+    "Even though: something unexpected, disappointing or unfair. 勉強したのに分からない.",
+    "Nouns and な-adjectives take な: 静かなのに.",
+    "The second clause is a fact or feeling, not a request or command.",
+    "It is not the same as のに meaning 'for the purpose of' (a nominal の plus に), as in 切るのに使う."
+  ],
+  "compare": [
+    {
+      "id": "kedo",
+      "difference": "けど is a neutral contrast. のに adds complaint or surprise."
+    },
+    {
+      "id": "kara_reason",
+      "difference": "から states a cause. のに says the expected result did not happen."
+    }
+  ]
+}

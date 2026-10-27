@@ -1,0 +1,49 @@
+{
+  "id": "te_itadaku",
+  "form": "いただく",
+  "romaji": "teitadaku",
+  "display": "ていただく",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "layer": 30,
+  "related": [
+    "te_morau"
+  ],
+  "meaning": "Humble: receive the favour of someone doing something.",
+  "examples": [
+    {
+      "japanese": "先生に教えていただいた。",
+      "reading": "せんせいにおしえていただいた。",
+      "gloss": "The teacher kindly taught me."
+    },
+    {
+      "japanese": "写真を撮っていただけませんか。",
+      "reading": "しゃしんをとっていただけませんか。",
+      "gloss": "Could you take a photo for me?"
+    },
+    {
+      "japanese": "説明していただく。",
+      "reading": "せつめいしていただく。",
+      "gloss": "I receive an explanation."
+    }
+  ],
+  "usage": [
+    "The humble partner of てもらう, used about people above you or people you do not know.",
+    "ていただけませんか uses the potential and the negative to make a very polite request.",
+    "The giver takes に, exactly as with てもらう."
+  ],
+  "compare": [
+    {
+      "id": "te_morau",
+      "difference": "てもらう is the plain version. ていただく is the humble version."
+    },
+    {
+      "id": "te_kudasai",
+      "difference": "ていただけませんか is more deferential than てください."
+    }
+  ]
+}

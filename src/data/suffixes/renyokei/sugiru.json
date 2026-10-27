@@ -1,0 +1,57 @@
+{
+  "id": "sugiru",
+  "form": "すぎる",
+  "romaji": "sugiru",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "ichidan",
+  "layer": 40,
+  "variants": [
+    {
+      "when": {
+        "types": [
+          "i-adj",
+          "na-adj"
+        ]
+      },
+      "attaches_to": "gokan",
+      "input_type": [
+        "i-adj",
+        "na-adj"
+      ]
+    }
+  ],
+  "related": [
+    "tai"
+  ],
+  "meaning": "Do too much; be too much.",
+  "examples": [
+    {
+      "japanese": "昨日は食べすぎた。",
+      "reading": "きのうはたべすぎた。",
+      "gloss": "I ate too much yesterday."
+    },
+    {
+      "japanese": "この店は高すぎる。",
+      "reading": "このみせはたかすぎる。",
+      "gloss": "This shop is too expensive."
+    },
+    {
+      "japanese": "ここは静かすぎる。",
+      "reading": "ここはしずかすぎる。",
+      "gloss": "It is too quiet here."
+    }
+  ],
+  "usage": [
+    "Too much. It carries a judgement that the amount is past what is good."
+  ],
+  "compare": [
+    {
+      "label": "とても / すごく",
+      "difference": "These mean 'very' and are neutral or positive. すぎる always says it went too far."
+    }
+  ]
+}

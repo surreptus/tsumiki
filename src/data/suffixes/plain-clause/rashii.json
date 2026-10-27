@@ -1,0 +1,52 @@
+{
+  "id": "rashii",
+  "form": "らしい",
+  "romaji": "rashii",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "i-adj",
+  "noun_link": "bare",
+  "output_class": "i-adj",
+  "meaning": "Apparently; it seems (from information).",
+  "examples": [
+    {
+      "japanese": "彼は病気らしい。",
+      "reading": "かれはびょうきらしい。",
+      "gloss": "Apparently he is sick."
+    },
+    {
+      "japanese": "明日は雨が降るらしい。",
+      "reading": "あしたはあめがふるらしい。",
+      "gloss": "I hear it will rain tomorrow."
+    },
+    {
+      "japanese": "この店は人気があるらしい。",
+      "reading": "このみせはにんきがあるらしい。",
+      "gloss": "This shop seems to be popular."
+    }
+  ],
+  "usage": [
+    "You are basing this on something you heard, read or saw, and you are not vouching for it.",
+    "Do not use it for your own firsthand experience. 'I'm tired' is not 疲れているらしい unless you are reporting what others say about you.",
+    "After a noun it can mean 'typical of': 男らしい (manly), 子供らしい (childlike). That is a separate suffix attached to a noun, with an adjective meaning."
+  ],
+  "compare": [
+    {
+      "id": "deshou",
+      "difference": "でしょう is your own conclusion. らしい is information from outside."
+    },
+    {
+      "difference": "そうだ states the source more plainly: 'I heard that ...'. らしい is more indirect and also covers inference.",
+      "id": "sou_hearsay"
+    },
+    {
+      "label": "ようだ / みたい",
+      "difference": "ようだ and みたい describe your own impression from what you perceive. らしい leans on others' information."
+    }
+  ]
+}

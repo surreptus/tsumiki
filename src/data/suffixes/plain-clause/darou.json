@@ -1,0 +1,46 @@
+{
+  "id": "darou",
+  "form": "だろう",
+  "romaji": "darou",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "bare",
+  "meaning": "Probably (plain style of でしょう).",
+  "examples": [
+    {
+      "japanese": "明日は雨だろう。",
+      "reading": "あしたはあめだろう。",
+      "gloss": "It will probably rain tomorrow."
+    },
+    {
+      "japanese": "彼はもう帰っただろう。",
+      "reading": "かれはもうかえっただろう。",
+      "gloss": "He has probably gone home already."
+    },
+    {
+      "japanese": "そんなに高くないだろう。",
+      "reading": "そんなにたかくないだろう。",
+      "gloss": "It is probably not that expensive."
+    }
+  ],
+  "usage": [
+    "The plain, casual-to-written partner of でしょう. Used in writing and in thinking aloud.",
+    "With a rising tone it asks for agreement, but でしょう is the usual choice."
+  ],
+  "compare": [
+    {
+      "id": "deshou",
+      "difference": "でしょう is the polite form. だろう is plain."
+    },
+    {
+      "id": "kamo_shirenai",
+      "difference": "かもしれない is weaker: it might be. だろう is stronger: probably."
+    }
+  ]
+}

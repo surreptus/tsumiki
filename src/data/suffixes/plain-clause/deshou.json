@@ -1,0 +1,49 @@
+{
+  "id": "deshou",
+  "form": "でしょう",
+  "romaji": "deshou",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "bare",
+  "register": "Polite; the plain counterpart is だろう.",
+  "meaning": "Probably; right?",
+  "examples": [
+    {
+      "japanese": "明日は雨でしょう。",
+      "reading": "あしたはあめでしょう。",
+      "gloss": "It will probably rain tomorrow."
+    },
+    {
+      "japanese": "彼は来るでしょう。",
+      "reading": "かれはくるでしょう。",
+      "gloss": "He will probably come."
+    },
+    {
+      "japanese": "これは高いでしょう。",
+      "reading": "これはたかいでしょう。",
+      "gloss": "This is expensive, isn't it?"
+    }
+  ],
+  "usage": [
+    "Your own confident guess: 明日は雨でしょう, 'it will probably rain'. Think of a weather forecaster.",
+    "With rising intonation it asks for agreement: 'right?'. 高いでしょう? is 'expensive, isn't it?'.",
+    "It is the polite form. The plain form is だろう.",
+    "It ends the clause, so nothing more attaches except particles like ね, よ, or けど."
+  ],
+  "compare": [
+    {
+      "id": "kamo_shirenai",
+      "difference": "かもしれない is weaker: it only says something is possible. でしょう expects it to be true."
+    },
+    {
+      "id": "rashii",
+      "difference": "らしい reports what you heard or saw. でしょう is your own conclusion."
+    }
+  ]
+}

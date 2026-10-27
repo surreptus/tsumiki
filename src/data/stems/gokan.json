@@ -1,0 +1,46 @@
+{
+  "id": "gokan",
+  "name": "語幹",
+  "romaji": "gokan",
+  "label": "The adjective stem",
+  "etymology": {
+    "reading": "ごかん",
+    "literal": "word trunk",
+    "parts": [
+      {
+        "char": "語",
+        "reading": "go",
+        "meaning": "word, language"
+      },
+      {
+        "char": "幹",
+        "reading": "kan",
+        "meaning": "trunk (of a tree)"
+      }
+    ],
+    "mnemonic": "A tree trunk with the branches cut off. In 高い, the trunk is 高; the い is a branch. な-adjectives and nouns are already bare trunks: 静か, 学生."
+  },
+  "order": 8,
+  "description": "The part of an adjective that stays put. For い-adjectives it is the word minus い. For な-adjectives and nouns it is the whole word.",
+  "rules": {
+    "i-adj": {
+      "drop": 1,
+      "add": ""
+    },
+    "na-adj": {
+      "drop": 0,
+      "add": ""
+    },
+    "noun": {
+      "drop": 0,
+      "add": ""
+    },
+    "suru": {
+      "drop": 2,
+      "add": ""
+    }
+  },
+  "exceptions": [
+    "ii-lemma"
+  ]
+}

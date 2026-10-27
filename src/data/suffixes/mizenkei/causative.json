@@ -1,0 +1,52 @@
+{
+  "id": "causative",
+  "form": "させる",
+  "romaji": "saseru",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "allomorphs": [
+    {
+      "after": [
+        "a"
+      ],
+      "form": "せる"
+    }
+  ],
+  "output_class": "ichidan",
+  "layer": 10,
+  "related": [
+    "passive"
+  ],
+  "meaning": "Causative: make or let someone do.",
+  "examples": [
+    {
+      "japanese": "子供に野菜を食べさせる。",
+      "reading": "こどもにやさいをたべさせる。",
+      "gloss": "I make my child eat vegetables."
+    },
+    {
+      "japanese": "先生は学生に本を読ませた。",
+      "reading": "せんせいはがくせいにほんをよませた。",
+      "gloss": "The teacher had the students read a book."
+    },
+    {
+      "japanese": "部下に残業をさせた。",
+      "reading": "ぶかにざんぎょうをさせた。",
+      "gloss": "I made my subordinate work overtime."
+    }
+  ],
+  "usage": [
+    "Make someone do something, or let someone do something. Context and particles decide which.",
+    "The person made to act takes に: 子供に野菜を食べさせる. With an intransitive verb it can take を: 子供を行かせる.",
+    "Combine with the passive for 'be made to': 食べさせられる. Always causative first, then passive."
+  ],
+  "compare": [
+    {
+      "id": "passive",
+      "difference": "The causative changes who acts. The passive describes the person acted upon."
+    }
+  ]
+}

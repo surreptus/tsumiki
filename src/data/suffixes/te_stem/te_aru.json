@@ -1,0 +1,49 @@
+{
+  "id": "te_aru",
+  "form": "ある",
+  "romaji": "tearu",
+  "display": "てある",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "aux_verb": "aru",
+  "layer": 30,
+  "related": [
+    "te_iru"
+  ],
+  "meaning": "State left by a deliberate action.",
+  "examples": [
+    {
+      "japanese": "窓が開けてある。",
+      "reading": "まどがあけてある。",
+      "gloss": "The window has been left open."
+    },
+    {
+      "japanese": "名前が書いてあります。",
+      "reading": "なまえがかいてあります。",
+      "gloss": "A name is written on it."
+    },
+    {
+      "japanese": "準備はしてある。",
+      "reading": "じゅんびはしてある。",
+      "gloss": "The preparations have been made."
+    }
+  ],
+  "usage": [
+    "The lasting result of a deliberate action. The thing affected is the subject: 窓が開けてある.",
+    "Only with transitive verbs. 窓が開いている is just 'open', with no one implied."
+  ],
+  "compare": [
+    {
+      "id": "te_iru",
+      "difference": "ている describes the state with no agent. てある implies someone did it."
+    },
+    {
+      "id": "te_oku",
+      "difference": "ておく is the action of doing in advance. てある is the state left behind."
+    }
+  ]
+}

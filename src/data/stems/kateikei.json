@@ -1,0 +1,89 @@
+{
+  "id": "kateikei",
+  "name": "仮定形",
+  "romaji": "kateikei",
+  "label": "The ば-stem",
+  "etymology": {
+    "reading": "かていけい",
+    "literal": "supposing form",
+    "parts": [
+      {
+        "char": "仮",
+        "reading": "ka",
+        "meaning": "provisional, temporary"
+      },
+      {
+        "char": "定",
+        "reading": "tei",
+        "meaning": "decide, fix in place"
+      },
+      {
+        "char": "形",
+        "reading": "kei",
+        "meaning": "form, shape"
+      }
+    ],
+    "mnemonic": "Provisionally fix something in place, then see what follows. 書けば means \"suppose it is settled that you write...\", the if-form."
+  },
+  "order": 4,
+  "description": "The form before ば. Godan verbs shift to the え-row; ichidan verbs replace る with れ. It is also the base of the godan potential.",
+  "rules": {
+    "ichidan": {
+      "drop": 1,
+      "add": "れ"
+    },
+    "godan": {
+      "う": {
+        "drop": 1,
+        "add": "え"
+      },
+      "く": {
+        "drop": 1,
+        "add": "け"
+      },
+      "ぐ": {
+        "drop": 1,
+        "add": "げ"
+      },
+      "す": {
+        "drop": 1,
+        "add": "せ"
+      },
+      "つ": {
+        "drop": 1,
+        "add": "て"
+      },
+      "ぬ": {
+        "drop": 1,
+        "add": "ね"
+      },
+      "ぶ": {
+        "drop": 1,
+        "add": "べ"
+      },
+      "む": {
+        "drop": 1,
+        "add": "め"
+      },
+      "る": {
+        "drop": 1,
+        "add": "れ"
+      }
+    },
+    "suru": {
+      "drop": 2,
+      "add": "すれ"
+    },
+    "kuru": {
+      "drop": 1,
+      "add": "れ"
+    },
+    "i-adj": {
+      "drop": 1,
+      "add": "けれ"
+    }
+  },
+  "exceptions": [
+    "ii-lemma"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "mae_ni",
+  "form": "まえに",
+  "romaji": "mae-ni",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "written": "前に",
+  "meaning": "Before doing.",
+  "examples": [
+    {
+      "japanese": "寝る前に歯を磨く。",
+      "reading": "ねるまえにはをみがく。",
+      "gloss": "I brush my teeth before going to bed."
+    },
+    {
+      "japanese": "食べる前に手を洗う。",
+      "reading": "たべるまえにてをあらう。",
+      "gloss": "I wash my hands before eating."
+    },
+    {
+      "japanese": "日本に行く前に勉強した。",
+      "reading": "にほんにいくまえにべんきょうした。",
+      "gloss": "I studied before going to Japan."
+    }
+  ],
+  "usage": [
+    "Before doing. The verb is always in the dictionary form, even if the main clause is past.",
+    "With a noun, put の between: 食事の前に.",
+    "The opposite is たあとで or てから."
+  ],
+  "compare": [
+    {
+      "difference": "てから says 'after doing' and uses the て-form. 前に says 'before doing' and uses the dictionary form.",
+      "id": "te_kara"
+    }
+  ]
+}

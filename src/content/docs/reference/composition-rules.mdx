@@ -1,0 +1,64 @@
+---
+title: Composition rules
+description: The order suffix functions stack in, a mnemonic to remember it, and what the types allow.
+---
+
+import Derivation from '../../../components/Derivation.astro';
+import LayerTable from '../../../components/LayerTable.astro';
+
+Functions go on in a fixed order. Inner layers change *who does what*, middle layers say *what kind of event it is*, and outer layers say *whether it happened, and how politely*. You almost never need to think about this, because every form you meet follows it. The mnemonics below help when you build a long form yourself.
+
+## The seven layers
+
+<LayerTable />
+
+Work from the inside out, so layer 1 is applied first and layer 7 last. Each row lists the functions at that layer. You can skip layers, but you cannot go backwards.
+
+## Two mnemonics
+
+**The letters.** C, P, A, D, N, T, P:
+
+> **C**ats **P**ounce **A**t **D**ancing **N**oisy **T**in **P**ots.
+
+**The story.** Read the layers as one small plot, in order: *Make* someone do it, then it *happens to* them, they *keep* at it, they *want* it, they do *not*, they *did*, and you say it *politely*.
+
+Here is the whole plot applied to 食べる, one layer at a time. Every layer is used, from cause to politeness:
+
+<Derivation verb="食べる" chain={["causative", "passive", "te_iru", "tai", "neg", "past", "desu"]} stems />
+
+食べさせられていたくなかったです means "I did not want to be being made to eat". It is awkward as a sentence, but each step is valid and follows the order.
+
+## Why this order
+
+- **Causative and passive come first** because they change who is acting. 食べさせられる is a new verb, and every later layer treats it as an ordinary verb.
+- **Aspect and desire come next** because they describe the event itself: it is ongoing, tried, wanted or too much.
+- **Negative and past come after** because they talk about the whole event: was it true, and when. This is why 食べたくなかった is neg then past, and never past then neg.
+- **Politeness comes last** because it is about how you say the sentence, not about what happened.
+
+After たい or ない the word is an い-adjective, so only adjective endings can follow: ない becomes くない, and past becomes かった. That is the type system showing up in the order.
+
+## The one exception: ます
+
+For adjectives and nouns, politeness is the very last layer: 高かったです, 静かでした. For verbs, ます is a stem with its own small set of forms (ます, ません, ました, ませんでした), so the polite step comes early and the negative and past are applied to it:
+
+<Derivation verb="食べる" chain={["masu", "neg", "past"]} />
+
+Read it as "the polite verb, made negative, made past". Politeness still ends up on the outside of what you hear, because ませんでした sounds last. In practice: once a verb is a ます-form you cannot add たい or other 連用形 endings, so build everything else first and turn the verb polite as the last step of the *meaning*, not of the notation.
+
+## What a type error looks like
+
+ない produces an い-adjective, and たい only attaches to a verb:
+
+<Derivation verb="食べる" chain={["neg", "tai"]} expectError />
+
+ます is a dead end for most suffixes, because a ます-form has no 連用形 for たい to attach to:
+
+<Derivation verb="食べる" chain={["masu", "tai"]} expectError />
+
+## Same functions, different types
+
+The same `neg` and `past` work on adjectives and nouns. Only the route differs:
+
+<Derivation verb="静か" chain={["neg", "past"]} stems />
+
+<Derivation verb="食べる" chain={["tai", "past", "desu"]} stems />

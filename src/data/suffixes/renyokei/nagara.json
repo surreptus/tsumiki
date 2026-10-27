@@ -1,0 +1,42 @@
+{
+  "id": "nagara",
+  "form": "ながら",
+  "romaji": "nagara",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "related": [
+    "masu"
+  ],
+  "meaning": "While doing.",
+  "examples": [
+    {
+      "japanese": "音楽を聞きながら勉強します。",
+      "reading": "おんがくをききながらべんきょうします。",
+      "gloss": "I study while listening to music."
+    },
+    {
+      "japanese": "歩きながら話す。",
+      "reading": "あるきながらはなす。",
+      "gloss": "We talk while walking."
+    },
+    {
+      "japanese": "ご飯を食べながらテレビを見る。",
+      "reading": "ごはんをたべながらテレビをみる。",
+      "gloss": "I watch TV while eating."
+    }
+  ],
+  "usage": [
+    "Both actions are done by the same person at the same time.",
+    "The main action is the last verb. The ながら clause is the background action: in 歩きながら話す the talking is the point.",
+    "It cannot join two different subjects. Use a clause with 間 or と同時に instead."
+  ],
+  "compare": [
+    {
+      "id": "te",
+      "difference": "て joins actions in sequence or as a list. ながら means two actions at once."
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "naide",
+  "form": "ないで",
+  "romaji": "naide",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "meaning": "Without doing / please do not.",
+  "examples": [
+    {
+      "japanese": "傘を持たないで出かけた。",
+      "reading": "かさをもたないででかけた。",
+      "gloss": "I went out without an umbrella."
+    },
+    {
+      "japanese": "朝ご飯を食べないで学校に行く。",
+      "reading": "あさごはんをたべないでがっこうにいく。",
+      "gloss": "I go to school without eating breakfast."
+    },
+    {
+      "japanese": "心配しないでください。",
+      "reading": "しんぱいしないでください。",
+      "gloss": "Please do not worry."
+    }
+  ],
+  "usage": [
+    "A separate form from the ない + て chain. The chain 食べなくて is a reason (\"because I did not eat\"). ないで says \"without eating\".",
+    "Followed by ください it is the usual negative request.",
+    "The formal written version is ずに."
+  ],
+  "compare": [
+    {
+      "id": "zu",
+      "difference": "ずに is the formal written version of ないで."
+    },
+    {
+      "id": "te_kudasai",
+      "difference": "てください asks someone to do. ないでください asks them not to."
+    }
+  ]
+}

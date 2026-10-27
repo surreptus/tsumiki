@@ -1,0 +1,53 @@
+{
+  "id": "imperative",
+  "form": "",
+  "romaji": "meirei",
+  "attaches_to": "meireikei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "register": "Rough, masculine. For polite requests use てください.",
+  "related": [
+    "na_prohibitive"
+  ],
+  "meaning": "Plain command.",
+  "examples": [
+    {
+      "japanese": "早く食べろ！",
+      "reading": "はやくたべろ！",
+      "gloss": "Eat quickly!"
+    },
+    {
+      "japanese": "こっちに来い！",
+      "reading": "こっちにこい！",
+      "gloss": "Come here!"
+    },
+    {
+      "japanese": "静かにしろ。",
+      "reading": "しずかにしろ。",
+      "gloss": "Be quiet."
+    },
+    {
+      "japanese": "頑張れ！",
+      "reading": "がんばれ！",
+      "gloss": "Hang in there! / Go for it!"
+    }
+  ],
+  "usage": [
+    "A plain, blunt command. Heard from coaches, parents to children, in fiction and on signs.",
+    "Do not use it to anyone you must be polite to. Use てください, or a softer request.",
+    "Shouted as encouragement it is warm, not rude: 頑張れ！ (Go for it!). The negative partner, 負けるな！ (Don't give up!), is encouragement too.",
+    "The negative command is ～な, built on the dictionary form: 行け (go!) and 行くな (don't go!)."
+  ],
+  "compare": [
+    {
+      "id": "na_prohibitive",
+      "difference": "The imperative says 'do it'. ～な says 'don't'."
+    },
+    {
+      "difference": "てください is the polite request form. The imperative is only for commands.",
+      "id": "te_kudasai"
+    }
+  ]
+}

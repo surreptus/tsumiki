@@ -1,0 +1,106 @@
+{
+  "id": "te_stem",
+  "name": "て形",
+  "romaji": "te-kei",
+  "label": "The て-form",
+  "etymology": {
+    "reading": "てけい",
+    "literal": "te form",
+    "parts": [
+      {
+        "char": "て",
+        "reading": "te",
+        "meaning": "the sound the form ends in (kana, no kanji)"
+      },
+      {
+        "char": "形",
+        "reading": "kei",
+        "meaning": "form, shape"
+      }
+    ],
+    "mnemonic": "Named after the sound it ends in, since it has no grammatical name of its own. Every て-form ends in て or で, and its job is to link: 書いて、読んで、食べる."
+  },
+  "order": 6,
+  "description": "The complete て-form, sound change included. いる, しまう and おく attach to it. For godan verbs the change depends on the last kana.",
+  "rules": {
+    "ichidan": {
+      "drop": 1,
+      "add": "て"
+    },
+    "godan": {
+      "う": {
+        "drop": 1,
+        "add": "って"
+      },
+      "く": {
+        "drop": 1,
+        "add": "いて"
+      },
+      "ぐ": {
+        "drop": 1,
+        "add": "いで"
+      },
+      "す": {
+        "drop": 1,
+        "add": "して"
+      },
+      "つ": {
+        "drop": 1,
+        "add": "って"
+      },
+      "ぬ": {
+        "drop": 1,
+        "add": "んで"
+      },
+      "ぶ": {
+        "drop": 1,
+        "add": "んで"
+      },
+      "む": {
+        "drop": 1,
+        "add": "んで"
+      },
+      "る": {
+        "drop": 1,
+        "add": "って"
+      }
+    },
+    "suru": {
+      "drop": 2,
+      "add": "して"
+    },
+    "kuru": {
+      "drop": 1,
+      "add": "て",
+      "reading": {
+        "drop": 2,
+        "add": "きて"
+      }
+    },
+    "i-adj": {
+      "drop": 1,
+      "add": "くて"
+    },
+    "na-adj": {
+      "drop": 0,
+      "add": "で"
+    },
+    "noun": {
+      "drop": 0,
+      "add": "で"
+    },
+    "masu": {
+      "drop": 1,
+      "add": "して"
+    },
+    "masen": {
+      "drop": 0,
+      "add": "で"
+    }
+  },
+  "exceptions": [
+    "iku-te",
+    "tou-te",
+    "ii-lemma"
+  ]
+}

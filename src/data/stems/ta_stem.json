@@ -1,0 +1,110 @@
+{
+  "id": "ta_stem",
+  "name": "た形",
+  "romaji": "ta-kei",
+  "label": "The た-form (plain past)",
+  "etymology": {
+    "reading": "たけい",
+    "literal": "ta form",
+    "parts": [
+      {
+        "char": "た",
+        "reading": "ta",
+        "meaning": "the sound the form ends in (kana, no kanji)"
+      },
+      {
+        "char": "形",
+        "reading": "kei",
+        "meaning": "form, shape"
+      }
+    ],
+    "mnemonic": "The same idea as the て-form: named for its ending sound. Plain past tense and the stem for ら, ことがある and ほうがいい all end in た or だ."
+  },
+  "order": 7,
+  "description": "The complete た-form, which is also the plain past. It follows the same sound changes as the て-form.",
+  "rules": {
+    "ichidan": {
+      "drop": 1,
+      "add": "た"
+    },
+    "godan": {
+      "う": {
+        "drop": 1,
+        "add": "った"
+      },
+      "く": {
+        "drop": 1,
+        "add": "いた"
+      },
+      "ぐ": {
+        "drop": 1,
+        "add": "いだ"
+      },
+      "す": {
+        "drop": 1,
+        "add": "した"
+      },
+      "つ": {
+        "drop": 1,
+        "add": "った"
+      },
+      "ぬ": {
+        "drop": 1,
+        "add": "んだ"
+      },
+      "ぶ": {
+        "drop": 1,
+        "add": "んだ"
+      },
+      "む": {
+        "drop": 1,
+        "add": "んだ"
+      },
+      "る": {
+        "drop": 1,
+        "add": "った"
+      }
+    },
+    "suru": {
+      "drop": 2,
+      "add": "した"
+    },
+    "kuru": {
+      "drop": 1,
+      "add": "た",
+      "reading": {
+        "drop": 2,
+        "add": "きた"
+      }
+    },
+    "i-adj": {
+      "drop": 1,
+      "add": "かった"
+    },
+    "na-adj": {
+      "drop": 0,
+      "add": "だった"
+    },
+    "noun": {
+      "drop": 0,
+      "add": "だった"
+    },
+    "masu": {
+      "drop": 1,
+      "add": "した"
+    },
+    "masen": {
+      "drop": 0,
+      "add": "でした"
+    },
+    "desu": {
+      "drop": 2,
+      "add": "でした"
+    }
+  },
+  "exceptions": [
+    "iku-ta",
+    "tou-ta",
+    "ii-lemma"
+  ]
+}

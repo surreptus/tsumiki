@@ -1,0 +1,50 @@
+{
+  "id": "sou_hearsay",
+  "form": "そうだ",
+  "romaji": "souda",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "da",
+  "related": [
+    "sou"
+  ],
+  "meaning": "I hear that.",
+  "examples": [
+    {
+      "japanese": "明日は雨が降るそうだ。",
+      "reading": "あしたはあめがふるそうだ。",
+      "gloss": "I hear it will rain tomorrow."
+    },
+    {
+      "japanese": "彼は先月、日本に来たそうだ。",
+      "reading": "かれはせんげつ、にほんにきたそうだ。",
+      "gloss": "I hear he came to Japan last month."
+    },
+    {
+      "japanese": "あの店はおいしくないそうだ。",
+      "reading": "あのみせはおいしくないそうだ。",
+      "gloss": "I hear that shop is not good."
+    }
+  ],
+  "usage": [
+    "Reports information you heard. It attaches to the plain form, including the past and negative.",
+    "It does not conjugate: there is no そうだった as hearsay.",
+    "For appearance based on what you see, use そう on the stem."
+  ],
+  "compare": [
+    {
+      "id": "sou",
+      "difference": "そう on the stem is your own impression. そうだ on a plain form is hearsay."
+    },
+    {
+      "id": "rashii",
+      "difference": "らしい is a judgement that may include hearsay. そうだ only reports."
+    }
+  ]
+}

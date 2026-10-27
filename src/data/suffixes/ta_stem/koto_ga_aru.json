@@ -1,0 +1,41 @@
+{
+  "id": "koto_ga_aru",
+  "form": "ことがある",
+  "romaji": "kotogaaru",
+  "attaches_to": "ta_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "aux_verb": "aru",
+  "meaning": "Have done before.",
+  "examples": [
+    {
+      "japanese": "富士山に登ったことがある。",
+      "reading": "ふじさんにのぼったことがある。",
+      "gloss": "I have climbed Mt. Fuji."
+    },
+    {
+      "japanese": "納豆を食べたことがありません。",
+      "reading": "なっとうをたべたことがありません。",
+      "gloss": "I have never eaten natto."
+    },
+    {
+      "japanese": "日本に行ったことがありますか。",
+      "reading": "にほんにいったことがありますか。",
+      "gloss": "Have you ever been to Japan?"
+    }
+  ],
+  "usage": [
+    "Experience: 'have done before'. 食べたことがある means 'I have eaten it'.",
+    "The negative ことがない means 'never': 食べたことがない.",
+    "The verb must be in the past form. With the dictionary form, 食べることがある means 'sometimes eats'."
+  ],
+  "compare": [
+    {
+      "id": "past",
+      "difference": "The past reports one event. ことがある says the experience is part of your history."
+    }
+  ]
+}

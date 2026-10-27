@@ -1,0 +1,39 @@
+{
+  "id": "made",
+  "form": "まで",
+  "romaji": "made",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb",
+    "i-adj"
+  ],
+  "output_type": "clause",
+  "meaning": "Until.",
+  "examples": [
+    {
+      "japanese": "私が帰るまで待ってください。",
+      "reading": "わたしがかえるまでまってください。",
+      "gloss": "Please wait until I come back."
+    },
+    {
+      "japanese": "母が来るまで、ここにいる。",
+      "reading": "ははがくるまで、ここにいる。",
+      "gloss": "I will stay here until my mother comes."
+    },
+    {
+      "japanese": "眠くなるまで本を読んだ。",
+      "reading": "ねむくなるまでほんをよんだ。",
+      "gloss": "I read a book until I got sleepy."
+    }
+  ],
+  "usage": [
+    "The action continues up to the point. The main verb must be a continuing action.",
+    "For \"by the time\", use までに."
+  ],
+  "compare": [
+    {
+      "id": "made_ni",
+      "difference": "までに is a deadline: something happens at or before the time. まで is a duration."
+    }
+  ]
+}

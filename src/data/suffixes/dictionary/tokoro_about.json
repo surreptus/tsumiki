@@ -1,0 +1,47 @@
+{
+  "id": "tokoro_about",
+  "form": "ところ",
+  "romaji": "tokoroabout",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "noun",
+  "display": "るところ",
+  "output_class": "noun",
+  "related": [
+    "tokoro_doing",
+    "tokoro_just"
+  ],
+  "meaning": "About to do.",
+  "examples": [
+    {
+      "japanese": "これから出かけるところだ。",
+      "reading": "これからでかけるところだ。",
+      "gloss": "I am about to go out."
+    },
+    {
+      "japanese": "今、ご飯を食べるところだ。",
+      "reading": "いま、ごはんをたべるところだ。",
+      "gloss": "I am just about to eat."
+    },
+    {
+      "japanese": "電話をかけるところだった。",
+      "reading": "でんわをかけるところだった。",
+      "gloss": "I was about to make a call."
+    }
+  ],
+  "usage": [
+    "The action is about to start. It attaches to the dictionary form."
+  ],
+  "compare": [
+    {
+      "id": "tokoro_doing",
+      "difference": "ているところ is in the middle. るところ is about to start."
+    },
+    {
+      "id": "tokoro_just",
+      "difference": "たところ is just finished."
+    }
+  ]
+}

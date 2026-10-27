@@ -1,0 +1,89 @@
+{
+  "id": "meireikei",
+  "name": "命令形",
+  "romaji": "meireikei",
+  "label": "The command form",
+  "etymology": {
+    "reading": "めいれいけい",
+    "literal": "command form",
+    "parts": [
+      {
+        "char": "命",
+        "reading": "mei",
+        "meaning": "order, command"
+      },
+      {
+        "char": "令",
+        "reading": "rei",
+        "meaning": "order, command"
+      },
+      {
+        "char": "形",
+        "reading": "kei",
+        "meaning": "form, shape"
+      }
+    ],
+    "mnemonic": "Two characters that both mean \"order\", so the name is doubly commanding. Think of a general barking 書け!"
+  },
+  "order": 5,
+  "description": "The bare command. Godan verbs shift to the え-row; ichidan verbs replace る with ろ.",
+  "rules": {
+    "ichidan": {
+      "drop": 1,
+      "add": "ろ"
+    },
+    "godan": {
+      "う": {
+        "drop": 1,
+        "add": "え"
+      },
+      "く": {
+        "drop": 1,
+        "add": "け"
+      },
+      "ぐ": {
+        "drop": 1,
+        "add": "げ"
+      },
+      "す": {
+        "drop": 1,
+        "add": "せ"
+      },
+      "つ": {
+        "drop": 1,
+        "add": "て"
+      },
+      "ぬ": {
+        "drop": 1,
+        "add": "ね"
+      },
+      "ぶ": {
+        "drop": 1,
+        "add": "べ"
+      },
+      "む": {
+        "drop": 1,
+        "add": "め"
+      },
+      "る": {
+        "drop": 1,
+        "add": "れ"
+      }
+    },
+    "suru": {
+      "drop": 2,
+      "add": "しろ"
+    },
+    "kuru": {
+      "drop": 1,
+      "add": "い",
+      "reading": {
+        "drop": 2,
+        "add": "こい"
+      }
+    }
+  },
+  "exceptions": [
+    "honorific-meireikei"
+  ]
+}

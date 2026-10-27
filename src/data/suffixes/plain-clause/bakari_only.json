@@ -1,0 +1,48 @@
+{
+  "id": "bakari_only",
+  "form": "ばかり",
+  "display": "ばかり",
+  "romaji": "bakari",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "noun"
+  ],
+  "output_type": "noun",
+  "noun_link": "bare",
+  "meaning": "Nothing but; mostly.",
+  "examples": [
+    {
+      "japanese": "この町は学生ばかりだ。",
+      "reading": "このまちはがくせいばかりだ。",
+      "gloss": "This town is nothing but students."
+    },
+    {
+      "japanese": "彼は肉ばかり食べる。",
+      "reading": "かれはにくばかりたべる。",
+      "gloss": "He eats nothing but meat."
+    },
+    {
+      "japanese": "文句ばかり言わないで。",
+      "reading": "もんくばかりいわないで。",
+      "gloss": "Stop complaining all the time."
+    }
+  ],
+  "usage": [
+    "Means 'nothing but' or 'mostly', and often carries a complaint: too much of one thing.",
+    "It replaces を, が and は: 肉を食べる becomes 肉ばかり食べる. Other particles stay after it: 友達とばかり遊ぶ.",
+    "The result is a noun, so だ and です can follow: 学生ばかりです."
+  ],
+  "compare": [
+    {
+      "id": "bakari",
+      "difference": "たばかり on a verb means 'just did'. ばかり on a noun means 'nothing but'."
+    },
+    {
+      "label": "だけ",
+      "difference": "だけ is neutral 'only'. ばかり says there is a lot of it, and often that this is too much."
+    }
+  ],
+  "related": [
+    "bakari"
+  ]
+}

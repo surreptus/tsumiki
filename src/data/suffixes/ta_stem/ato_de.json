@@ -1,0 +1,53 @@
+{
+  "id": "ato_de",
+  "form": "あとで",
+  "romaji": "atode",
+  "attaches_to": "ta_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "written": "後で",
+  "display": "たあとで",
+  "related": [
+    "ato_ni",
+    "no_ato_de"
+  ],
+  "meaning": "After doing.",
+  "examples": [
+    {
+      "japanese": "食べた後で、散歩する。",
+      "reading": "たべたあとで、さんぽする。",
+      "gloss": "I take a walk after I eat."
+    },
+    {
+      "japanese": "宿題をした後で遊ぶ。",
+      "reading": "しゅくだいをしたあとであそぶ。",
+      "gloss": "I play after I finish my homework."
+    },
+    {
+      "japanese": "授業が終わった後で、先生に聞いた。",
+      "reading": "じゅぎょうがおわったあとで、せんせいにきいた。",
+      "gloss": "After class ended, I asked the teacher."
+    }
+  ],
+  "usage": [
+    "The た-form is required, even when the sentence is non-past.",
+    "Sequence only: A happened, then B. The two actions need not be close in time.",
+    "The meaning with a noun is 食事の後で."
+  ],
+  "compare": [
+    {
+      "id": "te_kara",
+      "difference": "てから stresses that B comes only after A. 後で is a neutral order of events."
+    },
+    {
+      "id": "ato_ni",
+      "difference": "後に is more formal and is common in writing."
+    },
+    {
+      "id": "mae_ni",
+      "difference": "前に is the reverse. It attaches to the dictionary form."
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "neg",
+  "form": "ない",
+  "romaji": "nai",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "output_class": "i-adj",
+  "effects": {
+    "polarity": "neg"
+  },
+  "layer": 50,
+  "variants": [
+    {
+      "when": {
+        "classes": [
+          "i-adj"
+        ]
+      },
+      "attaches_to": "renyokei",
+      "form": "ない",
+      "input_type": [
+        "i-adj"
+      ]
+    },
+    {
+      "when": {
+        "types": [
+          "na-adj",
+          "noun"
+        ]
+      },
+      "attaches_to": "gokan",
+      "form": "じゃない",
+      "input_type": [
+        "na-adj",
+        "noun"
+      ]
+    },
+    {
+      "when": {
+        "classes": [
+          "masu"
+        ]
+      },
+      "form": "ん",
+      "output_type": "verb",
+      "output_class": "masen"
+    }
+  ],
+  "related": [
+    "past",
+    "masu"
+  ],
+  "meaning": "Negation: do not.",
+  "examples": [
+    {
+      "japanese": "魚は食べない。",
+      "reading": "さかなはたべない。",
+      "gloss": "I do not eat fish."
+    },
+    {
+      "japanese": "宿題をしない。",
+      "reading": "しゅくだいをしない。",
+      "gloss": "I do not do homework."
+    },
+    {
+      "japanese": "この部屋は静かじゃない。",
+      "reading": "このへやはしずかじゃない。",
+      "gloss": "This room is not quiet."
+    }
+  ],
+  "usage": [
+    "Plain negative. The result is an い-adjective, so the past is なかった and the て-form is なくて.",
+    "ある is an exception: its negative is ない, not あらない.",
+    "い-adjectives and nouns do not use this suffix directly. They go く + ない and じゃない (or ではない).",
+    "Polite verbs use ません instead. Polite adjectives and nouns add です to the plain negative: 高くないです, 学生じゃないです."
+  ],
+  "compare": [
+    {
+      "id": "zu",
+      "difference": "ず means 'without doing' and is formal or written. ない is the everyday negative."
+    },
+    {
+      "difference": "ないで means 'without doing' or, with ください, 'please do not'. ない is the plain negative.",
+      "id": "naide"
+    }
+  ]
+}

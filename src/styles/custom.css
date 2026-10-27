@@ -1,0 +1,284 @@
+/*
+ * Design system: friendly and tactile.
+ *
+ * Every size and gap comes from two scales:
+ *   spacing  --s-1 … --s-16   (multiples of 4px)
+ *   type     --text-xs … --text-2xl
+ * Nothing below uses a raw rem value outside these tokens.
+ *
+ * Vertical rhythm: blocks are separated by --gap (1rem). A heading adds space above it,
+ * never below: h2 --s-12, h3 --s-8, h4 --s-6. Headings never use em-based margins.
+ *
+ * Colour: Dracula (dark) / Alucard (light). Each type has one colour.
+ */
+
+:root {
+  /* spacing scale */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-6: 1.5rem;
+  --s-8: 2rem;
+  --s-12: 3rem;
+  --s-16: 4rem;
+  --gap: var(--s-4);
+
+  /* type scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+
+  --radius: 14px;
+  --outline: 2px solid var(--sl-color-gray-5);
+
+  --ja-font: 'Zen Maru Gothic', 'Hiragino Maru Gothic ProN', 'Hiragino Sans', 'Yu Gothic', Meiryo, sans-serif;
+  --sl-font: 'Zen Maru Gothic', ui-rounded, 'SF Pro Rounded', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --sl-font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  --sl-content-width: 44rem;
+  --sl-line-height: 1.7;
+  --sl-line-height-headings: 1.3;
+  --sl-content-gap-y: var(--gap);
+
+  /* map Starlight's type tokens onto our scale; headings are the same size at every width */
+  --sl-text-h1: var(--text-2xl);
+  --sl-text-h2: var(--text-xl);
+  --sl-text-h3: var(--text-lg);
+  --sl-text-h4: var(--text-md);
+  --sl-text-h5: var(--text-base);
+
+  /* Dracula */
+  --sl-color-white: #f8f8f2;
+  --sl-color-gray-1: #e8e8e2;
+  --sl-color-gray-2: #cfd0dc;
+  --sl-color-gray-3: #a4a9c8;
+  --sl-color-gray-4: #6272a4;
+  --sl-color-gray-5: #44475a;
+  --sl-color-gray-6: #343746;
+  --sl-color-gray-7: #2e303e;
+  --sl-color-black: #282a36;
+  --sl-color-accent-low: #23402f;
+  --sl-color-accent: #50fa7b;
+  --sl-color-accent-high: #a4ffbd;
+  --sl-color-text-accent: #bd93f9;
+
+  --on-accent: #1d2a21;
+  --ledge: #2f9e50;
+  --t-verb: #bd93f9;
+  --t-i-adj: #50fa7b;
+  --t-na-adj: #ffb86c;
+  --t-noun: #8be9fd;
+  --t-adverb: #f1fa8c;
+  --t-clause: #ff79c6;
+  --danger: #ff5555;
+  --danger-text: #ff8a8a;
+  --danger-low: #4a2a35;
+  --accent-text: var(--sl-color-accent);
+}
+
+/* Alucard */
+:root[data-theme='light'] {
+  --sl-color-white: #1f1f1f;
+  --sl-color-gray-1: #2b2b2b;
+  --sl-color-gray-2: #3d3b32;
+  --sl-color-gray-3: #6c664b;
+  --sl-color-gray-4: #9b9674;
+  --sl-color-gray-5: #ddd7b6;
+  --sl-color-gray-6: #f5efd0;
+  --sl-color-gray-7: #faf4d6;
+  --sl-color-black: #fffbeb;
+  --sl-color-accent-low: #d7efcd;
+  --sl-color-accent: #1d8a10;
+  --sl-color-accent-high: #0f5a08;
+  --sl-color-text-accent: #644ac9;
+
+  --on-accent: #ffffff;
+  --ledge: #0f5a08;
+  --t-verb: #644ac9;
+  --t-i-adj: #14710a;
+  --t-na-adj: #a34d14;
+  --t-noun: #036a96;
+  --t-adverb: #7a5800;
+  --t-clause: #a3144d;
+  --danger: #cb3a2a;
+  --danger-text: #a8261a;
+  --danger-low: #fbe1dc;
+  --accent-text: var(--sl-color-accent-high);
+}
+
+:lang(ja), .ja { font-family: var(--ja-font); }
+
+/* ---- headings: one rhythm ------------------------------------------------
+ * Spacing is applied to the outermost element of a heading, which is the
+ * .sl-heading-wrapper for Markdown headings and the bare <h*> for headings
+ * written in components. The heading itself carries no margin.
+ */
+.sl-markdown-content :is(h1, h2, h3, h4) { font-weight: 700; letter-spacing: -0.01em; margin: 0; }
+h1#_top { font-size: var(--text-2xl); }
+
+.sl-markdown-content :is(h2, .sl-heading-wrapper.level-h2) { margin-top: var(--s-12); }
+.sl-markdown-content :is(h3, .sl-heading-wrapper.level-h3) { margin-top: var(--s-8); }
+.sl-markdown-content :is(h4, .sl-heading-wrapper.level-h4) { margin-top: var(--s-6); }
+.sl-markdown-content .sl-heading-wrapper > :is(h2, h3, h4) { margin-top: 0; }
+/* the first thing on a page starts at the top; a heading right after a heading is tight */
+.sl-markdown-content > :first-child { margin-top: 0; }
+.sl-markdown-content :is(h2, h3, h4, .sl-heading-wrapper) + :is(h3, h4, .sl-heading-wrapper) { margin-top: var(--s-6); }
+.sl-markdown-content h2 a, .sl-markdown-content h3 a { text-decoration: none; }
+
+/* whatever follows a heading sits one gap below it, even when the element resets its own margin */
+.sl-markdown-content :is(h2, h3, h4, .sl-heading-wrapper) + * { margin-top: var(--gap); }
+
+/* everything else is separated by the same gap */
+.sl-markdown-content :is(ul, ol) { padding-inline-start: var(--s-6); }
+.sl-markdown-content li + li { margin-top: var(--s-1); }
+
+strong { font-weight: 700; }
+a { text-underline-offset: 0.2em; text-decoration-thickness: 2px; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); }
+a:hover { text-decoration-color: currentColor; }
+code { font-size: 0.875em; color: var(--sl-color-gray-1); background: var(--sl-color-gray-6); padding: 0.1em var(--s-2); border-radius: 8px; }
+
+/* ---- shell ------------------------------------------------------------ */
+.site-title { color: var(--sl-color-white); font-weight: 700; }
+.sidebar-content a { border-radius: 10px; padding-block: var(--s-1); }
+.sidebar-content a[aria-current='page'] { background: var(--sl-color-accent-low); color: var(--accent-text); font-weight: 700; }
+.sidebar-content a:hover:not([aria-current='page']) { background: var(--sl-color-gray-6); }
+.sidebar-content .large { font-weight: 700; }
+site-search button { border-radius: 999px; border: 2px solid var(--sl-color-gray-3); }
+
+.starlight-aside { background: var(--sl-color-gray-6); border: var(--outline); border-radius: var(--radius); padding: var(--s-4); }
+.starlight-aside__title { font-weight: 700; }
+
+/* ---- tables: rounded panels -------------------------------------------- */
+.stem-table, .suffix-table, .conj-trace-wrap, .derivation-table, .table-scroll { overflow-x: auto; }
+.sl-markdown-content table { display: table; width: 100%; border-collapse: separate; border-spacing: 0; font-size: var(--text-sm); border: var(--outline); border-radius: var(--radius); overflow: hidden; }
+.sl-markdown-content :is(th, td) { border: 0; border-bottom: var(--outline); padding: var(--s-3) var(--s-4); vertical-align: top; text-align: start; background: none; }
+.sl-markdown-content thead th { background: var(--sl-color-gray-6); font-weight: 700; font-size: var(--text-xs); color: var(--sl-color-gray-3); }
+.sl-markdown-content tbody tr:last-child td { border-bottom: 0; }
+.sl-markdown-content td { overflow-wrap: anywhere; }
+.sl-markdown-content tr:nth-child(2n) td { background: none; }
+:is(.derivation-table, .stem-table, .suffix-table) :is(.ja, [lang='ja']) { white-space: nowrap; }
+td small, .stem-table small { color: var(--sl-color-gray-3); }
+
+/* type pills: one colour per type */
+.type-chip { display: inline-block; margin-inline-end: var(--s-1); padding: 0 var(--s-3); border-radius: 999px; font-size: var(--text-xs); font-weight: 700; white-space: nowrap; color: color-mix(in srgb, var(--c) 70%, var(--sl-color-white)); background: color-mix(in srgb, var(--c) 12%, transparent); }
+.type-verb { --c: var(--t-verb); }
+.type-i-adj { --c: var(--t-i-adj); }
+.type-na-adj { --c: var(--t-na-adj); }
+.type-noun { --c: var(--t-noun); }
+.type-adverb { --c: var(--t-adverb); }
+.type-clause { --c: var(--t-clause); }
+
+.irregular-flag { font-size: var(--text-xs); font-weight: 700; color: color-mix(in srgb, var(--t-na-adj) 70%, var(--sl-color-white)); background: color-mix(in srgb, var(--t-na-adj) 12%, transparent); padding: 0 var(--s-2); border-radius: 999px; text-decoration: none; }
+.derivation-error td { color: var(--danger-text); background: var(--danger-low); }
+
+/* ---- derivation: code block + table -------------------------------------- */
+.derivation { display: grid; gap: var(--gap); }
+.derivation-warnings { margin: 0; font-size: var(--text-sm); color: var(--t-na-adj); }
+
+/* code blocks: monospace, flat panel; Japanese falls back to the site's Japanese font */
+.sl-markdown-content pre.code-block, pre.code-block {
+  margin: 0; padding: var(--s-4); overflow-x: auto; white-space: pre;
+  font-family: var(--sl-font-mono), var(--ja-font); font-variant-ligatures: none; font-size: var(--text-sm); line-height: 1.7;
+  background: var(--sl-color-gray-7); border: var(--outline); border-radius: var(--radius);
+}
+pre.code-block, pre.code-block :is(code, span):lang(ja), pre.code-block :is(code, span) { font-family: var(--sl-font-mono), var(--ja-font); }
+pre.code-block code { background: none; padding: 0; border-radius: 0; font: inherit; color: var(--sl-color-white); white-space: pre; }
+.code-comment { color: var(--sl-color-gray-3); }
+.code-error { color: var(--danger-text); }
+.code-notation { color: var(--sl-color-white); }
+/* function names in notation: stems are coloured and link to their page, suffixes stay plain */
+pre.code-block a.fn { text-decoration: underline dotted; text-underline-offset: 3px; }
+pre.code-block a.fn-suffix { color: inherit; }
+.fn-stem, pre.code-block a.fn-stem { color: var(--accent-text); font-weight: 700; }
+pre.code-block a.fn:hover { text-decoration-style: solid; }
+td a.fn-stem { text-decoration: underline dotted; text-underline-offset: 3px; }
+
+/* ---- suffix card ------------------------------------------------------ */
+.suffix-card dl { display: grid; margin: 0; border: var(--outline); border-radius: var(--radius); overflow: hidden; }
+.suffix-card dl > div { display: grid; grid-template-columns: 8rem 1fr; gap: var(--s-4); padding: var(--s-3) var(--s-4); border-bottom: var(--outline); }
+.suffix-card dl > div:last-child { border-bottom: 0; }
+.suffix-card dt { font-size: var(--text-xs); font-weight: 700; color: var(--sl-color-gray-3); padding-top: var(--s-1); }
+.suffix-card dd { margin: 0; }
+.suffix-form { font-size: var(--text-xl); font-weight: 700; }
+.examples, .compare { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-3); }
+.sl-markdown-content :is(.examples, .compare) { padding: 0; }
+.examples li, .compare li { margin: 0; padding: var(--s-3) var(--s-4); border: var(--outline); border-radius: var(--radius); }
+.examples .ja { font-size: var(--text-md); font-weight: 700; }
+.examples .gloss { color: var(--sl-color-gray-3); font-size: var(--text-sm); }
+.compare li strong { display: block; margin-bottom: var(--s-1); }
+.usage { margin: 0; display: grid; gap: var(--s-2); }
+@media (max-width: 30rem) {
+  .suffix-card dl > div { grid-template-columns: 1fr; gap: 0; }
+}
+
+/* ---- conjugator ------------------------------------------------------- */
+.conjugator { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--gap); }
+.conjugator > * { min-width: 0; }
+.conj-field { display: grid; gap: var(--s-2); font-size: var(--text-xs); font-weight: 700; color: var(--sl-color-gray-3); }
+.conjugator select { width: 100%; min-width: 0; padding: var(--s-3) var(--s-4); max-width: 100%; font: inherit; font-weight: 700; font-size: var(--text-base); color: var(--sl-color-white); background: var(--sl-color-gray-6); border: 2px solid var(--sl-color-gray-3); border-radius: var(--radius); }
+.conj-actions { display: flex; gap: var(--s-2); }
+
+/* raised buttons that press down */
+.conjugator button { cursor: pointer; font: inherit; font-weight: 700; font-size: var(--text-sm); color: var(--sl-color-white); background: var(--sl-color-gray-6); border: 2px solid var(--sl-color-gray-3); border-bottom-width: 4px; border-radius: 12px; padding: var(--s-1) var(--s-4); transition: transform 0.05s; }
+.conjugator button:hover:not(:disabled) { border-color: var(--sl-color-white); }
+.conjugator button:active:not(:disabled) { transform: translateY(2px); border-bottom-width: 2px; margin-bottom: 2px; }
+.conjugator button:disabled { opacity: 0.4; cursor: default; }
+.conjugator button:focus-visible, .conjugator select:focus-visible { outline: 3px solid var(--sl-color-text-accent); outline-offset: 2px; }
+
+.conj-palette { display: grid; gap: var(--s-4); }
+.conj-palette fieldset { border: var(--outline); border-radius: var(--radius); padding: var(--s-2) var(--s-4) var(--s-4); margin: 0; display: flex; flex-wrap: wrap; gap: var(--s-2); }
+.conj-palette legend { padding: 0 var(--s-2); font-size: var(--text-xs); font-weight: 700; color: var(--sl-color-gray-3); }
+.conj-palette button { display: inline-flex; flex-direction: column; align-items: flex-start; line-height: 1.25; min-width: 4.5rem; }
+.conj-palette small { font-size: var(--text-xs); color: var(--sl-color-gray-3); }
+/* would be a type error as the next step: same text contrast, but a dashed outline */
+.conj-dim { border-style: dashed; border-bottom-style: dashed; }
+
+/* compact cells for the step tables; function names are links but read as code, so no underline */
+.derivation-table :is(th, td) { padding: var(--s-2) var(--s-3); }
+.derivation-table td:nth-child(2) { white-space: nowrap; }
+a:has(> code) { text-decoration: none; }
+
+/* accessibility helpers */
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* keyboard focus on scrollable regions */
+:is(pre.code-block, .derivation-table, .stem-table, .suffix-table, .table-scroll):focus-visible { outline: 3px solid var(--sl-color-text-accent); outline-offset: 2px; }
+
+/* previous / next links: raised-button border instead of a drop shadow */
+.pagination-links a {
+  box-shadow: none; border: 2px solid var(--sl-color-gray-3); border-bottom-width: 4px; border-radius: var(--radius);
+  padding: var(--s-4); transition: transform 0.05s;
+}
+.pagination-links a:hover { border-color: var(--sl-color-gray-2); }
+.pagination-links a:active { transform: translateY(2px); border-bottom-width: 2px; margin-bottom: 2px; }
+.pagination-links .link-title { font-size: var(--text-xl); }
+
+/* ---- illustrations (overview pages) ----------------------------------- */
+.illus { margin: var(--s-6) 0; padding: var(--s-4); border: var(--outline); border-radius: var(--radius); }
+.illus svg { display: block; width: 100%; max-width: 560px; height: auto; margin-inline: auto; }
+.illus figcaption { margin-top: var(--s-3); font-size: var(--text-sm); color: var(--sl-color-gray-2); text-align: center; }
+.il-blk, .il-mach, .il-stem, .il-pill { stroke-width: 2; }
+.il-blk { fill: color-mix(in srgb, var(--c) 16%, transparent); stroke: var(--c); }
+.il-mach { fill: color-mix(in srgb, var(--sl-color-gray-3) 18%, transparent); stroke: var(--sl-color-gray-2); }
+.il-stem { fill: color-mix(in srgb, var(--accent-text) 6%, transparent); stroke: var(--accent-text); stroke-dasharray: 5 3; }
+.il-stem.il-solid { stroke-dasharray: none; }
+.il-pill { fill: color-mix(in srgb, var(--c) 16%, transparent); stroke: none; }
+.il-t { fill: var(--sl-color-white); font-size: 18px; text-anchor: middle; dominant-baseline: central; }
+.il-m { font-family: var(--sl-font-mono); font-size: 14px; }
+.il-s { font-size: 16px; fill: var(--sl-color-gray-2); }
+.il-p { font-size: 14px; font-weight: 700; fill: color-mix(in srgb, var(--c) 70%, var(--sl-color-white)); }
+.il-l { text-anchor: start; dominant-baseline: central; }
+.il-ac { fill: var(--sl-color-white); font-size: 16px; font-weight: 700; }
+.il-a { fill: none; stroke: var(--sl-color-gray-3); stroke-width: 2; }
+.il-ah { fill: var(--sl-color-gray-3); }
+.il-ok { fill: none; stroke: var(--t-i-adj); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.il-bad { fill: none; stroke: var(--danger-text); stroke-width: 2; stroke-linecap: round; }
+.il-bad-h { fill: var(--danger-text); }
+.il-t.il-bad-t, .il-s.il-bad-t { fill: var(--danger-text); }

@@ -1,0 +1,44 @@
+{
+  "id": "nakute_mo_ii",
+  "form": "なくてもいい",
+  "romaji": "nakutemoii",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "output_class": "i-adj",
+  "aux_verb": "ii",
+  "meaning": "You do not have to do.",
+  "examples": [
+    {
+      "japanese": "明日は来なくてもいい。",
+      "reading": "あしたはこなくてもいい。",
+      "gloss": "You do not have to come tomorrow."
+    },
+    {
+      "japanese": "全部食べなくてもいい。",
+      "reading": "ぜんぶたべなくてもいい。",
+      "gloss": "You do not have to eat it all."
+    },
+    {
+      "japanese": "急がなくてもいい。",
+      "reading": "いそがなくてもいい。",
+      "gloss": "There is no need to hurry."
+    }
+  ],
+  "usage": [
+    "Says an action is not needed. It does not say you must not do it.",
+    "Polite: なくてもいいです. Also seen as なくてもかまわない."
+  ],
+  "compare": [
+    {
+      "id": "nakereba_naranai",
+      "difference": "なければならない says you must. なくてもいい says you do not need to."
+    },
+    {
+      "id": "te_mo_ii",
+      "difference": "てもいい gives permission to do. なくてもいい gives permission not to."
+    }
+  ]
+}

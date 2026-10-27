@@ -1,0 +1,49 @@
+{
+  "id": "owaru",
+  "form": "おわる",
+  "romaji": "owaru",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "written": "終わる",
+  "output_class": "godan",
+  "layer": 30,
+  "related": [
+    "hajimeru",
+    "tsuzukeru"
+  ],
+  "meaning": "Finish doing.",
+  "examples": [
+    {
+      "japanese": "本を読み終わった。",
+      "reading": "ほんをよみおわった。",
+      "gloss": "I finished reading the book."
+    },
+    {
+      "japanese": "食べ終わったら、教えてください。",
+      "reading": "たべおわったら、おしえてください。",
+      "gloss": "Tell me when you finish eating."
+    },
+    {
+      "japanese": "手紙を書き終わった。",
+      "reading": "てがみをかきおわった。",
+      "gloss": "I finished writing the letter."
+    }
+  ],
+  "usage": [
+    "Marks completion of an action that takes time.",
+    "Also seen as 終える (transitive): 読み終える."
+  ],
+  "compare": [
+    {
+      "id": "te_shimau",
+      "difference": "てしまう says an action is done and often adds regret. 終わる only says it is finished."
+    },
+    {
+      "id": "hajimeru",
+      "difference": "始める begins. 終わる ends."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "id": "tame_ni",
+  "form": "ために",
+  "romaji": "tame-ni",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "written": "ために",
+  "meaning": "In order to do.",
+  "examples": [
+    {
+      "japanese": "日本語を勉強するために日本へ来た。",
+      "reading": "にほんごをべんきょうするためににほんへきた。",
+      "gloss": "I came to Japan in order to study Japanese."
+    },
+    {
+      "japanese": "試験に合格するために頑張る。",
+      "reading": "しけんにごうかくするためにがんばる。",
+      "gloss": "I will work hard in order to pass the exam."
+    },
+    {
+      "japanese": "家を買うために貯金している。",
+      "reading": "いえをかうためにちょきんしている。",
+      "gloss": "I am saving money to buy a house."
+    }
+  ],
+  "usage": [
+    "Purpose: 'in order to'. The verb must be one you control, and both clauses share the subject.",
+    "With nouns and states it expresses cause: 病気のために休んだ.",
+    "If the outcome is not under your control, use ように: 聞こえるように話す."
+  ],
+  "compare": [
+    {
+      "label": "ように",
+      "difference": "ように is for outcomes you hope for but cannot directly make happen. ために is for deliberate purposes."
+    }
+  ]
+}

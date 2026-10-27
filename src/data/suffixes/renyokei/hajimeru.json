@@ -1,0 +1,49 @@
+{
+  "id": "hajimeru",
+  "form": "はじめる",
+  "romaji": "hajimeru",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "written": "始める",
+  "output_class": "ichidan",
+  "layer": 30,
+  "related": [
+    "tsuzukeru",
+    "owaru"
+  ],
+  "meaning": "Begin to do.",
+  "examples": [
+    {
+      "japanese": "雨が降り始めた。",
+      "reading": "あめがふりはじめた。",
+      "gloss": "It started to rain."
+    },
+    {
+      "japanese": "日本語を勉強し始めて三年です。",
+      "reading": "にほんごをべんきょうしはじめてさんねんです。",
+      "gloss": "It has been three years since I began studying Japanese."
+    },
+    {
+      "japanese": "食べ始めましょう。",
+      "reading": "たべはじめましょう。",
+      "gloss": "Let us start eating."
+    }
+  ],
+  "usage": [
+    "Marks the start of an action or a process. The result is an ichidan verb.",
+    "For a state that begins suddenly, use だす: 降りだす."
+  ],
+  "compare": [
+    {
+      "id": "tsuzukeru",
+      "difference": "続ける continues an action. 始める begins it."
+    },
+    {
+      "id": "owaru",
+      "difference": "終わる says an action is finished."
+    }
+  ]
+}

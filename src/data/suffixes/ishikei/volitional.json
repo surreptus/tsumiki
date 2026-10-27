@@ -1,0 +1,51 @@
+{
+  "id": "volitional",
+  "form": "よう",
+  "romaji": "you",
+  "attaches_to": "ishikei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "allomorphs": [
+    {
+      "classes": [
+        "godan",
+        "masu"
+      ],
+      "form": "う"
+    }
+  ],
+  "related": [
+    "masu"
+  ],
+  "meaning": "Volitional: let's do, I will do.",
+  "examples": [
+    {
+      "japanese": "一緒に食べよう。",
+      "reading": "いっしょにたべよう。",
+      "gloss": "Let us eat together."
+    },
+    {
+      "japanese": "映画を見に行こう。",
+      "reading": "えいがをみにいこう。",
+      "gloss": "Let us go see a movie."
+    },
+    {
+      "japanese": "そろそろ帰ろう。",
+      "reading": "そろそろかえろう。",
+      "gloss": "Time to head home."
+    }
+  ],
+  "usage": [
+    "Two main uses: 'let's' (一緒に食べよう) and 'I will' (そろそろ帰ろう).",
+    "With と思う it means 'I am thinking of doing': 行こうと思う. With とする it means 'try to do': 開けようとした.",
+    "The polite version is ましょう. The question ましょうか offers or suggests."
+  ],
+  "compare": [
+    {
+      "id": "tsumori",
+      "difference": "つもり states a plan that is already settled. よう(と思う) is a decision still being formed."
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+[
+  {
+    "id": "taberu",
+    "kanji": "食べる",
+    "kana": "たべる",
+    "class": "ichidan",
+    "meaning": "to eat"
+  },
+  {
+    "id": "miru",
+    "kanji": "見る",
+    "kana": "みる",
+    "class": "ichidan",
+    "meaning": "to see, to look"
+  },
+  {
+    "id": "okiru",
+    "kanji": "起きる",
+    "kana": "おきる",
+    "class": "ichidan",
+    "meaning": "to wake up, to get up"
+  },
+  {
+    "id": "neru",
+    "kanji": "寝る",
+    "kana": "ねる",
+    "class": "ichidan",
+    "meaning": "to sleep, to go to bed"
+  },
+  {
+    "id": "kiru-wear",
+    "kanji": "着る",
+    "kana": "きる",
+    "class": "ichidan",
+    "meaning": "to wear (on the upper body)",
+    "notes": "Same kana as 切る (to cut), which is godan."
+  },
+  {
+    "id": "deru",
+    "kanji": "出る",
+    "kana": "でる",
+    "class": "ichidan",
+    "meaning": "to go out, to leave"
+  },
+  {
+    "id": "oshieru",
+    "kanji": "教える",
+    "kana": "おしえる",
+    "class": "ichidan",
+    "meaning": "to teach, to tell"
+  },
+  {
+    "id": "kangaeru",
+    "kanji": "考える",
+    "kana": "かんがえる",
+    "class": "ichidan",
+    "meaning": "to think"
+  },
+  {
+    "id": "shinjiru",
+    "kanji": "信じる",
+    "kana": "しんじる",
+    "class": "ichidan",
+    "meaning": "to believe, to trust"
+  },
+  {
+    "id": "iru-exist",
+    "kanji": "居る",
+    "kana": "いる",
+    "class": "ichidan",
+    "meaning": "to be, to exist (animate)",
+    "notes": "Same kana as 要る (to need), which is godan. Usually written in kana."
+  },
+  {
+    "id": "kariru",
+    "kanji": "借りる",
+    "kana": "かりる",
+    "class": "ichidan",
+    "meaning": "to borrow"
+  },
+  {
+    "id": "wasureru",
+    "kanji": "忘れる",
+    "kana": "わすれる",
+    "class": "ichidan",
+    "meaning": "to forget"
+  },
+  {
+    "id": "kau",
+    "kanji": "買う",
+    "kana": "かう",
+    "class": "godan",
+    "meaning": "to buy"
+  },
+  {
+    "id": "au",
+    "kanji": "会う",
+    "kana": "あう",
+    "class": "godan",
+    "meaning": "to meet"
+  },
+  {
+    "id": "iu",
+    "kanji": "言う",
+    "kana": "いう",
+    "class": "godan",
+    "meaning": "to say"
+  },
+  {
+    "id": "tou",
+    "kanji": "問う",
+    "kana": "とう",
+    "class": "godan",
+    "meaning": "to ask, to question",
+    "notes": "Literary. Its て-form keeps the う: 問うて."
+  },
+  {
+    "id": "matsu",
+    "kanji": "待つ",
+    "kana": "まつ",
+    "class": "godan",
+    "meaning": "to wait"
+  },
+  {
+    "id": "motsu",
+    "kanji": "持つ",
+    "kana": "もつ",
+    "class": "godan",
+    "meaning": "to hold, to have"
+  },
+  {
+    "id": "kaeru-return",
+    "kanji": "帰る",
+    "kana": "かえる",
+    "class": "godan",
+    "meaning": "to return home",
+    "lookalike": true,
+    "notes": "Looks like an ichidan verb (-eru) but is godan: 帰らない, not 帰えない."
+  },
+  {
+    "id": "hairu",
+    "kanji": "入る",
+    "kana": "はいる",
+    "class": "godan",
+    "meaning": "to enter",
+    "lookalike": true,
+    "notes": "Looks like an ichidan verb (-iru) but is godan: 入らない."
+  },
+  {
+    "id": "hashiru",
+    "kanji": "走る",
+    "kana": "はしる",
+    "class": "godan",
+    "meaning": "to run",
+    "lookalike": true,
+    "notes": "Looks like an ichidan verb (-iru) but is godan: 走らない."
+  },
+  {
+    "id": "shiru",
+    "kanji": "知る",
+    "kana": "しる",
+    "class": "godan",
+    "meaning": "to know, to get to know",
+    "lookalike": true,
+    "notes": "Looks like an ichidan verb (-iru) but is godan: 知らない."
+  },
+  {
+    "id": "kiru-cut",
+    "kanji": "切る",
+    "kana": "きる",
+    "class": "godan",
+    "meaning": "to cut",
+    "lookalike": true,
+    "notes": "Same kana as 着る (to wear), which is ichidan."
+  },
+  {
+    "id": "iru-need",
+    "kanji": "要る",
+    "kana": "いる",
+    "class": "godan",
+    "meaning": "to be needed",
+    "lookalike": true,
+    "notes": "Same kana as 居る (to be), which is ichidan: 要らない vs 居ない."
+  },
+  {
+    "id": "toru",
+    "kanji": "取る",
+    "kana": "とる",
+    "class": "godan",
+    "meaning": "to take"
+  },
+  {
+    "id": "aru",
+    "kanji": "ある",
+    "kana": "ある",
+    "class": "godan",
+    "meaning": "to be, to exist (inanimate)",
+    "notes": "The negative is the suppletive ない, not あらない."
+  },
+  {
+    "id": "shinu",
+    "kanji": "死ぬ",
+    "kana": "しぬ",
+    "class": "godan",
+    "meaning": "to die",
+    "notes": "The only godan verb ending in ぬ."
+  },
+  {
+    "id": "asobu",
+    "kanji": "遊ぶ",
+    "kana": "あそぶ",
+    "class": "godan",
+    "meaning": "to play"
+  },
+  {
+    "id": "yobu",
+    "kanji": "呼ぶ",
+    "kana": "よぶ",
+    "class": "godan",
+    "meaning": "to call"
+  },
+  {
+    "id": "nomu",
+    "kanji": "飲む",
+    "kana": "のむ",
+    "class": "godan",
+    "meaning": "to drink"
+  },
+  {
+    "id": "yomu",
+    "kanji": "読む",
+    "kana": "よむ",
+    "class": "godan",
+    "meaning": "to read"
+  },
+  {
+    "id": "kaku",
+    "kanji": "書く",
+    "kana": "かく",
+    "class": "godan",
+    "meaning": "to write"
+  },
+  {
+    "id": "iku",
+    "kanji": "行く",
+    "kana": "いく",
+    "class": "godan",
+    "meaning": "to go",
+    "notes": "Irregular te/ta-form: 行って, 行った."
+  },
+  {
+    "id": "aruku",
+    "kanji": "歩く",
+    "kana": "あるく",
+    "class": "godan",
+    "meaning": "to walk"
+  },
+  {
+    "id": "oyogu",
+    "kanji": "泳ぐ",
+    "kana": "およぐ",
+    "class": "godan",
+    "meaning": "to swim"
+  },
+  {
+    "id": "isogu",
+    "kanji": "急ぐ",
+    "kana": "いそぐ",
+    "class": "godan",
+    "meaning": "to hurry"
+  },
+  {
+    "id": "hanasu",
+    "kanji": "話す",
+    "kana": "はなす",
+    "class": "godan",
+    "meaning": "to speak, to talk"
+  },
+  {
+    "id": "kasu",
+    "kanji": "貸す",
+    "kana": "かす",
+    "class": "godan",
+    "meaning": "to lend"
+  },
+  {
+    "id": "irassharu",
+    "kanji": "いらっしゃる",
+    "kana": "いらっしゃる",
+    "class": "godan",
+    "meaning": "to be, to go, to come (honorific)",
+    "notes": "Honorific godan: いらっしゃいます."
+  },
+  {
+    "id": "nasaru",
+    "kanji": "なさる",
+    "kana": "なさる",
+    "class": "godan",
+    "meaning": "to do (honorific)",
+    "notes": "Honorific godan: なさいます."
+  },
+  {
+    "id": "kudasaru",
+    "kanji": "下さる",
+    "kana": "くださる",
+    "class": "godan",
+    "meaning": "to give (honorific)",
+    "notes": "Honorific godan: くださいます."
+  },
+  {
+    "id": "ossharu",
+    "kanji": "おっしゃる",
+    "kana": "おっしゃる",
+    "class": "godan",
+    "meaning": "to say (honorific)",
+    "notes": "Honorific godan: おっしゃいます."
+  },
+  {
+    "id": "gozaru",
+    "kanji": "ござる",
+    "kana": "ござる",
+    "class": "godan",
+    "meaning": "to be (humble-polite)",
+    "notes": "Survives mainly as ございます."
+  },
+  {
+    "id": "suru",
+    "kanji": "する",
+    "kana": "する",
+    "class": "suru",
+    "meaning": "to do"
+  },
+  {
+    "id": "kuru",
+    "kanji": "来る",
+    "kana": "くる",
+    "class": "kuru",
+    "meaning": "to come"
+  },
+  {
+    "id": "benkyou-suru",
+    "kanji": "勉強する",
+    "kana": "べんきょうする",
+    "class": "suru",
+    "meaning": "to study",
+    "notes": "Noun + する compounds conjugate exactly like する."
+  },
+  {
+    "id": "sanpo-suru",
+    "kanji": "散歩する",
+    "kana": "さんぽする",
+    "class": "suru",
+    "meaning": "to take a walk",
+    "notes": "Noun + する compounds conjugate exactly like する."
+  },
+  {
+    "id": "kiku",
+    "kanji": "聞く",
+    "kana": "きく",
+    "class": "godan",
+    "meaning": "to hear, to ask",
+    "lookalike": false
+  },
+  {
+    "id": "annai-suru",
+    "kanji": "案内する",
+    "kana": "あんないする",
+    "class": "suru",
+    "meaning": "to guide",
+    "lookalike": false
+  },
+  {
+    "id": "renraku-suru",
+    "kanji": "連絡する",
+    "kana": "れんらくする",
+    "class": "suru",
+    "meaning": "to contact",
+    "lookalike": false
+  }
+]

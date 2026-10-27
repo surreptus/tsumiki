@@ -1,0 +1,46 @@
+{
+  "id": "you_ni_naru",
+  "form": "ようになる",
+  "romaji": "youninaru",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "related": [
+    "you_ni_suru",
+    "koto_ni_naru"
+  ],
+  "meaning": "Come to the point where.",
+  "examples": [
+    {
+      "japanese": "日本語が話せるようになった。",
+      "reading": "にほんごがはなせるようになった。",
+      "gloss": "I became able to speak Japanese."
+    },
+    {
+      "japanese": "最近、朝早く起きるようになった。",
+      "reading": "さいきん、あさはやくおきるようになった。",
+      "gloss": "Recently I have begun getting up early."
+    },
+    {
+      "japanese": "漢字が読めるようになりたい。",
+      "reading": "かんじがよめるようになりたい。",
+      "gloss": "I want to become able to read kanji."
+    }
+  ],
+  "usage": [
+    "A gradual change: you did not, and now you do. With potential verbs it means \"become able\"."
+  ],
+  "compare": [
+    {
+      "id": "koto_ni_naru",
+      "difference": "ことになる is a decision made by circumstances. ようになる is a gradual change in ability or habit."
+    },
+    {
+      "id": "you_ni_suru",
+      "difference": "ようにする is making an effort. ようになる is the result."
+    }
+  ]
+}

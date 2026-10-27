@@ -1,0 +1,43 @@
+{
+  "id": "nasai",
+  "form": "なさい",
+  "romaji": "nasai",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "meaning": "Do (a soft command).",
+  "examples": [
+    {
+      "japanese": "早く寝なさい。",
+      "reading": "はやくねなさい。",
+      "gloss": "Go to bed early."
+    },
+    {
+      "japanese": "宿題をしなさい。",
+      "reading": "しゅくだいをしなさい。",
+      "gloss": "Do your homework."
+    },
+    {
+      "japanese": "ちゃんと食べなさい。",
+      "reading": "ちゃんとたべなさい。",
+      "gloss": "Eat properly."
+    }
+  ],
+  "usage": [
+    "A firm but kind command, from a parent, teacher or other person in authority.",
+    "Not for people above you or equals. Use ください.",
+    "With する, the stem is し: 静かにしなさい."
+  ],
+  "compare": [
+    {
+      "id": "imperative",
+      "difference": "The imperative 食べろ is blunt. なさい is firmer than a request but softer than the imperative."
+    },
+    {
+      "id": "te_kudasai",
+      "difference": "ください is a request to anyone. なさい is an instruction from above."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+---
+import { TYPE_SHORT } from '../lib/conjugate';
+import type { Type } from '../lib/schemas';
+
+interface Props {
+  type: Type;
+  past?: boolean;
+}
+const { type, past = false } = Astro.props;
+---
+<span class={`type-chip type-${type}`}>{TYPE_SHORT[type]}{past && ' · past'}</span>

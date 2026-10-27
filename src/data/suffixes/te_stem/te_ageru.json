@@ -1,0 +1,50 @@
+{
+  "id": "te_ageru",
+  "form": "あげる",
+  "romaji": "teageru",
+  "display": "てあげる",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "ichidan",
+  "layer": 30,
+  "related": [
+    "te_kureru",
+    "te_morau"
+  ],
+  "meaning": "Do something for someone (a favour from you).",
+  "examples": [
+    {
+      "japanese": "友達に本を貸してあげた。",
+      "reading": "ともだちにほんをかしてあげた。",
+      "gloss": "I lent my friend a book."
+    },
+    {
+      "japanese": "弟に宿題を教えてあげる。",
+      "reading": "おとうとにしゅくだいをおしえてあげる。",
+      "gloss": "I will help my younger brother with his homework."
+    },
+    {
+      "japanese": "母に料理を作ってあげた。",
+      "reading": "ははにりょうりをつくってあげた。",
+      "gloss": "I cooked a meal for my mother."
+    }
+  ],
+  "usage": [
+    "The giver is the subject; the receiver takes に.",
+    "Do not say it about favours to a superior, because てあげる sounds as if you are being generous. Use a humble form instead.",
+    "Giving and receiving are written from the point of view of the speaker or their group."
+  ],
+  "compare": [
+    {
+      "id": "te_kureru",
+      "difference": "てくれる describes a favour done for me or my group. てあげる describes a favour I do for others."
+    },
+    {
+      "id": "te_morau",
+      "difference": "てもらう puts the receiver as the subject: I got someone to do it."
+    }
+  ]
+}

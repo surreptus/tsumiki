@@ -1,0 +1,91 @@
+{
+  "id": "ishikei",
+  "name": "意志形",
+  "romaji": "ishikei",
+  "label": "The う-stem",
+  "etymology": {
+    "reading": "いしけい",
+    "literal": "intention form",
+    "parts": [
+      {
+        "char": "意",
+        "reading": "i",
+        "meaning": "mind, intention"
+      },
+      {
+        "char": "志",
+        "reading": "shi",
+        "meaning": "will, resolve"
+      },
+      {
+        "char": "形",
+        "reading": "kei",
+        "meaning": "form, shape"
+      }
+    ],
+    "mnemonic": "Your intention and your will, packed into one stem. It is the form behind \"let's\" and \"I'll try\": 書こう, 食べよう."
+  },
+  "order": 3,
+  "description": "The form before う and よう. Godan verbs shift to the お-row; ichidan verbs drop る and take よう. Many grammars file it under 未然形; this guide splits it off because the godan stem differs.",
+  "rules": {
+    "ichidan": {
+      "drop": 1,
+      "add": ""
+    },
+    "godan": {
+      "う": {
+        "drop": 1,
+        "add": "お"
+      },
+      "く": {
+        "drop": 1,
+        "add": "こ"
+      },
+      "ぐ": {
+        "drop": 1,
+        "add": "ご"
+      },
+      "す": {
+        "drop": 1,
+        "add": "そ"
+      },
+      "つ": {
+        "drop": 1,
+        "add": "と"
+      },
+      "ぬ": {
+        "drop": 1,
+        "add": "の"
+      },
+      "ぶ": {
+        "drop": 1,
+        "add": "ぼ"
+      },
+      "む": {
+        "drop": 1,
+        "add": "も"
+      },
+      "る": {
+        "drop": 1,
+        "add": "ろ"
+      }
+    },
+    "suru": {
+      "drop": 2,
+      "add": "し"
+    },
+    "kuru": {
+      "drop": 1,
+      "add": "",
+      "reading": {
+        "drop": 2,
+        "add": "こ"
+      }
+    },
+    "masu": {
+      "drop": 1,
+      "add": "しょ"
+    }
+  },
+  "exceptions": []
+}

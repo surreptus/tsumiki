@@ -1,0 +1,58 @@
+---
+// Rules for one stem, per verb class, plus its exceptions and the suffixes that attach to it.
+import { getCollection, getEntry } from 'astro:content';
+import { irregularsHref } from '../lib/paths';
+import { CLASS_LABELS } from '../lib/conjugate';
+import { GODAN_FINALS, type Rule } from '../lib/schemas';
+import StemName from './StemName.astro';
+import SuffixTable from './SuffixTable.astro';
+
+interface Props {
+  id: string;
+}
+const entry = await getEntry('stems', Astro.props.id);
+if (!entry) throw new Error(`<StemCard>: unknown stem "${Astro.props.id}"`);
+const stem = entry.data;
+
+const irregulars = new Map((await getCollection('irregulars')).map((e) => [e.id, e.data]));
+const describeRule = (r: Rule) =>
+  (r.reading ?? r).drop === 0 ? `add ${(r.reading ?? r).add}` : `drop ${(r.reading ?? r).drop}, add ${(r.reading ?? r).add || '∅'}`;
+
+const classRows = Object.entries(stem.rules).filter(([k]) => k !== 'godan') as [string, Rule][];
+---
+<div class="stem-card">
+  <p>{stem.description}</p>
+
+  <h2 id="name">Reading the name</h2>
+  <StemName id={stem.id} />
+
+  <h2 id="rules">Rules by class</h2>
+  <table>
+    <thead><tr><th>Class</th><th>Rule on the dictionary form</th></tr></thead>
+    <tbody>
+      {classRows.map(([cls, rule]) => (
+        <tr><td>{CLASS_LABELS[cls as keyof typeof CLASS_LABELS]}</td><td><code>{describeRule(rule)}</code></td></tr>
+      ))}
+      {stem.rules.godan && GODAN_FINALS.map((f) => (
+        <tr>
+          <td>godan, ends in <span lang="ja">{f}</span></td>
+          <td><code>{describeRule(stem.rules.godan![f]!)}</code></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+
+  {stem.exceptions.length > 0 && (
+    <>
+      <h2 id="exceptions">Exceptions</h2>
+      <ul>
+        {stem.exceptions.map((id) => (
+          <li><a href={irregularsHref(id)}>{irregulars.get(id)?.title ?? id}</a></li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <h2 id="suffixes">Suffixes that attach here</h2>
+  <SuffixTable attachesTo={stem.id} />
+</div>

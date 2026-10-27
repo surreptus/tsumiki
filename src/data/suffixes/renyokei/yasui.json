@@ -1,0 +1,47 @@
+{
+  "id": "yasui",
+  "form": "やすい",
+  "romaji": "yasui",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "output_class": "i-adj",
+  "layer": 40,
+  "related": [
+    "nikui"
+  ],
+  "meaning": "Easy to do.",
+  "examples": [
+    {
+      "japanese": "この本は読みやすい。",
+      "reading": "このほんはよみやすい。",
+      "gloss": "This book is easy to read."
+    },
+    {
+      "japanese": "このペンは書きやすいです。",
+      "reading": "このペンはかきやすいです。",
+      "gloss": "This pen is easy to write with."
+    },
+    {
+      "japanese": "彼は怒りやすい。",
+      "reading": "かれはおこりやすい。",
+      "gloss": "He gets angry easily."
+    }
+  ],
+  "usage": [
+    "Easy to do. It describes how easy the thing is to handle, not what the person does.",
+    "It also means 'tends to': 怒りやすい (quick to anger), 風邪をひきやすい (catches colds easily)."
+  ],
+  "compare": [
+    {
+      "id": "nikui",
+      "difference": "The opposite. 難しい just says something is hard. ～にくい says it is hard to do."
+    },
+    {
+      "label": "簡単な",
+      "difference": "簡単な describes the task as simple. やすい describes how easily you can use or handle the thing."
+    }
+  ]
+}

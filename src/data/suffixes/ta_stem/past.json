@@ -1,0 +1,49 @@
+{
+  "id": "past",
+  "form": "",
+  "romaji": "ta",
+  "attaches_to": "ta_stem",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "same",
+  "output_state": "past",
+  "layer": 60,
+  "related": [
+    "te",
+    "neg"
+  ],
+  "meaning": "Plain past tense.",
+  "examples": [
+    {
+      "japanese": "昨日、寿司を食べた。",
+      "reading": "きのう、すしをたべた。",
+      "gloss": "I ate sushi yesterday."
+    },
+    {
+      "japanese": "映画は面白かった。",
+      "reading": "えいがはおもしろかった。",
+      "gloss": "The movie was interesting."
+    },
+    {
+      "japanese": "昨日は雨だった。",
+      "reading": "きのうはあめだった。",
+      "gloss": "It was rainy yesterday."
+    }
+  ],
+  "usage": [
+    "Plain past tense. Polite past is ました for verbs and でした for nouns. After an い-adjective the tense goes inside and です follows: 高かったです.",
+    "It can mean 'has done' as well: もう食べた.",
+    "In a relative clause it marks something finished before the main verb: 食べた人.",
+    "The same form feeds たら, たり, たことがある and たほうがいい."
+  ],
+  "compare": [
+    {
+      "id": "te",
+      "difference": "て keeps the sentence going. The past ends it."
+    }
+  ]
+}

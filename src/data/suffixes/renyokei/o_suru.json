@@ -1,0 +1,64 @@
+{
+  "id": "o_suru",
+  "form": "する",
+  "romaji": "osuru",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "display": "お〜する",
+  "prefix": "お",
+  "output_class": "suru",
+  "aux_verb": "suru",
+  "variants": [
+    {
+      "when": {
+        "classes": [
+          "suru"
+        ]
+      },
+      "attaches_to": "gokan",
+      "prefix": "ご",
+      "input_type": [
+        "verb"
+      ]
+    }
+  ],
+  "related": [
+    "o_ni_naru"
+  ],
+  "meaning": "Humble: お + stem + する.",
+  "examples": [
+    {
+      "japanese": "荷物をお持ちしましょうか。",
+      "reading": "にもつをおもちしましょうか。",
+      "gloss": "Shall I carry your luggage?"
+    },
+    {
+      "japanese": "お手伝いします。",
+      "reading": "おてつだいします。",
+      "gloss": "I will help you."
+    },
+    {
+      "japanese": "明日、お届けする。",
+      "reading": "あした、おとどけする。",
+      "gloss": "I will deliver it tomorrow."
+    }
+  ],
+  "usage": [
+    "Lowers the speaker by describing their action towards someone else. The subject is you.",
+    "Some verbs have a humble verb of their own: 食べる → いただく, 行く → 参る, する → いたす. See the irregulars page.",
+    "With kanji compounds, ご replaces お: ご案内します."
+  ],
+  "compare": [
+    {
+      "id": "o_ni_naru",
+      "difference": "おになる raises the other person. おする lowers the speaker."
+    },
+    {
+      "id": "te_itadaku",
+      "difference": "ていただく is a humble way to receive a favour."
+    }
+  ]
+}

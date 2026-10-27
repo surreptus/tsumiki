@@ -1,0 +1,39 @@
+---
+// The canonical stacking order, built from each suffix's `layer`, so the table cannot drift from the data.
+import { getCollection } from 'astro:content';
+import { suffixHref } from '../lib/paths';
+import { suffixName } from '../lib/names';
+import Ja from './Ja.astro';
+
+const LAYERS = [
+  { layer: 10, key: 'C', name: 'Cause', story: 'Make someone do it' },
+  { layer: 20, key: 'P', name: 'Passive and potential', story: 'It happens to you, or you can' },
+  { layer: 30, key: 'A', name: 'Aspect', story: 'Keep it going, try it, finish it' },
+  { layer: 40, key: 'D', name: 'Desire and degree', story: 'Want it, too much of it' },
+  { layer: 50, key: 'N', name: 'Negative', story: 'Not' },
+  { layer: 60, key: 'T', name: 'Tense', story: 'It was' },
+  { layer: 70, key: 'P', name: 'Polite', story: 'Say it nicely' },
+] as const;
+
+const suffixes = (await getCollection('suffixes')).map((e) => e.data);
+const name = (s: (typeof suffixes)[number]) => ({ te: 'て', past: 'た' } as Record<string, string>)[s.id] ?? suffixName(s);
+---
+<div class="table-scroll" tabindex="0" role="region" aria-label="Stacking order of suffix functions">
+  <table>
+    <thead><tr><th>#</th><th>Layer</th><th>Think</th><th>Functions</th></tr></thead>
+    <tbody>
+      {LAYERS.map((l, i) => (
+        <tr>
+          <td>{i + 1}</td>
+          <td><strong>{l.key}</strong> {l.name}</td>
+          <td>{l.story}</td>
+          <td>
+            {suffixes.filter((s) => s.layer === l.layer).filter((s, j, all) => all.findIndex((o) => name(o) === name(s)) === j).map((s, j) => (
+              <>{j > 0 && ', '}<a href={suffixHref(s)}><Ja text={name(s)} /></a></>
+            ))}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

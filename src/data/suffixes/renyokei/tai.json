@@ -1,0 +1,46 @@
+{
+  "id": "tai",
+  "form": "たい",
+  "romaji": "tai",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "output_class": "i-adj",
+  "layer": 40,
+  "register": "Expresses the speaker's own wish; for other people use たがる.",
+  "related": [
+    "masu",
+    "neg"
+  ],
+  "meaning": "Want to do.",
+  "examples": [
+    {
+      "japanese": "水が飲みたい。",
+      "reading": "みずがのみたい。",
+      "gloss": "I want to drink water."
+    },
+    {
+      "japanese": "日本に行きたいです。",
+      "reading": "にほんにいきたいです。",
+      "gloss": "I want to go to Japan."
+    },
+    {
+      "japanese": "何も食べたくない。",
+      "reading": "なにもたべたくない。",
+      "gloss": "I do not want to eat anything."
+    }
+  ],
+  "usage": [
+    "Says what the speaker wants to do. In a question it asks what the listener wants: 食べたいですか.",
+    "For another person's wish use たがる, or soften it with らしい or そうだ. Saying 彼は行きたい about someone else sounds like you can read their mind.",
+    "The thing wanted takes を or が: 水を飲みたい and 水が飲みたい are both fine."
+  ],
+  "compare": [
+    {
+      "label": "ほしい",
+      "difference": "ほしい is for wanting a thing (お金がほしい). たい is for wanting to do something."
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "tsuzukeru",
+  "form": "つづける",
+  "romaji": "tsuzukeru",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "written": "続ける",
+  "output_class": "ichidan",
+  "layer": 30,
+  "related": [
+    "hajimeru",
+    "owaru"
+  ],
+  "meaning": "Continue doing.",
+  "examples": [
+    {
+      "japanese": "毎日走り続けている。",
+      "reading": "まいにちはしりつづけている。",
+      "gloss": "I keep running every day."
+    },
+    {
+      "japanese": "彼は話し続けた。",
+      "reading": "かれははなしつづけた。",
+      "gloss": "He kept talking."
+    },
+    {
+      "japanese": "日本語を勉強し続けたい。",
+      "reading": "にほんごをべんきょうしつづけたい。",
+      "gloss": "I want to keep studying Japanese."
+    }
+  ],
+  "usage": [
+    "Keep doing, without stopping. Often implies effort or time."
+  ],
+  "compare": [
+    {
+      "id": "hajimeru",
+      "difference": "始める begins. 続ける continues."
+    },
+    {
+      "id": "te_iru",
+      "difference": "ている describes an action in progress. 続ける stresses that it does not stop."
+    }
+  ]
+}

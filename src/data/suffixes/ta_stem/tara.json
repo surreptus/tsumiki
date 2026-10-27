@@ -1,0 +1,48 @@
+{
+  "id": "tara",
+  "form": "ら",
+  "romaji": "tara",
+  "attaches_to": "ta_stem",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "related": [
+    "ba"
+  ],
+  "meaning": "Conditional \"if / when ...\".",
+  "examples": [
+    {
+      "japanese": "家に着いたら、電話する。",
+      "reading": "いえについたら、でんわする。",
+      "gloss": "When I get home, I will call."
+    },
+    {
+      "japanese": "安かったら買う。",
+      "reading": "やすかったらかう。",
+      "gloss": "If it is cheap, I will buy it."
+    },
+    {
+      "japanese": "雨だったらやめよう。",
+      "reading": "あめだったらやめよう。",
+      "gloss": "If it rains, let us call it off."
+    }
+  ],
+  "usage": [
+    "The all-purpose 'if' or 'when': hypothetical (雨だったらやめよう), future (着いたら電話する), or a discovery (開けたら空だった).",
+    "It is fine with requests and the speaker's own plans in the second clause."
+  ],
+  "compare": [
+    {
+      "id": "ba",
+      "difference": "ば sets a requirement and sounds odd with requests after an action."
+    },
+    {
+      "id": "to_conditional",
+      "difference": "と is for automatic results and cannot be followed by a request or a plan."
+    }
+  ]
+}

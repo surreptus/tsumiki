@@ -1,0 +1,44 @@
+{
+  "id": "te_kuru",
+  "form": "くる",
+  "romaji": "tekuru",
+  "display": "てくる",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "kuru",
+  "layer": 30,
+  "related": [
+    "te_iku"
+  ],
+  "meaning": "Do and come; toward now.",
+  "examples": [
+    {
+      "japanese": "友達を連れてきた。",
+      "reading": "ともだちをつれてきた。",
+      "gloss": "I brought a friend along."
+    },
+    {
+      "japanese": "だんだん暑くなってきた。",
+      "reading": "だんだんあつくなってきた。",
+      "gloss": "It has gradually become hot."
+    },
+    {
+      "japanese": "コンビニで買ってくる。",
+      "reading": "コンビニでかってくる。",
+      "gloss": "I will buy it at the convenience store and come back."
+    }
+  ],
+  "usage": [
+    "Do something and come back: 買ってくる. Or change that has led up to now: 暑くなってきた.",
+    "It looks back toward the speaker or toward the present."
+  ],
+  "compare": [
+    {
+      "id": "te_iku",
+      "difference": "てくる looks back and toward now. ていく looks forward and away."
+    }
+  ]
+}

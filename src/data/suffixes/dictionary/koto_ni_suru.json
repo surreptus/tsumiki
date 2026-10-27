@@ -1,0 +1,48 @@
+{
+  "id": "koto_ni_suru",
+  "form": "ことにする",
+  "romaji": "kotonisuru",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "suru",
+  "aux_verb": "suru",
+  "related": [
+    "koto_ni_naru"
+  ],
+  "meaning": "Decide to do.",
+  "examples": [
+    {
+      "japanese": "来月から日本語を勉強することにした。",
+      "reading": "らいげつからにほんごをべんきょうすることにした。",
+      "gloss": "I decided to study Japanese from next month."
+    },
+    {
+      "japanese": "毎朝走ることにしている。",
+      "reading": "まいあさはしることにしている。",
+      "gloss": "I have made it a rule to run every morning."
+    },
+    {
+      "japanese": "今日は家にいることにする。",
+      "reading": "きょうはいえにいることにする。",
+      "gloss": "I have decided to stay home today."
+    }
+  ],
+  "usage": [
+    "Your own decision. ことにした is the usual past form.",
+    "ことにしている means a rule you keep.",
+    "For a decision that other people or circumstances made, use ことになる."
+  ],
+  "compare": [
+    {
+      "id": "koto_ni_naru",
+      "difference": "ことになる says it was decided. ことにする says you decided."
+    },
+    {
+      "id": "tsumori",
+      "difference": "つもり states a plan. ことにする announces the decision."
+    }
+  ]
+}

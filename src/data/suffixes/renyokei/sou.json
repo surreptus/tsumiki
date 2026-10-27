@@ -1,0 +1,62 @@
+{
+  "id": "sou",
+  "form": "そう",
+  "romaji": "sou",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "na-adj",
+  "output_class": "na-adj",
+  "variants": [
+    {
+      "when": {
+        "types": [
+          "i-adj",
+          "na-adj"
+        ]
+      },
+      "attaches_to": "gokan",
+      "input_type": [
+        "i-adj",
+        "na-adj"
+      ]
+    }
+  ],
+  "related": [
+    "sou_hearsay"
+  ],
+  "meaning": "Looks like / seems about to (from what you see).",
+  "examples": [
+    {
+      "japanese": "雨が降りそうだ。",
+      "reading": "あめがふりそうだ。",
+      "gloss": "It looks like it will rain."
+    },
+    {
+      "japanese": "このケーキはおいしそうだ。",
+      "reading": "このケーキはおいしそうだ。",
+      "gloss": "This cake looks delicious."
+    },
+    {
+      "japanese": "彼は忙しそうだった。",
+      "reading": "かれはいそがしそうだった。",
+      "gloss": "He looked busy."
+    }
+  ],
+  "usage": [
+    "Appearance based on what you can see or sense. Attaches to the 連用形 of verbs, and to the stem of adjectives.",
+    "Irregular: いい becomes よさそう and ない becomes なさそう.",
+    "For something you heard, use そうだ with the plain form (see the hearsay entry)."
+  ],
+  "compare": [
+    {
+      "id": "sou_hearsay",
+      "difference": "そうだ with a plain form reports what someone said. そう on the stem is your own impression."
+    },
+    {
+      "id": "rashii",
+      "difference": "らしい is a judgement from evidence or hearsay, and attaches to a plain clause."
+    }
+  ]
+}

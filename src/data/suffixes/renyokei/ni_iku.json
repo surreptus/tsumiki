@@ -1,0 +1,48 @@
+{
+  "id": "ni_iku",
+  "form": "にいく",
+  "romaji": "niiku",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "written": "に行く",
+  "output_class": "godan",
+  "aux_verb": "iku",
+  "related": [
+    "ni_kuru"
+  ],
+  "meaning": "Go in order to do.",
+  "examples": [
+    {
+      "japanese": "友達に会いに行く。",
+      "reading": "ともだちにあいにいく。",
+      "gloss": "I am going to meet my friend."
+    },
+    {
+      "japanese": "映画を見に行った。",
+      "reading": "えいがをみにいった。",
+      "gloss": "I went to see a film."
+    },
+    {
+      "japanese": "本を借りに行ってきます。",
+      "reading": "ほんをかりにいってきます。",
+      "gloss": "I am off to borrow a book."
+    }
+  ],
+  "usage": [
+    "The purpose of the movement. With a noun, say the noun directly: 買い物に行く.",
+    "With する verbs the stem is し: 勉強しに行く."
+  ],
+  "compare": [
+    {
+      "id": "tame_ni",
+      "difference": "ために states a goal of any kind. に行く states what you go to do."
+    },
+    {
+      "id": "ni_kuru",
+      "difference": "に来る is the same pattern for coming instead of going."
+    }
+  ]
+}

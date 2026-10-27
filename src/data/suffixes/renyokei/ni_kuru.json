@@ -1,0 +1,43 @@
+{
+  "id": "ni_kuru",
+  "form": "にくる",
+  "romaji": "nikuru",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "written": "に来る",
+  "output_class": "kuru",
+  "aux_verb": "kuru",
+  "related": [
+    "ni_iku"
+  ],
+  "meaning": "Come in order to do.",
+  "examples": [
+    {
+      "japanese": "荷物を取りに来た。",
+      "reading": "にもつをとりにきた。",
+      "gloss": "I came to pick up my luggage."
+    },
+    {
+      "japanese": "友達が遊びに来る。",
+      "reading": "ともだちがあそびにくる。",
+      "gloss": "My friend is coming to hang out."
+    },
+    {
+      "japanese": "本を返しに来た。",
+      "reading": "ほんをかえしにきた。",
+      "gloss": "I came to return the book."
+    }
+  ],
+  "usage": [
+    "The speaker is at the destination, or the movement is towards the speaker."
+  ],
+  "compare": [
+    {
+      "id": "ni_iku",
+      "difference": "に行く moves away from the speaker. に来る moves toward them."
+    }
+  ]
+}

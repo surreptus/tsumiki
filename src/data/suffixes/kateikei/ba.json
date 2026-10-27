@@ -1,0 +1,45 @@
+{
+  "id": "ba",
+  "form": "ば",
+  "romaji": "ba",
+  "attaches_to": "kateikei",
+  "input_type": [
+    "verb",
+    "i-adj"
+  ],
+  "output_type": "clause",
+  "meaning": "Conditional: if.",
+  "examples": [
+    {
+      "japanese": "安ければ買う。",
+      "reading": "やすければかう。",
+      "gloss": "If it is cheap, I will buy it."
+    },
+    {
+      "japanese": "急げば間に合う。",
+      "reading": "いそげばまにあう。",
+      "gloss": "If you hurry, you will make it."
+    },
+    {
+      "japanese": "読めば分かる。",
+      "reading": "よめばわかる。",
+      "gloss": "If you read it, you will understand."
+    }
+  ],
+  "usage": [
+    "A conditional that treats the first clause as the one requirement for the second: 安ければ買う, 'if it is cheap, I will buy'.",
+    "い-adjectives use ければ. Nouns and な-adjectives use なら.",
+    "After an action, a request or command in the second clause often sounds odd. Use たら there.",
+    "Also in fixed phrases: よければ, できれば, 見れば分かる."
+  ],
+  "compare": [
+    {
+      "id": "tara",
+      "difference": "たら is the all-purpose 'if' or 'when' and works with requests and past events. ば is narrower."
+    },
+    {
+      "id": "to_conditional",
+      "difference": "と describes results that follow automatically. ば sets a requirement."
+    }
+  ]
+}

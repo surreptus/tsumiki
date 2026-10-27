@@ -1,0 +1,47 @@
+{
+  "id": "tokoro_just",
+  "form": "ところ",
+  "romaji": "tokorojust",
+  "attaches_to": "ta_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "noun",
+  "display": "たところ",
+  "output_class": "noun",
+  "related": [
+    "tokoro_doing",
+    "tokoro_about"
+  ],
+  "meaning": "Just did.",
+  "examples": [
+    {
+      "japanese": "今、帰ったところだ。",
+      "reading": "いま、かえったところだ。",
+      "gloss": "I have just come home."
+    },
+    {
+      "japanese": "たった今、起きたところだ。",
+      "reading": "たったいま、おきたところだ。",
+      "gloss": "I have only just woken up."
+    },
+    {
+      "japanese": "ちょうど電話を切ったところ。",
+      "reading": "ちょうどでんわをきったところ。",
+      "gloss": "I have just hung up."
+    }
+  ],
+  "usage": [
+    "The action finished a moment ago. It is closer in time than ばかり."
+  ],
+  "compare": [
+    {
+      "id": "bakari",
+      "difference": "たばかり is recent, but can cover weeks or months. たところ is seconds or minutes ago."
+    },
+    {
+      "id": "tokoro_doing",
+      "difference": "ているところ is in the middle of the action."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "te_morau",
+  "form": "もらう",
+  "romaji": "temorau",
+  "display": "てもらう",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "layer": 30,
+  "related": [
+    "te_ageru",
+    "te_kureru",
+    "te_itadaku"
+  ],
+  "meaning": "Have someone do something for me (I receive the favour).",
+  "examples": [
+    {
+      "japanese": "友達に写真を撮ってもらった。",
+      "reading": "ともだちにしゃしんをとってもらった。",
+      "gloss": "I had my friend take a photo for me."
+    },
+    {
+      "japanese": "先生に作文を直してもらう。",
+      "reading": "せんせいにさくぶんをなおしてもらう。",
+      "gloss": "I get my teacher to correct my essay."
+    },
+    {
+      "japanese": "兄に車で送ってもらった。",
+      "reading": "あににくるまでおくってもらった。",
+      "gloss": "My older brother drove me."
+    }
+  ],
+  "usage": [
+    "The receiver is the subject, and the giver takes に.",
+    "Often the nicest way to ask: 手伝ってもらえますか (\"could I have you help?\") uses the potential of もらう.",
+    "Humble form: ていただく."
+  ],
+  "compare": [
+    {
+      "id": "te_kureru",
+      "difference": "てくれる has the giver as the subject. てもらう has the receiver as the subject."
+    },
+    {
+      "id": "te_itadaku",
+      "difference": "ていただく is the humble version of てもらう, used for people above you."
+    }
+  ]
+}

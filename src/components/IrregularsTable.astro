@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+
+const rows = (await getCollection('irregulars')).map((e) => e.data);
+const labels = {
+  class: 'Class-wide irregulars',
+  suppletion: 'Suppletion',
+  'sound-change': 'Sound changes',
+  honorific: 'Honorific and humble verbs',
+  adjective: 'Adjectives',
+} as const;
+---
+{(Object.keys(labels) as (keyof typeof labels)[]).map((cat) => {
+  const group = rows.filter((r) => r.category === cat);
+  return group.length > 0 && (
+    <>
+      <h2 id={cat}>{labels[cat]}</h2>
+      <div class="table-scroll" tabindex="0" role="region" aria-label={labels[cat]}>
+      <table>
+        <thead><tr><th>Exception</th><th>What happens</th></tr></thead>
+        <tbody>
+          {group.map((r) => (
+            <tr id={r.id}><td><strong lang="ja">{r.title}</strong></td><td>{r.note}</td></tr>
+          ))}
+        </tbody>
+      </table>
+      </div>
+    </>
+  );
+})}

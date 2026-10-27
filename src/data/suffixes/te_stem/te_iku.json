@@ -1,0 +1,45 @@
+{
+  "id": "te_iku",
+  "form": "いく",
+  "romaji": "teiku",
+  "display": "ていく",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "aux_verb": "iku",
+  "layer": 30,
+  "related": [
+    "te_kuru"
+  ],
+  "meaning": "Do and go on; away from now.",
+  "examples": [
+    {
+      "japanese": "これからも頑張っていく。",
+      "reading": "これからもがんばっていく。",
+      "gloss": "I will keep on doing my best."
+    },
+    {
+      "japanese": "傘を持っていく。",
+      "reading": "かさをもっていく。",
+      "gloss": "I will take an umbrella."
+    },
+    {
+      "japanese": "歩いていきましょう。",
+      "reading": "あるいていきましょう。",
+      "gloss": "Let us go on foot."
+    }
+  ],
+  "usage": [
+    "Do something and go on: 持っていく (take along), 変わっていく (keep on changing), 頑張っていく (keep going).",
+    "It looks forward, away from now or from the speaker."
+  ],
+  "compare": [
+    {
+      "id": "te_kuru",
+      "difference": "ていく looks forward and away. てくる looks back and toward the speaker."
+    }
+  ]
+}

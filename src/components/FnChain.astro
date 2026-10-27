@@ -1,0 +1,17 @@
+---
+// Function notation with stems highlighted and linked: past(neg(renyokei(tai(renyokei(食べる))))).
+// `fns` runs innermost first, like the chain it is built from. Written inline so it can sit in a <pre>.
+interface Fn {
+  id: string;
+  /** Stems get their own colour and link to the stem page. */
+  stem?: boolean;
+  href?: string;
+}
+interface Props {
+  word: string;
+  fns: Fn[];
+}
+const { word, fns } = Astro.props;
+const outer = [...fns].reverse();
+---
+{outer.map((f) => <>{f.href ? <a class:list={['fn', f.stem ? 'fn-stem' : 'fn-suffix']} href={f.href}>{f.id}</a> : <span class:list={['fn', f.stem ? 'fn-stem' : 'fn-suffix']}>{f.id}</span>}(</>)}{word}{')'.repeat(fns.length)}

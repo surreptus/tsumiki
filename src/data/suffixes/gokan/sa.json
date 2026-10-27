@@ -1,0 +1,44 @@
+{
+  "id": "sa",
+  "form": "さ",
+  "romaji": "sa",
+  "attaches_to": "gokan",
+  "input_type": [
+    "i-adj",
+    "na-adj"
+  ],
+  "output_type": "noun",
+  "output_class": "noun",
+  "meaning": "The degree or quality of an adjective.",
+  "examples": [
+    {
+      "japanese": "山の高さを測る。",
+      "reading": "やまのたかさをはかる。",
+      "gloss": "I measure the height of the mountain."
+    },
+    {
+      "japanese": "その静かさに驚いた。",
+      "reading": "そのしずかさにおどろいた。",
+      "gloss": "I was surprised by how quiet it was."
+    },
+    {
+      "japanese": "優しさが大切だ。",
+      "reading": "やさしさがたいせつだ。",
+      "gloss": "Kindness is important."
+    }
+  ],
+  "usage": [
+    "Turns an adjective into a noun for its degree or quality. Attaches to the stem: 高い → 高さ, 静か → 静かさ.",
+    "ない becomes なさ, and いい becomes よさ."
+  ],
+  "compare": [
+    {
+      "id": "sou",
+      "difference": "そう on the stem describes how something looks. さ names how much of a quality it has."
+    },
+    {
+      "label": "み",
+      "difference": "み names a quality you feel, such as 重み. さ measures it, such as 重さ."
+    }
+  ]
+}

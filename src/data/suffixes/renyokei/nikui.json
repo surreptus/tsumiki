@@ -1,0 +1,47 @@
+{
+  "id": "nikui",
+  "form": "にくい",
+  "romaji": "nikui",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "output_class": "i-adj",
+  "layer": 40,
+  "related": [
+    "yasui"
+  ],
+  "meaning": "Hard to do.",
+  "examples": [
+    {
+      "japanese": "この漢字は覚えにくい。",
+      "reading": "このかんじはおぼえにくい。",
+      "gloss": "This kanji is hard to remember."
+    },
+    {
+      "japanese": "食べにくい料理ですね。",
+      "reading": "たべにくいりょうりですね。",
+      "gloss": "This is a dish that is hard to eat."
+    },
+    {
+      "japanese": "言いにくいことですが…",
+      "reading": "いいにくいことですが…",
+      "gloss": "It is hard to say, but..."
+    }
+  ],
+  "usage": [
+    "Hard to do. Often means awkward, inconvenient or uncomfortable rather than truly difficult.",
+    "Common with speaking and physical handling: 言いにくい, 歩きにくい, 食べにくい."
+  ],
+  "compare": [
+    {
+      "id": "yasui",
+      "difference": "The opposite."
+    },
+    {
+      "label": "づらい",
+      "difference": "づらい is close in meaning but stresses strain or emotional difficulty: 言いづらい."
+    }
+  ]
+}

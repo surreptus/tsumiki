@@ -1,0 +1,43 @@
+{
+  "id": "wake_da",
+  "form": "わけだ",
+  "romaji": "wakeda",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "na-no",
+  "meaning": "So that is why / it follows that.",
+  "examples": [
+    {
+      "japanese": "道理で眠いわけだ。",
+      "reading": "どうりでねむいわけだ。",
+      "gloss": "No wonder I am sleepy."
+    },
+    {
+      "japanese": "三年も住んでいるから、日本語が上手なわけだ。",
+      "reading": "さんねんもすんでいるから、にほんごがじょうずなわけだ。",
+      "gloss": "He has lived here for three years, so of course his Japanese is good."
+    },
+    {
+      "japanese": "今日は祭りだから、人が多いわけだ。",
+      "reading": "きょうはまつりだから、ひとがおおいわけだ。",
+      "gloss": "Today is a festival, so no wonder there are so many people."
+    }
+  ],
+  "usage": [
+    "Draws a conclusion that follows from what you already know.",
+    "わけがない means \"there is no way\". わけではない softens a statement: it is not that…",
+    "Nouns and な-adjectives link with の and な."
+  ],
+  "compare": [
+    {
+      "id": "hazu_da",
+      "difference": "はずだ is an expectation about the future or the unknown. わけだ explains a known fact."
+    }
+  ]
+}

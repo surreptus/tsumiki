@@ -1,0 +1,48 @@
+{
+  "id": "no_ato_ni",
+  "form": "あとに",
+  "written": "後に",
+  "display": "の後に",
+  "romaji": "noatoni",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "na-no",
+  "meaning": "After (a noun, formal).",
+  "examples": [
+    {
+      "japanese": "会議の後に、食事をした。",
+      "reading": "かいぎのあとに、しょくじをした。",
+      "gloss": "After the meeting, we had a meal."
+    },
+    {
+      "japanese": "授業の後に、友達と会う。",
+      "reading": "じゅぎょうのあとに、ともだちとあう。",
+      "gloss": "I meet a friend after class."
+    },
+    {
+      "japanese": "雨の後に虹が出た。",
+      "reading": "あめのあとににじがでた。",
+      "gloss": "A rainbow appeared after the rain."
+    }
+  ],
+  "usage": [
+    "A noun links with の: 会議の後に. After a verb, use the た-form instead: 食べた後に."
+  ],
+  "compare": [
+    {
+      "id": "ato_ni",
+      "difference": "Same meaning, but 後に on a verb follows the た-form: 終わった後に."
+    },
+    {
+      "id": "no_ato_de",
+      "difference": "後で is the everyday form. 後に is more written."
+    }
+  ],
+  "related": [
+    "ato_ni",
+    "no_ato_de"
+  ]
+}

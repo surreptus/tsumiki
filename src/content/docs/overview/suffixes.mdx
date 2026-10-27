@@ -1,0 +1,62 @@
+---
+title: Suffixes
+description: A suffix takes one particular stem and returns a new, typed word.
+sidebar:
+  order: 3
+---
+
+import SuffixTable from '../../../components/SuffixTable.astro';
+import SuffixesArt from '../../../components/illustrations/SuffixesArt.astro';
+import Derivation from '../../../components/Derivation.astro';
+
+A **suffix** is the other half of the idea: an ending that takes one specific stem and returns a new word. Every suffix can be described by three facts.
+
+<SuffixesArt />
+
+| Fact | For たい ("want to") |
+| --- | --- |
+| Attaches to which stem | 連用形, the ます-stem |
+| Takes which type | a verb |
+| Gives which type | an い-adjective |
+
+So `tai(書く)` takes the ます-stem 書き, adds たい, and gives 書きたい, which is an い-adjective. With the stem step written out, it is `tai(renyokei(書く))`: the stem function runs first, then the suffix.
+
+## One suffix, one stem
+
+This is the rule that does most of the work. たい takes the ます-stem, ない takes the ない-stem, ば takes the ば-stem. They never swap. That is why 書きない and 書かたい are wrong without needing a separate rule for each: the suffix simply does not accept that stem.
+
+Because each suffix names its stem, the short form `tai(書く)` loses nothing. Every suffix is listed by stem. This is the list for the ます-stem, generated from the data:
+
+<SuffixTable attachesTo="renyokei" />
+
+## A suffix can change shape
+
+Some suffixes have two shapes, chosen by the sound of the stem in front of them.
+
+| Suffix | After an ichidan stem | After a godan stem |
+| --- | --- | --- |
+| passive | 食べ**られ**る | 書か**れ**る |
+| causative | 食べ**させ**る | 書か**せ**る |
+| volitional | 食べ**よう** | 書こ**う** |
+
+It is still one suffix. The shape is just chosen by what comes before it.
+
+## Some forms are the stem alone
+
+The て-form and the past (た-form) need no ending at all, because the stem already includes it. They are still functions, and you can chain after them: `past(neg(食べる))` is 食べなかった.
+
+## The same job in different words
+
+The idea of "negative" is one function, but it reaches the same result by different routes depending on what you give it:
+
+| Put in | Route | Get out |
+| --- | --- | --- |
+| a verb (食べる) | ない-stem + ない | 食べない |
+| an い-adjective (高い) | stem + くない | 高くない |
+| a noun or な-adjective (静か) | word + じゃない | 静かじゃない |
+
+<Derivation verb="静か" chain={["neg", "past"]} />
+
+Here the noun-like 静か turns into an い-adjective by the first step, so the past follows the い-adjective route: なかった. The type changed, and that decided the next step.
+
+Next: how those types control what can follow, in [Types and composition](/overview/types/).

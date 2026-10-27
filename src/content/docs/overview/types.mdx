@@ -1,0 +1,62 @@
+---
+title: Types and composition
+description: Every result has a type, and the type decides what can come next.
+sidebar:
+  order: 4
+---
+
+import Derivation from '../../../components/Derivation.astro';
+import TypesArt from '../../../components/illustrations/TypesArt.astro';
+
+When you chain functions, one question matters at every step: *what did the last function give me?* The answer is the **type** of the result.
+
+<TypesArt />
+
+## Six types
+
+| Type | Examples | What it can take next |
+| --- | --- | --- |
+| verb | 食べる, 食べさせる | any verb suffix, because a verb has all its stems |
+| い-adjective | 食べたい, 高い | くない, かった, くて, ば, and so on |
+| な-adjective | 静か | じゃない, だった, で |
+| noun | 学生, 食べ方 | じゃない, だった, で |
+| adverb | 高く, 静かに | nothing: it modifies a verb in the sentence |
+| closed clause | 食べよう, 食べて | almost nothing: only particles and sentence endings |
+
+## The result is a new word with its own stems
+
+This is what makes long chains possible. 食べさせる is not just a changed 食べる. It is a **new ichidan verb**, so it has all its own stems, and that is why the passive can attach to it. Each step produces a word that is as complete as the one you started with.
+
+<Derivation verb="食べる" chain={["causative", "passive"]} />
+
+## Why some chains fail
+
+Chains fail when the type or shape of the result does not fit the next function. The explanation is always the same sentence: *this suffix needs X, and what you have is Y.*
+
+ない gives an い-adjective, but たい only attaches to verbs:
+
+<Derivation verb="食べる" chain={["neg", "tai"]} expectError />
+
+The past tense ends the word, so nothing that needs a stem can follow it:
+
+<Derivation verb="食べる" chain={["past", "masu"]} expectError />
+
+A ます-form has no stems of its own (only a few endings like ません and ました), so たい has nothing to attach to:
+
+<Derivation verb="食べる" chain={["masu", "tai"]} expectError />
+
+## A usual order
+
+Most real words stack in the same order, innermost first:
+
+causative → passive → aspect (ている, てしまう…) → たい → negative → tense → politeness
+
+You can break the order and sometimes get a valid word, but it will be an unusual one. 食べられさせる (passive then causative) passes the type check, but it is not something people say. The [composition rules](/reference/composition-rules/) page has a mnemonic for the order.
+
+One note on politeness. For verbs, ます sits low in the chain, because it attaches to the ます-stem and then has its own small set of endings (ません, ました, ませんでした). For adjectives and nouns, です sits at the end. You can see this in the next page.
+
+## Dead ends, on purpose
+
+Closed clauses, past forms and ます-forms are dead ends for most suffixes. That is not a flaw in the model. It is the model telling you something true: a word that has already finished cannot be built on.
+
+Next: [worked examples](/overview/examples/) you can read step by step.

@@ -1,0 +1,98 @@
+---
+// Step-by-step trace of a composition, drawn as a chain of blocks (積み木) with the step
+// table underneath. Built at build time: an invalid chain fails the build (so a typo cannot
+// ship) unless `expectError` marks it as a deliberate teaching example.
+import { getCollection } from 'astro:content';
+import { TYPE_SHORT, compose, findWord } from '../lib/conjugate';
+import { stemHref, suffixHref } from '../lib/paths';
+import FnChain from './FnChain.astro';
+import Ja from './Ja.astro';
+import TypeChip from './TypeChip.astro';
+
+interface Props {
+  verb: string;
+  chain: string[];
+  expectError?: boolean;
+  /** Also print the notation with the stem step written out: tai(renyokei(書く)). */
+  stems?: boolean;
+}
+const { verb, chain, expectError = false, stems = false } = Astro.props;
+
+const word = findWord(verb);
+if (!word) throw new Error(`<Derivation>: unknown word "${verb}"`);
+const derivation = compose(word.id, chain);
+if (derivation.error && !expectError) {
+  throw new Error(`<Derivation verb="${verb}" chain=${JSON.stringify(chain)}>: ${derivation.error.message}`);
+}
+if (!derivation.error && expectError) {
+  throw new Error(`<Derivation verb="${verb}" chain=${JSON.stringify(chain)}> was marked expectError but is valid`);
+}
+
+const suffixes = new Map((await getCollection('suffixes')).map((e) => [e.id, e.data]));
+const shown = derivation.steps;
+// past(neg(tai(passive(causative(食べる)))))
+const compact = shown.map((st) => ({ id: st.suffixId, href: suffixHref(suffixes.get(st.suffixId)!) }));
+// past(neg(renyokei(tai(...)))): zero-suffix functions (te, past, imperative) *are* their stem, so no extra step
+const expanded = shown.flatMap((st) => {
+  const suffix = suffixes.get(st.suffixId)!;
+  const fn = { id: st.suffixId, href: suffixHref(suffix) };
+  return st.stem && suffix.form ? [{ id: st.stem.id, stem: true, href: stemHref(st.stem.id) }, fn] : [fn];
+});
+const notation = shown.reduce((inner, st) => `${st.suffixId}(${inner})`, word.kanji);
+const e = derivation.error;
+---
+<div class="derivation">
+  <pre class="code-block" tabindex="0" aria-label="Composition in function notation"><code><span class="code-notation"><FnChain word={word.kanji} fns={compact} />{e && ` → ${chain[e.step]}(…)`}</span>{stems && !e && (
+<>{'\n'}<span class="code-comment">// with stems: </span><span class="code-notation"><FnChain word={word.kanji} fns={expanded} /></span></>
+)}{!e && derivation.result && (
+<>{'\n'}<span class="code-comment">= {derivation.result.text}   // {TYPE_SHORT[derivation.result.type]}{derivation.result.state === 'past' ? ', past' : ''}</span></>
+)}{e && (
+<>{'\n'}<span class="code-error">// type error at step {e.step + 1} ({chain[e.step]}), see below</span></>
+)}</code></pre>
+
+  <div class="derivation-table" tabindex="0" role="region" aria-label={`Derivation steps: ${notation}`}>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Function</th><th>Attaches to</th><th>Result</th><th>Type</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0</td><td><em>start</em></td><td>—</td>
+          <td><Ja text={derivation.start.text} /></td>
+          <td><TypeChip type={derivation.start.type} /></td>
+        </tr>
+        {derivation.steps.map((step) => {
+          const suffix = suffixes.get(step.suffixId)!;
+          return (
+            <tr>
+              <td>{step.index + 1}</td>
+              <td>
+                <a href={suffixHref(suffix)}><code>{step.suffixId}</code></a>
+                {suffix.form && <> <span lang="ja">{suffix.display ?? suffix.written ?? suffix.form}</span></>}
+              </td>
+              <td>
+                {step.stem
+                  ? <><Ja text={step.stem.surface.text} /> <small>(<a class="fn-stem" href={stemHref(step.stem.id)}>{step.stem.id}</a>)</small></>
+                  : <small>whole form</small>}
+              </td>
+              <td><Ja text={step.output.text} /></td>
+              <td><TypeChip type={step.output.type} past={step.output.state === 'past'} /></td>
+            </tr>
+          );
+        })}
+        {e && (
+          <tr class="derivation-error">
+            <td>{e.step + 1}</td><td><code>{chain[e.step]}</code></td>
+            <td colspan="3"><strong>Type error.</strong> {e.message}</td>
+          </tr>
+        )}
+      </tbody>
+    </table>
+  </div>
+
+  {derivation.steps.some((s) => s.warnings.length) && (
+    <ul class="derivation-warnings">
+      {derivation.steps.flatMap((s) => s.warnings.map((w) => <li>{w}</li>))}
+    </ul>
+  )}
+</div>

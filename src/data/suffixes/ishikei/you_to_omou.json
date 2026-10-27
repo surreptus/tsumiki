@@ -1,0 +1,58 @@
+{
+  "id": "you_to_omou",
+  "form": "ようとおもう",
+  "romaji": "youtoomou",
+  "attaches_to": "ishikei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "written": "ようと思う",
+  "output_class": "godan",
+  "allomorphs": [
+    {
+      "classes": [
+        "godan",
+        "masu"
+      ],
+      "form": "うとおもう",
+      "written": "うと思う"
+    }
+  ],
+  "related": [
+    "tsumori"
+  ],
+  "meaning": "I am thinking of doing.",
+  "examples": [
+    {
+      "japanese": "来年日本に行こうと思う。",
+      "reading": "らいねんにほんにいこうとおもう。",
+      "gloss": "I am thinking of going to Japan next year."
+    },
+    {
+      "japanese": "毎朝走ろうと思っている。",
+      "reading": "まいあさはしろうとおもっている。",
+      "gloss": "I am thinking of running every morning."
+    },
+    {
+      "japanese": "新しい車を買おうと思った。",
+      "reading": "あたらしいくるまをかおうとおもった。",
+      "gloss": "I thought I would buy a new car."
+    }
+  ],
+  "usage": [
+    "Says what you are leaning towards or have just decided. It is about your own intention.",
+    "ようと思っている describes a plan you have been holding.",
+    "Use it with the speaker as the subject. For other people, use と思っている or ようとしている."
+  ],
+  "compare": [
+    {
+      "id": "tsumori",
+      "difference": "つもり is a firmer plan. ようと思う is a tentative, more spoken intention."
+    },
+    {
+      "id": "volitional",
+      "difference": "The volitional alone means \"let us\" or \"I will\". ようと思う reports an intention."
+    }
+  ]
+}

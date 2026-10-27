@@ -1,0 +1,59 @@
+{
+  "id": "hou_ga_ii",
+  "form": "ほうがいい",
+  "romaji": "hougaii",
+  "attaches_to": "ta_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "written": "方がいい",
+  "output_class": "i-adj",
+  "aux_verb": "ii",
+  "meaning": "Had better do.",
+  "examples": [
+    {
+      "japanese": "早く寝たほうがいい。",
+      "reading": "はやくねたほうがいい。",
+      "gloss": "You had better go to bed early."
+    },
+    {
+      "japanese": "医者に行ったほうがいいですよ。",
+      "reading": "いしゃにいったほうがいいですよ。",
+      "gloss": "You should go see a doctor."
+    },
+    {
+      "japanese": "食べすぎないほうがいい。",
+      "reading": "たべすぎないほうがいい。",
+      "gloss": "You should not eat too much."
+    }
+  ],
+  "variants": [
+    {
+      "when": {
+        "classes": [
+          "i-adj"
+        ]
+      },
+      "attaches_to": "dictionary",
+      "input_type": [
+        "i-adj"
+      ]
+    }
+  ],
+  "usage": [
+    "Advice: 'you had better'. 早く寝たほうがいい.",
+    "It is an advisory, softer than a requirement. For rules, use なければならない.",
+    "Advice not to do something uses ない: 食べすぎないほうがいい."
+  ],
+  "compare": [
+    {
+      "difference": "べき states what is right or required. ほうがいい recommends what is better.",
+      "id": "beki"
+    },
+    {
+      "difference": "なければならない is an obligation. ほうがいい is a suggestion.",
+      "id": "nakereba_naranai"
+    }
+  ]
+}

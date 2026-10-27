@@ -1,0 +1,43 @@
+{
+  "id": "kata",
+  "form": "かた",
+  "romaji": "kata",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "noun",
+  "written": "方",
+  "related": [
+    "koto"
+  ],
+  "meaning": "The way of doing.",
+  "examples": [
+    {
+      "japanese": "箸の使い方を教えてください。",
+      "reading": "はしのつかいかたをおしえてください。",
+      "gloss": "Please teach me how to use chopsticks."
+    },
+    {
+      "japanese": "この漢字の読み方が分からない。",
+      "reading": "このかんじのよみかたがわからない。",
+      "gloss": "I do not know how to read this kanji."
+    },
+    {
+      "japanese": "食べ方がきれいですね。",
+      "reading": "たべかたがきれいですね。",
+      "gloss": "You have nice table manners."
+    }
+  ],
+  "usage": [
+    "The way of doing something. The result is a noun, so it follows の or a particle: 日本語の話し方.",
+    "The reading is かた, not ほう.",
+    "It names the manner, not the act. 話し方 is how someone speaks. 話すこと is the act of speaking."
+  ],
+  "compare": [
+    {
+      "id": "koto",
+      "difference": "こと turns a clause into 'the act of'. 方 turns a verb into 'the way of'."
+    }
+  ]
+}

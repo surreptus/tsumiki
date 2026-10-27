@@ -1,0 +1,43 @@
+{
+  "id": "te_oku",
+  "form": "おく",
+  "romaji": "teoku",
+  "display": "ておく",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "layer": 30,
+  "register": "Casual speech: とく.",
+  "meaning": "Do in advance, or leave as is.",
+  "examples": [
+    {
+      "japanese": "宿題をしておく。",
+      "reading": "しゅくだいをしておく。",
+      "gloss": "I will do my homework in advance."
+    },
+    {
+      "japanese": "先に買っておきます。",
+      "reading": "さきにかっておきます。",
+      "gloss": "I will buy it beforehand."
+    },
+    {
+      "japanese": "電気をつけておいてください。",
+      "reading": "でんきをつけておいてください。",
+      "gloss": "Please leave the light on."
+    }
+  ],
+  "usage": [
+    "Do something in advance, or leave something as it is: 窓を開けておく.",
+    "Often with 先に, もう or あらかじめ.",
+    "In speech it contracts to とく: 書いとく."
+  ],
+  "compare": [
+    {
+      "id": "te_aru",
+      "difference": "ておく is the person's action. てある is the lasting result."
+    }
+  ]
+}

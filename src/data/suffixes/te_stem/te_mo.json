@@ -1,0 +1,46 @@
+{
+  "id": "te_mo",
+  "form": "も",
+  "romaji": "temo",
+  "display": "ても",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "meaning": "Even if / even though.",
+  "examples": [
+    {
+      "japanese": "雨が降っても行きます。",
+      "reading": "あめがふってもいきます。",
+      "gloss": "I will go even if it rains."
+    },
+    {
+      "japanese": "高くても買います。",
+      "reading": "たかくてもかいます。",
+      "gloss": "I will buy it even if it is expensive."
+    },
+    {
+      "japanese": "何度聞いても分かりません。",
+      "reading": "なんどきいてもわかりません。",
+      "gloss": "However many times I ask, I do not understand."
+    }
+  ],
+  "usage": [
+    "Often paired with a question word: いくら〜ても, 何度〜ても.",
+    "It states a hypothetical or general case. For a fact that goes against expectation, use のに."
+  ],
+  "compare": [
+    {
+      "id": "noni",
+      "difference": "のに is about a real fact that contradicts what you expected. ても is hypothetical or \"regardless of\"."
+    },
+    {
+      "id": "tara",
+      "difference": "たら says \"if / when X, then Y\". ても says \"even if X, still Y\"."
+    }
+  ]
+}

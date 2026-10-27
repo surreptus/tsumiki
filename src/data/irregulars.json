@@ -1,0 +1,547 @@
+[
+  {
+    "id": "suru-passive",
+    "category": "class",
+    "title": "する before れる: さ",
+    "note": "する has three 未然形 stems. し goes in front of ない, but the passive れる takes さ, giving される.",
+    "match": {
+      "classes": [
+        "suru"
+      ]
+    },
+    "suffix": "passive",
+    "stems": [
+      "mizenkei"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 2,
+      "add": "さ"
+    }
+  },
+  {
+    "id": "suru-causative",
+    "category": "class",
+    "title": "する before せる: さ",
+    "note": "The causative also takes さ, giving させる. (Not する→しさせる.)",
+    "match": {
+      "classes": [
+        "suru"
+      ]
+    },
+    "suffix": "causative",
+    "stems": [
+      "mizenkei"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 2,
+      "add": "さ"
+    }
+  },
+  {
+    "id": "suru-zu",
+    "category": "class",
+    "title": "する before ず: せ",
+    "note": "The literary negative ず takes せ: せず, 勉強せずに.",
+    "match": {
+      "classes": [
+        "suru"
+      ]
+    },
+    "suffix": "zu",
+    "stems": [
+      "mizenkei"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 2,
+      "add": "せ"
+    }
+  },
+  {
+    "id": "suru-potential",
+    "category": "suppletion",
+    "title": "する → できる",
+    "note": "The potential of する is a different verb altogether: できる. It replaces the whole stem-plus-suffix result.",
+    "match": {
+      "classes": [
+        "suru"
+      ]
+    },
+    "suffix": "potential",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "できる"
+    }
+  },
+  {
+    "id": "aru-neg",
+    "category": "suppletion",
+    "title": "ある → ない",
+    "note": "The negative of ある is not あらない but ない. Everything built on ある (てある, ことがある) inherits this.",
+    "match": {
+      "verbs": [
+        "aru"
+      ]
+    },
+    "suffix": "neg",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "ない"
+    }
+  },
+  {
+    "id": "iku-te",
+    "category": "sound-change",
+    "title": "行く → 行って",
+    "note": "Regular く verbs become いて. 行く is the exception: 行って, not 行いて.",
+    "match": {
+      "verbs": [
+        "iku"
+      ]
+    },
+    "stems": [
+      "te_stem"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 1,
+      "add": "って"
+    }
+  },
+  {
+    "id": "iku-ta",
+    "category": "sound-change",
+    "title": "行く → 行った",
+    "note": "The た-form follows the て-form: 行った.",
+    "match": {
+      "verbs": [
+        "iku"
+      ]
+    },
+    "stems": [
+      "ta_stem"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 1,
+      "add": "った"
+    }
+  },
+  {
+    "id": "tou-te",
+    "category": "sound-change",
+    "title": "問う → 問うて",
+    "note": "A few literary う verbs keep the う instead of doubling the consonant: 問うて.",
+    "match": {
+      "verbs": [
+        "tou"
+      ]
+    },
+    "stems": [
+      "te_stem"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 0,
+      "add": "て"
+    }
+  },
+  {
+    "id": "tou-ta",
+    "category": "sound-change",
+    "title": "問う → 問うた",
+    "note": "The た-form follows the て-form: 問うた.",
+    "match": {
+      "verbs": [
+        "tou"
+      ]
+    },
+    "stems": [
+      "ta_stem"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 0,
+      "add": "た"
+    }
+  },
+  {
+    "id": "honorific-renyokei",
+    "category": "honorific",
+    "title": "Honorific godan verbs: ります → います",
+    "note": "いらっしゃる, なさる, くださる and おっしゃる are godan verbs whose 連用形 ends in い instead of り: いらっしゃいます, not いらっしゃります.",
+    "match": {
+      "verbs": [
+        "irassharu",
+        "nasaru",
+        "kudasaru",
+        "ossharu"
+      ]
+    },
+    "stems": [
+      "renyokei"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 1,
+      "add": "い"
+    }
+  },
+  {
+    "id": "gozaru-renyokei",
+    "category": "honorific",
+    "title": "ござる → ございます",
+    "note": "The humble-polite ござる behaves like the honorific godan verbs: ございます.",
+    "match": {
+      "verbs": [
+        "gozaru"
+      ]
+    },
+    "stems": [
+      "renyokei"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 1,
+      "add": "い"
+    }
+  },
+  {
+    "id": "honorific-meireikei",
+    "category": "honorific",
+    "title": "Honorific godan verbs: imperative in い",
+    "note": "The commands are いらっしゃい, なさい, ください, おっしゃい. They are soft, polite requests rather than blunt orders.",
+    "match": {
+      "verbs": [
+        "irassharu",
+        "nasaru",
+        "kudasaru",
+        "ossharu"
+      ]
+    },
+    "stems": [
+      "meireikei"
+    ],
+    "target": "stem",
+    "rule": {
+      "drop": 1,
+      "add": "い"
+    }
+  },
+  {
+    "id": "ii-lemma",
+    "category": "adjective",
+    "title": "いい → よい",
+    "note": "いい only exists in the dictionary form. Every other form is built on よい: よくない, よかった, よくて, よければ. Compounds (かっこいい, ほうがいい) inherit this.",
+    "match": {
+      "verbs": [
+        "ii"
+      ]
+    },
+    "stems": [
+      "renyokei",
+      "kateikei",
+      "te_stem",
+      "ta_stem",
+      "gokan"
+    ],
+    "target": "lemma",
+    "rule": {
+      "drop": 2,
+      "add": "よい"
+    }
+  },
+  {
+    "id": "sonkei-taberu",
+    "category": "honorific",
+    "title": "食べる, 飲む → 召し上がる",
+    "note": "The honorific for eating and drinking is its own verb, not お食べになる.",
+    "match": {
+      "verbs": [
+        "taberu",
+        "nomu"
+      ]
+    },
+    "suffix": "o_ni_naru",
+    "target": "form",
+    "rule": {
+      "drop": 3,
+      "add": "召し上がる",
+      "reading": {
+        "drop": 3,
+        "add": "めしあがる"
+      }
+    }
+  },
+  {
+    "id": "sonkei-miru",
+    "category": "honorific",
+    "title": "見る → ご覧になる",
+    "note": "見る has one-syllable stem, so it uses ご覧になる instead of お見になる.",
+    "match": {
+      "verbs": [
+        "miru"
+      ]
+    },
+    "suffix": "o_ni_naru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "ご覧になる",
+      "reading": {
+        "drop": 2,
+        "add": "ごらんになる"
+      }
+    }
+  },
+  {
+    "id": "sonkei-iku",
+    "category": "honorific",
+    "title": "行く, 来る, いる → いらっしゃる",
+    "note": "Three verbs of movement and being share one honorific verb.",
+    "match": {
+      "verbs": [
+        "iku",
+        "kuru",
+        "iru-exist"
+      ]
+    },
+    "suffix": "o_ni_naru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "いらっしゃる",
+      "reading": {
+        "drop": 2,
+        "add": "いらっしゃる"
+      }
+    },
+    "key": "irassharu"
+  },
+  {
+    "id": "sonkei-suru",
+    "category": "honorific",
+    "title": "する → なさる",
+    "note": "The honorific of する.",
+    "match": {
+      "verbs": [
+        "suru"
+      ]
+    },
+    "suffix": "o_ni_naru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "なさる",
+      "reading": {
+        "drop": 2,
+        "add": "なさる"
+      }
+    },
+    "key": "nasaru"
+  },
+  {
+    "id": "sonkei-iu",
+    "category": "honorific",
+    "title": "言う → おっしゃる",
+    "note": "The honorific of 言う.",
+    "match": {
+      "verbs": [
+        "iu"
+      ]
+    },
+    "suffix": "o_ni_naru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "おっしゃる",
+      "reading": {
+        "drop": 2,
+        "add": "おっしゃる"
+      }
+    },
+    "key": "ossharu"
+  },
+  {
+    "id": "kenjou-taberu",
+    "category": "honorific",
+    "title": "食べる, 飲む → いただく",
+    "note": "The humble verb for eating and drinking, and for receiving.",
+    "match": {
+      "verbs": [
+        "taberu",
+        "nomu"
+      ]
+    },
+    "suffix": "o_suru",
+    "target": "form",
+    "rule": {
+      "drop": 3,
+      "add": "いただく",
+      "reading": {
+        "drop": 3,
+        "add": "いただく"
+      }
+    },
+    "output_class": "godan"
+  },
+  {
+    "id": "kenjou-iku",
+    "category": "honorific",
+    "title": "行く, 来る → 参る",
+    "note": "The humble verb for going and coming.",
+    "match": {
+      "verbs": [
+        "iku",
+        "kuru"
+      ]
+    },
+    "suffix": "o_suru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "参る",
+      "reading": {
+        "drop": 2,
+        "add": "まいる"
+      }
+    },
+    "output_class": "godan"
+  },
+  {
+    "id": "kenjou-iru",
+    "category": "honorific",
+    "title": "いる → おる",
+    "note": "The humble verb for being, used for living things.",
+    "match": {
+      "verbs": [
+        "iru-exist"
+      ]
+    },
+    "suffix": "o_suru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "おる",
+      "reading": {
+        "drop": 2,
+        "add": "おる"
+      }
+    },
+    "output_class": "godan"
+  },
+  {
+    "id": "kenjou-suru",
+    "category": "honorific",
+    "title": "する → いたす",
+    "note": "The humble verb for doing.",
+    "match": {
+      "verbs": [
+        "suru"
+      ]
+    },
+    "suffix": "o_suru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "いたす",
+      "reading": {
+        "drop": 2,
+        "add": "いたす"
+      }
+    },
+    "output_class": "godan"
+  },
+  {
+    "id": "kenjou-iu",
+    "category": "honorific",
+    "title": "言う → 申す",
+    "note": "The humble verb for saying.",
+    "match": {
+      "verbs": [
+        "iu"
+      ]
+    },
+    "suffix": "o_suru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "申す",
+      "reading": {
+        "drop": 2,
+        "add": "もうす"
+      }
+    },
+    "output_class": "godan"
+  },
+  {
+    "id": "kenjou-miru",
+    "category": "honorific",
+    "title": "見る → 拝見する",
+    "note": "The humble verb for looking.",
+    "match": {
+      "verbs": [
+        "miru"
+      ]
+    },
+    "suffix": "o_suru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "拝見する",
+      "reading": {
+        "drop": 2,
+        "add": "はいけんする"
+      }
+    },
+    "output_class": "suru"
+  },
+  {
+    "id": "kenjou-au",
+    "category": "honorific",
+    "title": "会う → お目にかかる",
+    "note": "The humble verb for meeting.",
+    "match": {
+      "verbs": [
+        "au"
+      ]
+    },
+    "suffix": "o_suru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "お目にかかる",
+      "reading": {
+        "drop": 2,
+        "add": "おめにかかる"
+      }
+    },
+    "output_class": "godan"
+  },
+  {
+    "id": "kenjou-kiku",
+    "category": "honorific",
+    "title": "聞く → 伺う",
+    "note": "The humble verb for asking and visiting.",
+    "match": {
+      "verbs": [
+        "kiku"
+      ]
+    },
+    "suffix": "o_suru",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "伺う",
+      "reading": {
+        "drop": 2,
+        "add": "うかがう"
+      }
+    },
+    "output_class": "godan"
+  }
+]

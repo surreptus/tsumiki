@@ -1,0 +1,49 @@
+{
+  "id": "na_prohibitive",
+  "form": "な",
+  "romaji": "na",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "register": "Rough; the polite version is ないでください.",
+  "related": [
+    "imperative"
+  ],
+  "meaning": "Plain prohibition: don't do.",
+  "examples": [
+    {
+      "japanese": "行くな！",
+      "reading": "いくな！",
+      "gloss": "Don't go!"
+    },
+    {
+      "japanese": "ここで食べるな。",
+      "reading": "ここでたべるな。",
+      "gloss": "Don't eat here."
+    },
+    {
+      "japanese": "触るな。",
+      "reading": "さわるな。",
+      "gloss": "Don't touch."
+    },
+    {
+      "japanese": "負けるな！",
+      "reading": "まけるな！",
+      "gloss": "Don't give up! / Don't lose!"
+    }
+  ],
+  "usage": [
+    "A plain prohibition: 'don't'. 行くな.",
+    "It is harsh, like the imperative. Politely, use ないでください.",
+    "Like the imperative, it can encourage: 負けるな！ (Don't give up!), 泣くな！ (Don't cry!).",
+    "Do not confuse it with the sentence-final particle な, which softens or adds emphasis."
+  ],
+  "compare": [
+    {
+      "id": "imperative",
+      "difference": "The imperative says 'do it'. ～な says 'don't'."
+    }
+  ]
+}

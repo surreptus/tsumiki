@@ -1,0 +1,42 @@
+{
+  "id": "te_shimau",
+  "form": "しまう",
+  "romaji": "teshimau",
+  "display": "てしまう",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "layer": 30,
+  "register": "Casual speech: ちゃう / じゃう.",
+  "meaning": "Do completely, or do with regret.",
+  "examples": [
+    {
+      "japanese": "全部食べてしまった。",
+      "reading": "ぜんぶたべてしまった。",
+      "gloss": "I ate it all up."
+    },
+    {
+      "japanese": "財布を忘れてしまいました。",
+      "reading": "さいふをわすれてしまいました。",
+      "gloss": "I have forgotten my wallet."
+    },
+    {
+      "japanese": "もう帰ってしまった。",
+      "reading": "もうかえってしまった。",
+      "gloss": "He has already gone home."
+    }
+  ],
+  "usage": [
+    "Two senses: finish completely (全部食べてしまった) and regret something unintended (財布を忘れてしまった).",
+    "In speech it contracts to ちゃう or じゃう: 食べちゃった. The contracted form leans toward regret or a softer tone."
+  ],
+  "compare": [
+    {
+      "id": "past",
+      "difference": "The past simply reports an event. てしまった adds finality or regret."
+    }
+  ]
+}

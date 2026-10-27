@@ -1,0 +1,74 @@
+---
+title: The idea
+description: Japanese verbs and adjectives as small functions that combine, instead of tables to memorise.
+sidebar:
+  order: 1
+---
+
+import Derivation from '../../../components/Derivation.astro';
+import IdeaArt from '../../../components/illustrations/IdeaArt.astro';
+
+Most Japanese courses teach conjugation as tables: a verb on the left, a dozen forms on the right, and a lot of memorising. This guide takes a different view. A verb or adjective is built from a **small number of moving parts**, and every long form is those parts clicked together, like building blocks (積み木, *tsumiki*).
+
+<IdeaArt />
+
+## Words in, words out
+
+Think of each ending as a small **function**: you put a word in, and a changed word comes out. We write that with brackets:
+
+`past(食べる)` reads "the past of 食べる", and the answer is 食べた.
+
+That is all the notation means. Here are a few, with the same thing as a plain table:
+
+| Function | Put in | Get out | Meaning |
+| --- | --- | --- | --- |
+| `past` | 食べる | 食べた | ate |
+| `neg` | 食べる | 食べない | does not eat |
+| `tai` | 食べる | 食べたい | wants to eat |
+| `potential` | 食べる | 食べられる | can eat |
+
+That is all "function" means here: something goes in, something comes out. If the word sounds technical, keep the picture and ignore the name.
+
+## Two kinds of function
+
+Look closely at `tai(書く)`. The ending たい cannot attach to 書く itself. You have to say 書きたい, so the verb must first be turned into 書き. That first step is a function too, called a **stem**:
+
+| Step | Function | Put in | Get out |
+| --- | --- | --- | --- |
+| 1 | `renyokei` (a stem) | 書く | 書き |
+| 2 | `tai` (a suffix) | 書き | 書きたい |
+
+Written in one line, that is `tai(renyokei(書く))`. The two kinds of function do different jobs:
+
+- A **stem** gets the word into the right shape. It changes the verb's own ending and adds nothing.
+- A **suffix** attaches to one particular stem and adds meaning.
+
+Every suffix takes exactly one stem. たい only ever takes `renyokei`, so naming it is redundant, and we usually leave it out and write `tai(書く)`. The short form is a shorthand for the long one, and nothing is lost. When you want to see the hidden step, this guide shows it as a second line:
+
+<Derivation verb="書く" chain={["tai"]} stems />
+
+## Functions can be chained
+
+The answer from one function can go straight into the next. `tai(食べる)` gives 食べたい, and `neg` of that gives 食べたくない ("does not want to eat"). Written in one go, that is `neg(tai(食べる))`. You read it from the inside out.
+
+Here is a long, intimidating word taken apart this way. 食べさせられたくなかった means "did not want to be made to eat":
+
+<Derivation verb="食べる" chain={["causative", "passive", "tai", "neg", "past"]} stems />
+
+Five small steps, and each step is a rule you already know from a smaller word. Nothing in the long form is new. The second line shows the stem each suffix picked up along the way, and the table lists the same thing in the "Attaches to" column.
+
+## Three ideas make this work
+
+1. **Stems.** Functions that put the verb in the right shape. 食べる becomes 食べ, and 書く becomes 書か or 書き, depending on what comes next. See [Stems](/overview/stems/).
+2. **Suffixes.** An ending such as たい or ない is a function that takes one particular stem and gives back a new word. See [Suffixes](/overview/suffixes/).
+3. **Types.** Every result is a verb, an adjective, a noun or a finished clause, and that decides what can come next. This is why 食べたいない is impossible and 食べたくない is fine. See [Types and composition](/overview/types/).
+
+## What this gives you
+
+- You learn a few stems and a few dozen endings instead of hundreds of separate forms.
+- Mistakes become predictable. If a chain does not work, the type tells you why.
+- A long form is never a new thing to memorise. It is just more of the same.
+
+## Where it stops
+
+Not everything in Japanese works like this. Particles such as は and が, politeness choices, casual speech and set phrases depend on meaning and context, not on rules that combine. Those live in the [Guides](/guides/particles/), and each guide begins by saying why the building-block view stops there.

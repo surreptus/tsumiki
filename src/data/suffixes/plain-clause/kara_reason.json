@@ -1,0 +1,58 @@
+{
+  "id": "kara_reason",
+  "form": "から",
+  "romaji": "kara",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun",
+    "clause"
+  ],
+  "output_type": "clause",
+  "accepts": [
+    "lemma",
+    "past",
+    "closed"
+  ],
+  "noun_link": "da",
+  "constraints": {
+    "politeness": "any"
+  },
+  "related": [],
+  "meaning": "Because.",
+  "examples": [
+    {
+      "japanese": "疲れたから寝る。",
+      "reading": "つかれたからねる。",
+      "gloss": "I am tired, so I will sleep."
+    },
+    {
+      "japanese": "雨だから行かない。",
+      "reading": "あめだからいかない。",
+      "gloss": "It is raining, so I will not go."
+    },
+    {
+      "japanese": "安いから買った。",
+      "reading": "やすいからかった。",
+      "gloss": "It was cheap, so I bought it."
+    }
+  ],
+  "usage": [
+    "Because: gives the speaker's reason, usually subjective. 疲れたから寝る.",
+    "Before から the verb can be plain or polite: 食べますから.",
+    "Nouns and な-adjectives take だ: 雨だから.",
+    "It can end a sentence as a stand-alone answer: どうして? 疲れたから."
+  ],
+  "compare": [
+    {
+      "difference": "ので is more objective and softer, so it is better for polite explanations and requests: 遅れるので. から is more direct and can be followed by a command: 危ないから、やめて。",
+      "id": "node"
+    },
+    {
+      "id": "kedo",
+      "difference": "けど says 'but'. から says 'so'."
+    }
+  ]
+}

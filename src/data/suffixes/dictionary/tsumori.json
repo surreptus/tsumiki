@@ -1,0 +1,42 @@
+{
+  "id": "tsumori",
+  "form": "つもり",
+  "romaji": "tsumori",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb",
+    "i-adj"
+  ],
+  "output_type": "noun",
+  "output_class": "noun",
+  "meaning": "Intention: I plan to.",
+  "examples": [
+    {
+      "japanese": "来年、日本へ行くつもりです。",
+      "reading": "らいねん、にほんへいくつもりです。",
+      "gloss": "I intend to go to Japan next year."
+    },
+    {
+      "japanese": "今日は何も食べないつもりだ。",
+      "reading": "きょうはなにもたべないつもりだ。",
+      "gloss": "I do not intend to eat anything today."
+    },
+    {
+      "japanese": "来年結婚するつもり。",
+      "reading": "らいねんけっこんするつもり。",
+      "gloss": "I plan to get married next year."
+    }
+  ],
+  "usage": [
+    "A settled intention or plan: 行くつもりです.",
+    "The negative puts ない before: 行かないつもり, not 行くつもりじゃない.",
+    "In the past, つもりだった means 'I had meant to' and implies it did not happen.",
+    "It is a noun, so a copula follows: つもりだ, つもりです."
+  ],
+  "compare": [
+    {
+      "id": "volitional",
+      "difference": "つもり is a decision already made. よう(と思う) is still taking shape."
+    }
+  ]
+}

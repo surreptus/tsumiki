@@ -1,0 +1,43 @@
+{
+  "id": "node",
+  "form": "ので",
+  "romaji": "node",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "na",
+  "meaning": "Because (a softer reason).",
+  "examples": [
+    {
+      "japanese": "雨が降っているので、家にいます。",
+      "reading": "あめがふっているので、いえにいます。",
+      "gloss": "It is raining, so I am staying home."
+    },
+    {
+      "japanese": "頭が痛いので、早く寝た。",
+      "reading": "あたまがいたいので、はやくねた。",
+      "gloss": "I had a headache, so I went to bed early."
+    },
+    {
+      "japanese": "明日は休みなので、ゆっくり寝られる。",
+      "reading": "あしたはやすみなので、ゆっくりねられる。",
+      "gloss": "It is a day off tomorrow, so I can sleep in."
+    }
+  ],
+  "usage": [
+    "A reason stated as a fact. Preferred when explaining yourself politely.",
+    "Nouns and な-adjectives take な: 休みなので, 静かなので.",
+    "Cannot end with a request or order the way から can."
+  ],
+  "compare": [
+    {
+      "id": "kara_reason",
+      "difference": "から states a reason in the speaker's voice and can lead into a request. ので sounds more objective and polite."
+    }
+  ]
+}

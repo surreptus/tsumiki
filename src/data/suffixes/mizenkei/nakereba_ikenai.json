@@ -1,0 +1,46 @@
+{
+  "id": "nakereba_ikenai",
+  "form": "なければいけない",
+  "romaji": "nakerebaikenai",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "output_class": "i-adj",
+  "related": [
+    "nakereba_naranai"
+  ],
+  "meaning": "Must do (conversational).",
+  "examples": [
+    {
+      "japanese": "行かなければいけない。",
+      "reading": "いかなければいけない。",
+      "gloss": "I have to go."
+    },
+    {
+      "japanese": "早く寝なければいけない。",
+      "reading": "はやくねなければいけない。",
+      "gloss": "I have to go to bed early."
+    },
+    {
+      "japanese": "約束を守らなければいけなかった。",
+      "reading": "やくそくをまもらなければいけなかった。",
+      "gloss": "I had to keep my promise."
+    }
+  ],
+  "usage": [
+    "The everyday way to say \"have to\". Used the same as なければならない.",
+    "Pair it with the negative for \"does not have to\": なくてもいい."
+  ],
+  "compare": [
+    {
+      "id": "nakereba_naranai",
+      "difference": "なければならない is more formal. なければいけない is the everyday form."
+    },
+    {
+      "id": "nakute_mo_ii",
+      "difference": "なくてもいい says it is not necessary."
+    }
+  ]
+}

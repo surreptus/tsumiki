@@ -1,0 +1,69 @@
+---
+title: Stems
+description: A stem is the shape a verb takes so that an ending can attach to it.
+sidebar:
+  order: 2
+---
+
+import StemTable from '../../../components/StemTable.astro';
+import StemsArt from '../../../components/illustrations/StemsArt.astro';
+import StemNames from '../../../components/StemNames.astro';
+
+A **stem** is the form of a verb that is ready to take an ending. It is a function too: `renyokei(書く)` gives 書き, and `mizenkei(書く)` gives 書か. The verb is the same, but the shape that comes out depends on which stem you ask for.
+
+<StemsArt />
+
+A stem is always the first half of a pair: it fits the word, then a suffix attaches. `tai(renyokei(書く))` is `renyokei` making 書き, then `tai` making 書きたい. The [idea page](/overview/idea/) has the full picture.
+
+## A verb has a handful of stems
+
+There are only seven for verbs. The table shows each one for 書く, with what it is used for:
+
+| Stem | Plain name | 書く gives | Used before |
+| --- | --- | --- | --- |
+| 連用形 | the ます-stem | 書き | ます, たい, ながら |
+| 未然形 | the ない-stem | 書か | ない, れる, せる |
+| 意志形 | the "let's" stem | 書こ | う |
+| 仮定形 | the ば-stem | 書け | ば |
+| 命令形 | the command form | 書け | (used alone) |
+| て形 | the て-form | 書いて | いる, しまう, おく |
+| た形 | the た-form | 書いた | ら, ことがある |
+
+Here is the same thing computed from the actual rules, so you can see the verb and every stem side by side:
+
+<StemTable verb="書く" />
+
+## Godan verbs move along the kana chart
+
+書く ends in く. To get the other stems you shift that last sound along its row of the kana chart:
+
+| Row | く becomes | Gives | Used for |
+| --- | --- | --- | --- |
+| い-row | き | 書き | ます, たい |
+| あ-row | か | 書か | ない, れる, せる |
+| お-row | こ | 書こ | う |
+| え-row | け | 書け | ば, commands, "can" |
+
+Every godan verb does the same with its own last sound. 飲む becomes 飲み, 飲ま, 飲も, 飲め. 話す becomes 話し, 話さ, 話そ, 話せ.
+
+The て-form and た-form are the exception. Their ending changes by sound, such as 書いて, 飲んで, 待って and 話して. You can see every case on the [て-form stem page](/reference/stems/te_stem/).
+
+## Ichidan verbs collapse into one stem
+
+Verbs like 食べる are simpler. You drop る and several stems turn out identical:
+
+<StemTable verb="食べる" />
+
+The ます-stem, the ない-stem and the "let's" stem are all 食べ, and the て-form and た-form are just 食べ plus て or た. That is why ichidan verbs feel easy. There is almost nothing to learn once you have 食べ.
+
+## What the names mean
+
+Each stem has a traditional name made of kanji, and the characters are a handy memory hook. Most end in 形 (*kei*, "form"), so you only need to remember the first part. Each stem's own page breaks the characters down one by one.
+
+<StemNames />
+
+## Two verbs break the pattern
+
+する and 来る have their own stem rules. 来る even changes its pronunciation: 来ない is こない, but 来ます is きます. The [irregulars](/reference/irregulars/) page lists every exception, including honorific verbs such as いらっしゃる.
+
+Next: the functions that take these stems, in [Suffixes](/overview/suffixes/).

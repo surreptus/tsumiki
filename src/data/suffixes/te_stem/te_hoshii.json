@@ -1,0 +1,45 @@
+{
+  "id": "te_hoshii",
+  "form": "ほしい",
+  "romaji": "tehoshii",
+  "display": "てほしい",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "output_class": "i-adj",
+  "layer": 40,
+  "meaning": "I want you to do (a wish about someone else).",
+  "examples": [
+    {
+      "japanese": "手伝ってほしい。",
+      "reading": "てつだってほしい。",
+      "gloss": "I want you to help."
+    },
+    {
+      "japanese": "もっと早く来てほしかった。",
+      "reading": "もっとはやくきてほしかった。",
+      "gloss": "I wish you had come earlier."
+    },
+    {
+      "japanese": "静かにしてほしいです。",
+      "reading": "しずかにしてほしいです。",
+      "gloss": "I would like you to be quiet."
+    }
+  ],
+  "usage": [
+    "A wish about what someone else does. For your own wish, use たい.",
+    "Negative request: ないでほしい (行かないでほしい: please do not go)."
+  ],
+  "compare": [
+    {
+      "id": "tai",
+      "difference": "たい is what the speaker wants to do. てほしい is what the speaker wants someone else to do."
+    },
+    {
+      "id": "te_kudasai",
+      "difference": "ください is a direct request. てほしい states a wish and leaves the other person room."
+    }
+  ]
+}

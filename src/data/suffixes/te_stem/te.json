@@ -1,0 +1,46 @@
+{
+  "id": "te",
+  "form": "",
+  "romaji": "te",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "related": [
+    "past"
+  ],
+  "meaning": "The て-form: connects clauses.",
+  "examples": [
+    {
+      "japanese": "朝起きて、ご飯を食べた。",
+      "reading": "あさおきて、ごはんをたべた。",
+      "gloss": "I got up in the morning and ate breakfast."
+    },
+    {
+      "japanese": "この店は安くて美味しい。",
+      "reading": "このみせはやすくておいしい。",
+      "gloss": "This shop is cheap and delicious."
+    },
+    {
+      "japanese": "ここは静かで便利です。",
+      "reading": "ここはしずかでべんりです。",
+      "gloss": "This place is quiet and convenient."
+    }
+  ],
+  "usage": [
+    "Joins clauses: in sequence (起きて食べた), as a list (安くて美味しい), or as a reason (疲れて寝た).",
+    "It does not carry tense. The final verb of the sentence sets it.",
+    "It is also the base for every suffix in the て-form group.",
+    "い-adjectives use くて, and nouns and な-adjectives use で."
+  ],
+  "compare": [
+    {
+      "id": "past",
+      "difference": "The past ends a sentence. The て-form keeps the sentence going."
+    }
+  ]
+}

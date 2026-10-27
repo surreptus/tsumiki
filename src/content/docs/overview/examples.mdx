@@ -1,0 +1,57 @@
+---
+title: Worked examples
+description: Five real forms taken apart, one step at a time.
+sidebar:
+  order: 5
+---
+
+import Derivation from '../../../components/Derivation.astro';
+import TowerArt from '../../../components/illustrations/TowerArt.astro';
+
+Each example shows the composition in function notation, then every step with the stem it used and the type it produced.
+
+<TowerArt />
+
+## A passive with negative and past
+
+書かれなかった means "was not written (by someone)":
+
+<Derivation verb="書く" chain={["passive", "neg", "past"]} stems />
+
+The passive attaches to 書か, the ない-stem, as れる. That gives a verb. The negative then makes an い-adjective, so the past is なかった.
+
+## An ongoing state, denied, in the past
+
+行っていなかった means "was not going / had not gone":
+
+<Derivation verb="行く" chain={["te_iru", "neg", "past"]} stems />
+
+Notice the first step uses 行って, not 行いて. 行く has an irregular て-form, and the model records that exception in one place so every form built on it is correct.
+
+## Polite, passive, negative, past
+
+来られませんでした means "could not come" (or "was affected by someone coming"):
+
+<Derivation verb="来る" chain={["passive", "masu", "neg", "past"]} stems />
+
+Here ます comes before the negative and the past. The ます-form has its own small set of endings (ません, ました, ませんでした), so the negative becomes ません and the past becomes でした.
+
+## An adjective with です
+
+食べたかったです means "wanted to eat" (politely):
+
+<Derivation verb="食べる" chain={["tai", "past", "desu"]} stems />
+
+For い-adjectives, です only adds politeness, so the tense goes **inside** and です goes last. 食べたいでした would be a type error.
+
+## A noun that behaves like an adjective
+
+静かじゃなかった means "was not quiet":
+
+<Derivation verb="静か" chain={["neg", "past"]} stems />
+
+じゃない turns 静か into an い-adjective, and an い-adjective forms its past with かった.
+
+## Build your own
+
+The [conjugator](/reference/conjugator/) lets you pick any word and click suffixes in order. When a chain is invalid, you get the same kind of type error as above. The [Reference](/reference/stems/renyokei/) lists every stem and suffix with notes on when to use each.

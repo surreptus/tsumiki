@@ -1,0 +1,58 @@
+{
+  "id": "kedo",
+  "form": "けど",
+  "romaji": "kedo",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun",
+    "clause"
+  ],
+  "output_type": "clause",
+  "accepts": [
+    "lemma",
+    "past",
+    "closed"
+  ],
+  "noun_link": "da",
+  "constraints": {
+    "politeness": "any"
+  },
+  "register": "Casual; the formal equivalents are が and けれども.",
+  "meaning": "But; although.",
+  "examples": [
+    {
+      "japanese": "高いけど買う。",
+      "reading": "たかいけどかう。",
+      "gloss": "It is expensive, but I will buy it."
+    },
+    {
+      "japanese": "行きたいけど時間がない。",
+      "reading": "いきたいけどじかんがない。",
+      "gloss": "I want to go, but I have no time."
+    },
+    {
+      "japanese": "学生だけど働いている。",
+      "reading": "がくせいだけどはたらいている。",
+      "gloss": "I am a student, but I work."
+    }
+  ],
+  "usage": [
+    "But, although: 高いけど買う.",
+    "Often just softens a statement or request: すみませんけど, ちょっといいですか。",
+    "It can trail off at the end of a sentence: 行きたいけど…, leaving the rest unsaid.",
+    "It is casual. The formal forms are が and けれども."
+  ],
+  "compare": [
+    {
+      "id": "noni",
+      "difference": "のに complains or shows surprise. けど is a neutral contrast."
+    },
+    {
+      "id": "kara_reason",
+      "difference": "から gives the cause. けど sets up a contrast."
+    }
+  ]
+}

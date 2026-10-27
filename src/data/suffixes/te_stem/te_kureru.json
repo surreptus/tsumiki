@@ -1,0 +1,50 @@
+{
+  "id": "te_kureru",
+  "form": "くれる",
+  "romaji": "tekureru",
+  "display": "てくれる",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "ichidan",
+  "layer": 30,
+  "related": [
+    "te_ageru",
+    "te_morau"
+  ],
+  "meaning": "Someone does something for me (or my group).",
+  "examples": [
+    {
+      "japanese": "友達が手伝ってくれた。",
+      "reading": "ともだちがてつだってくれた。",
+      "gloss": "My friend helped me."
+    },
+    {
+      "japanese": "先生が説明してくれた。",
+      "reading": "せんせいがせつめいしてくれた。",
+      "gloss": "The teacher explained it to me."
+    },
+    {
+      "japanese": "母が弁当を作ってくれる。",
+      "reading": "ははがべんとうをつくってくれる。",
+      "gloss": "My mother makes me a lunchbox."
+    }
+  ],
+  "usage": [
+    "The giver is the subject, and the favour goes to the speaker or their group.",
+    "Gratitude is implied. The same event without てくれる sounds neutral.",
+    "The imperative くれ is irregular, so the request てくれ is more casual than ください."
+  ],
+  "compare": [
+    {
+      "id": "te_ageru",
+      "difference": "てあげる is a favour from me. てくれる is a favour to me."
+    },
+    {
+      "id": "te_morau",
+      "difference": "てもらう has the receiver as the subject. てくれる has the giver as the subject."
+    }
+  ]
+}

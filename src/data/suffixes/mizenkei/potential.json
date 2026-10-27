@@ -1,0 +1,61 @@
+{
+  "id": "potential",
+  "form": "られる",
+  "romaji": "rareru-potential",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "ichidan",
+  "layer": 20,
+  "variants": [
+    {
+      "when": {
+        "classes": [
+          "godan"
+        ]
+      },
+      "attaches_to": "kateikei",
+      "form": "る"
+    }
+  ],
+  "register": "Casual speech often shortens 食べられる to 食べれる (ら抜き).",
+  "related": [
+    "passive"
+  ],
+  "meaning": "Potential: can do.",
+  "examples": [
+    {
+      "japanese": "日本語が話せる。",
+      "reading": "にほんごがはなせる。",
+      "gloss": "I can speak Japanese."
+    },
+    {
+      "japanese": "納豆が食べられない。",
+      "reading": "なっとうがたべられない。",
+      "gloss": "I cannot eat natto."
+    },
+    {
+      "japanese": "一人で来られますか。",
+      "reading": "ひとりでこられますか。",
+      "gloss": "Can you come by yourself?"
+    }
+  ],
+  "usage": [
+    "Can do: ability or possibility.",
+    "The object often takes が instead of を: 日本語が話せる.",
+    "Dropping ら (食べれる) is common in speech but is not accepted in formal writing.",
+    "Only verbs you control have a potential. ある does not."
+  ],
+  "compare": [
+    {
+      "id": "koto_ga_dekiru",
+      "difference": "ことができる is longer and more formal. Use the potential verb in everyday speech."
+    },
+    {
+      "id": "passive",
+      "difference": "For ichidan verbs the shape is the same as the passive. Check the particles to tell them apart."
+    }
+  ]
+}

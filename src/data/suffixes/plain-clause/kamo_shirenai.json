@@ -1,0 +1,52 @@
+{
+  "id": "kamo_shirenai",
+  "form": "かもしれない",
+  "romaji": "kamoshirenai",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "i-adj",
+  "noun_link": "bare",
+  "output_class": "i-adj",
+  "related": [
+    "deshou"
+  ],
+  "meaning": "Might be.",
+  "examples": [
+    {
+      "japanese": "雨が降るかもしれない。",
+      "reading": "あめがふるかもしれない。",
+      "gloss": "It might rain."
+    },
+    {
+      "japanese": "彼は学生かもしれない。",
+      "reading": "かれはがくせいかもしれない。",
+      "gloss": "He might be a student."
+    },
+    {
+      "japanese": "遅れるかもしれません。",
+      "reading": "おくれるかもしれません。",
+      "gloss": "I might be late."
+    }
+  ],
+  "usage": [
+    "Possibility: 'might', 'could be'. 雨が降るかもしれない. The speaker thinks it is possible, maybe 30 to 50 percent.",
+    "The polite form is かもしれません. The casual short form is かも.",
+    "A noun or な-adjective goes on without だ: 学生かもしれない.",
+    "It is mainly used as a fixed phrase. Negative and past forms (かもしれなかった) are rare."
+  ],
+  "compare": [
+    {
+      "id": "deshou",
+      "difference": "でしょう is a confident guess. かもしれない is a weaker possibility."
+    },
+    {
+      "id": "rashii",
+      "difference": "らしい passes on what you heard. かもしれない is your own judgement."
+    }
+  ]
+}

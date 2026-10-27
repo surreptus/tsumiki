@@ -1,0 +1,44 @@
+{
+  "id": "uchi_ni",
+  "form": "うちに",
+  "romaji": "uchini",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb",
+    "i-adj"
+  ],
+  "output_type": "clause",
+  "meaning": "While / before it changes.",
+  "examples": [
+    {
+      "japanese": "若いうちに旅行したい。",
+      "reading": "わかいうちにりょこうしたい。",
+      "gloss": "I want to travel while I am young."
+    },
+    {
+      "japanese": "忘れないうちにメモしておく。",
+      "reading": "わすれないうちにメモしておく。",
+      "gloss": "I will note it down before I forget."
+    },
+    {
+      "japanese": "雨が降らないうちに帰ろう。",
+      "reading": "あめがふらないうちにかえろう。",
+      "gloss": "Let us go home before it rains."
+    }
+  ],
+  "usage": [
+    "Do something while a state lasts, before it changes.",
+    "For な-adjectives and nouns the link is な and の: 静かなうちに, 学生のうちに.",
+    "A negative form means \"before it happens\"."
+  ],
+  "compare": [
+    {
+      "id": "mae_ni",
+      "difference": "前に is simply \"before an event\". うちに adds the sense that the chance will pass."
+    },
+    {
+      "id": "made_ni",
+      "difference": "までに names a deadline. うちに names a state that will end."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+---
+// One row per stem: name, reading and word-for-word meaning. Links to each stem page for the full breakdown.
+import { getCollection } from 'astro:content';
+import { stemHref } from '../lib/paths';
+import Ja from './Ja.astro';
+
+const stems = (await getCollection('stems')).map((e) => e.data).sort((a, b) => a.order - b.order);
+---
+<div class="table-scroll" tabindex="0" role="region" aria-label="Stem names, readings and meanings">
+  <table>
+    <thead><tr><th>Stem</th><th>Reading</th><th>Word for word</th></tr></thead>
+    <tbody>
+      {stems.map((s) => (
+        <tr>
+          <td><a href={stemHref(s.id)}><Ja text={s.name} /></a></td>
+          <td><Ja text={s.etymology.reading} /> <small>({s.romaji})</small></td>
+          <td>{s.etymology.literal}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

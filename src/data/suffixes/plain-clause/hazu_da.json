@@ -1,0 +1,47 @@
+{
+  "id": "hazu_da",
+  "form": "はずだ",
+  "romaji": "hazuda",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "na-no",
+  "meaning": "Should be / is expected to be.",
+  "examples": [
+    {
+      "japanese": "彼はもう着いているはずだ。",
+      "reading": "かれはもうついているはずだ。",
+      "gloss": "He should have arrived by now."
+    },
+    {
+      "japanese": "彼女は日本語が上手なはずだ。",
+      "reading": "かのじょはにほんごがじょうずなはずだ。",
+      "gloss": "She should be good at Japanese."
+    },
+    {
+      "japanese": "今日は日曜日だから、店は閉まっているはずだ。",
+      "reading": "きょうはにちようびだから、みせはしまっているはずだ。",
+      "gloss": "It is Sunday, so the shop should be closed."
+    }
+  ],
+  "usage": [
+    "The speaker's expectation, based on reasoning or knowledge.",
+    "はずがない means \"there is no way\". はずだった means \"it was supposed to\".",
+    "Nouns and な-adjectives link with の and な: 学生のはず, 静かなはず."
+  ],
+  "compare": [
+    {
+      "id": "deshou",
+      "difference": "でしょう is a guess. はずだ is a firm expectation based on grounds."
+    },
+    {
+      "id": "kamo_shirenai",
+      "difference": "かもしれない is a possibility. はずだ is a strong likelihood."
+    }
+  ]
+}

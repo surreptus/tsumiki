@@ -1,0 +1,64 @@
+{
+  "id": "suru_change",
+  "form": "にする",
+  "romaji": "surukange",
+  "attaches_to": "gokan",
+  "input_type": [
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "verb",
+  "display": "くする・にする",
+  "output_class": "suru",
+  "aux_verb": "suru",
+  "variants": [
+    {
+      "when": {
+        "types": [
+          "i-adj"
+        ]
+      },
+      "attaches_to": "renyokei",
+      "form": "する",
+      "input_type": [
+        "i-adj"
+      ]
+    }
+  ],
+  "related": [
+    "naru_change",
+    "adverb"
+  ],
+  "meaning": "Make (something) so.",
+  "examples": [
+    {
+      "japanese": "部屋を明るくする。",
+      "reading": "へやをあかるくする。",
+      "gloss": "I will brighten the room."
+    },
+    {
+      "japanese": "静かにしてください。",
+      "reading": "しずかにしてください。",
+      "gloss": "Please be quiet."
+    },
+    {
+      "japanese": "音を小さくした。",
+      "reading": "おとをちいさくした。",
+      "gloss": "I turned the sound down."
+    }
+  ],
+  "usage": [
+    "A deliberate change. The thing changed takes を: 部屋を明るくする.",
+    "With a noun, にする also means \"choose\": 私はコーヒーにする (\"I will have coffee\")."
+  ],
+  "compare": [
+    {
+      "id": "naru_change",
+      "difference": "なる is a change that happens. する is a change someone makes."
+    },
+    {
+      "id": "koto_ni_suru",
+      "difference": "ことにする is deciding to do something. くする and にする change what something is."
+    }
+  ]
+}

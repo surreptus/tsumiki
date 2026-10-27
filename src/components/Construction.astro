@@ -1,0 +1,52 @@
+---
+// The suffix as a function: a formula per shape, then a table that builds a real word step by step.
+// Computed from the engine, so it always matches what the Conjugator does.
+import { getEntry } from 'astro:content';
+import { TYPE_SHORT } from '../lib/conjugate';
+import { construction, summariseLabels } from '../lib/construction';
+import { stemHref } from '../lib/paths';
+import Ja from './Ja.astro';
+import TypeChip from './TypeChip.astro';
+
+interface Props {
+  id: string;
+}
+const entry = await getEntry('suffixes', Astro.props.id);
+if (!entry) throw new Error(`<Construction>: unknown suffix "${Astro.props.id}"`);
+const s = entry.data;
+const rows = construction(s.id);
+
+const ATTACH_NAMES: Record<string, string> = { dictionary: 'dictionary form', 'plain-clause': 'plain form' };
+const types = [...new Set(rows.map((r) => TYPE_SHORT[r.type]))].join(' | ');
+const inputs = [...new Set([...s.input_type, ...(s.variants ?? []).flatMap((v) => v.input_type ?? [])])].map((t) => TYPE_SHORT[t]).join(' | ');
+const notes = rows.map((r) => summariseLabels(r.labels) + (r.piece === undefined ? ', irregular' : r.stem ? '' : `, as the ${ATTACH_NAMES[s.attaches_to]}`));
+---
+<div class="construction">
+  <pre class="code-block" tabindex="0" aria-label="How the suffix is built"><code><span class="code-notation">{s.id} : {inputs} → {types}</span>
+{rows.map((r, i) => (
+<><span class="code-notation">{s.id}(<span class="fn-word">{r.piece === undefined ? r.words[0] : 'word'}</span>) = {r.piece === undefined
+  ? r.result
+  : <>{r.prefix ? `${r.prefix} + ` : ''}{r.stem ? <a class="fn fn-stem" href={stemHref(r.stem)}>{r.stem}</a> : null}{r.stem ? '(word)' : 'word'}{r.piece ? ` + ${r.piece}` : ''}</>}</span>  <span class="code-comment">// {notes[i]}</span>{'\n'}</>
+))}</code></pre>
+
+  <div class="table-scroll" tabindex="0" role="region" aria-label={`Building ${s.id} step by step`}>
+    <table>
+      <thead>
+        <tr><th>Start with</th><th>{s.attaches_to === 'dictionary' || s.attaches_to === 'plain-clause' ? 'Take' : 'Stem'}</th><th>Add</th><th>Result</th><th>Type</th></tr>
+      </thead>
+      <tbody>
+        {rows.map((r) => (
+          <tr>
+            <td><Ja text={r.words[0]} /><br /><small>{summariseLabels(r.labels)}</small></td>
+            <td>{r.stem
+              ? <><Ja text={r.base!} /> <small>(<a class="fn-stem" href={stemHref(r.stem)}>{r.stem}</a>)</small></>
+              : <small>{ATTACH_NAMES[s.attaches_to] ?? 'the whole word'}</small>}</td>
+            <td>{r.piece === undefined ? <small>irregular</small> : r.piece ? <Ja text={r.piece} /> : <small>nothing</small>}</td>
+            <td><Ja text={r.result} /></td>
+            <td><TypeChip type={r.type} /></td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>

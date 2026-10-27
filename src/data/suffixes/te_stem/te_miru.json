@@ -1,0 +1,42 @@
+{
+  "id": "te_miru",
+  "form": "みる",
+  "romaji": "temiru",
+  "display": "てみる",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "ichidan",
+  "layer": 30,
+  "meaning": "Try doing.",
+  "examples": [
+    {
+      "japanese": "このケーキを食べてみる。",
+      "reading": "このケーキをたべてみる。",
+      "gloss": "I will try this cake."
+    },
+    {
+      "japanese": "日本語で書いてみた。",
+      "reading": "にほんごでかいてみた。",
+      "gloss": "I tried writing it in Japanese."
+    },
+    {
+      "japanese": "一度、読んでみてください。",
+      "reading": "いちど、よんでみてください。",
+      "gloss": "Please try reading it once."
+    }
+  ],
+  "usage": [
+    "Try something to see what it is like: 食べてみる.",
+    "Common in requests: 食べてみてください.",
+    "It is a light trial, not effort. For a difficult attempt use ようとする."
+  ],
+  "compare": [
+    {
+      "id": "volitional",
+      "difference": "ようとする is an attempt at something hard or interrupted. てみる is a casual test."
+    }
+  ]
+}

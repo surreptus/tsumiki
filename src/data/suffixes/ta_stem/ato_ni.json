@@ -1,0 +1,43 @@
+{
+  "id": "ato_ni",
+  "form": "あとに",
+  "romaji": "atoni",
+  "attaches_to": "ta_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "written": "後に",
+  "display": "たあとに",
+  "related": [
+    "ato_de",
+    "no_ato_ni"
+  ],
+  "meaning": "After doing (formal).",
+  "examples": [
+    {
+      "japanese": "会議が終わった後に、食事をした。",
+      "reading": "かいぎがおわったあとに、しょくじをした。",
+      "gloss": "After the meeting, we had a meal."
+    },
+    {
+      "japanese": "雨が降った後に虹が出た。",
+      "reading": "あめがふったあとににじがでた。",
+      "gloss": "A rainbow appeared after the rain."
+    },
+    {
+      "japanese": "帰った後に気づいた。",
+      "reading": "かえったあとにきづいた。",
+      "gloss": "I noticed after I got home."
+    }
+  ],
+  "usage": [
+    "More formal than 後で. Often used when the second event happens at a point in time rather than as a planned action."
+  ],
+  "compare": [
+    {
+      "id": "ato_de",
+      "difference": "後で is the everyday form. 後に is more written."
+    }
+  ]
+}

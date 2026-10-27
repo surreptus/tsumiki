@@ -1,0 +1,48 @@
+{
+  "id": "tokoro_doing",
+  "form": "ところ",
+  "romaji": "tokorodoing",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "noun",
+  "display": "ているところ",
+  "output_class": "noun",
+  "related": [
+    "tokoro_about",
+    "tokoro_just"
+  ],
+  "meaning": "In the middle of doing.",
+  "examples": [
+    {
+      "japanese": "今、食べているところだ。",
+      "reading": "いま、たべているところだ。",
+      "gloss": "I am eating right now."
+    },
+    {
+      "japanese": "今、本を読んでいるところだ。",
+      "reading": "いま、ほんをよんでいるところだ。",
+      "gloss": "I am reading a book right now."
+    },
+    {
+      "japanese": "ちょうど料理を作っているところ。",
+      "reading": "ちょうどりょうりをつくっているところ。",
+      "gloss": "I am just in the middle of cooking."
+    }
+  ],
+  "usage": [
+    "Use it after the ている form. Build ている first, then ところ.",
+    "Stresses that the action is in progress at this very moment. ている alone can be a habit or a result."
+  ],
+  "compare": [
+    {
+      "id": "te_iru",
+      "difference": "ている describes an ongoing action or a state. ているところ pins it to this moment."
+    },
+    {
+      "id": "tokoro_about",
+      "difference": "るところ is about to start."
+    }
+  ]
+}

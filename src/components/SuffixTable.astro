@@ -1,0 +1,48 @@
+---
+// A table of every suffix that attaches to one stem / attach point, generated from the collection.
+import { getCollection } from 'astro:content';
+import { suffixHref } from '../lib/paths';
+import { type Attach } from '../lib/schemas';
+import { suffixName } from '../lib/names';
+import Ja from './Ja.astro';
+import TypeChip from './TypeChip.astro';
+
+interface Props {
+  attachesTo: Attach;
+}
+const { attachesTo } = Astro.props;
+
+const rows = (await getCollection('suffixes'))
+  .map((e) => e.data)
+  .filter((s) => s.attaches_to === attachesTo)
+  .sort((a, b) => a.id.localeCompare(b.id));
+---
+<div class="suffix-table" tabindex="0" role="region" aria-label="Suffixes that attach here">
+  <table>
+    <thead>
+      <tr><th>Suffix</th><th>Takes → gives</th><th>Meaning</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      {rows.map((s) => {
+        const ex = s.examples[0];
+        return (
+          <tr>
+            <td>
+              <a href={suffixHref(s)}>
+                <strong lang="ja">{s.display ?? s.written ?? (s.form || s.romaji)}</strong>
+              </a><br />
+              <small>{s.romaji}</small>
+            </td>
+            <td>
+              {s.input_type.map((t) => <TypeChip type={t} />)}
+              <span aria-label="gives"> → </span>
+              {s.output_type === 'same' ? <small>same type</small> : <TypeChip type={s.output_type} />}
+            </td>
+            <td>{s.meaning.split('. ')[0].replace(/\.$/, '')}</td>
+            <td><Ja text={ex.japanese} /><br /><small>{ex.gloss}</small></td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+</div>

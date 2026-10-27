@@ -1,0 +1,43 @@
+{
+  "id": "koto_ga_dekiru",
+  "form": "ことができる",
+  "romaji": "kotogadekiru",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "ichidan",
+  "related": [
+    "potential"
+  ],
+  "meaning": "Can do (formal).",
+  "examples": [
+    {
+      "japanese": "日本語を話すことができる。",
+      "reading": "にほんごをはなすことができる。",
+      "gloss": "I can speak Japanese."
+    },
+    {
+      "japanese": "ピアノを弾くことができます。",
+      "reading": "ピアノをひくことができます。",
+      "gloss": "I can play the piano."
+    },
+    {
+      "japanese": "ここで泳ぐことができない。",
+      "reading": "ここでおよぐことができない。",
+      "gloss": "We cannot swim here."
+    }
+  ],
+  "usage": [
+    "Can do, in a more explicit and formal way: 泳ぐことができる.",
+    "It conjugates as できる, so できない, できた, できます.",
+    "Rules, formal writing and slogans favour it. Speech favours the potential verb."
+  ],
+  "compare": [
+    {
+      "id": "potential",
+      "difference": "The potential is shorter and more natural. ことができる is longer and more formal."
+    }
+  ]
+}

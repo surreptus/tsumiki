@@ -1,0 +1,47 @@
+{
+  "id": "te_iru",
+  "form": "いる",
+  "romaji": "teiru",
+  "display": "ている",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "ichidan",
+  "aux_verb": "iru-exist",
+  "layer": 30,
+  "register": "Casual speech drops the い: 勉強してる.",
+  "meaning": "Ongoing action or resulting state.",
+  "examples": [
+    {
+      "japanese": "今、勉強している。",
+      "reading": "いま、べんきょうしている。",
+      "gloss": "I am studying now."
+    },
+    {
+      "japanese": "窓が開いている。",
+      "reading": "まどがあいている。",
+      "gloss": "The window is open."
+    },
+    {
+      "japanese": "彼は東京に住んでいる。",
+      "reading": "かれはとうきょうにすんでいる。",
+      "gloss": "He lives in Tokyo."
+    }
+  ],
+  "usage": [
+    "Two meanings. With activities it means 'in progress': 勉強している. With change-of-state verbs it means 'in the resulting state': 結婚している, 窓が開いている.",
+    "It also marks habits: 毎日走っている."
+  ],
+  "compare": [
+    {
+      "id": "te_aru",
+      "difference": "ている describes the state. てある implies someone did it on purpose."
+    },
+    {
+      "id": "past",
+      "difference": "食べた is a completed event. 食べている is an ongoing action or a state."
+    }
+  ]
+}

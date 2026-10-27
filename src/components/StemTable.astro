@@ -1,0 +1,64 @@
+---
+// All stems of one verb, computed at build time from the stem rules.
+import { getCollection } from 'astro:content';
+import { CLASS_LABELS, findWord, irregularFor, startForm, stemSurface } from '../lib/conjugate';
+import { irregularsHref, stemHref } from '../lib/paths';
+import { STEM_IDS, type StemId } from '../lib/schemas';
+import Ja from './Ja.astro';
+
+interface Props {
+  /** Lexicon id, written form or kana, e.g. "食べる". */
+  verb: string;
+  /** Which stems to show; defaults to the seven verb stems. */
+  stems?: StemId[];
+}
+const { verb, stems: only } = Astro.props;
+
+const word = findWord(verb);
+if (!word) throw new Error(`<StemTable>: unknown verb "${verb}"`);
+const form = startForm(word);
+
+const stemEntries = (await getCollection('stems')).map((e) => e.data);
+const wanted = only ?? STEM_IDS.filter((id) => id !== 'gokan');
+const rows = wanted.map((id) => {
+  const info = stemEntries.find((s) => s.id === id)!;
+  const surface = stemSurface(form, id);
+  const irregular = surface ? irregularFor(form, id) : undefined;
+  // "む → んで": what the rule did to the end of the word
+  const rule = surface && form.reading.slice(-1) !== '' ? ruleSummary(form.reading, surface.reading) : '';
+  return { info, surface, irregular, rule };
+});
+
+/** Show the part of the word that changed, e.g. 飲む → 飲んで becomes "む → んで". */
+function ruleSummary(from: string, to: string): string {
+  let i = 0;
+  while (i < from.length && i < to.length && from[i] === to[i]) i++;
+  return `${from.slice(i) || '·'} → ${to.slice(i) || '·'}`;
+}
+---
+<div class="stem-table" tabindex="0" role="region" aria-label={`Stems of ${word.kanji}`}>
+  <p class="stem-table-caption">
+    <strong><Ja text={word.kanji} /></strong>
+    <span>({word.meaning}; {CLASS_LABELS[word.cls]})</span>
+  </p>
+  <table>
+    <thead>
+      <tr><th>Stem</th><th>Form</th><th>Change</th></tr>
+    </thead>
+    <tbody>
+      {rows.map(({ info, surface, irregular, rule }) => (
+        <tr>
+          <td>
+            <a href={stemHref(info.id)}><span lang="ja">{info.name}</span></a><br />
+            <small>{info.label}</small>
+          </td>
+          <td>{surface ? <Ja text={surface.text} /> : <em>none</em>}</td>
+          <td>
+            <code>{rule}</code>
+            {irregular && <> <a class="irregular-flag" href={irregularsHref(irregular.id)} title={irregular.title}>irregular</a></>}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

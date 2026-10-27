@@ -1,0 +1,48 @@
+{
+  "id": "to_conditional",
+  "form": "と",
+  "romaji": "to",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb",
+    "i-adj"
+  ],
+  "output_type": "clause",
+  "related": [
+    "ba",
+    "tara"
+  ],
+  "meaning": "If or whenever (natural result).",
+  "examples": [
+    {
+      "japanese": "春になると暖かくなる。",
+      "reading": "はるになるとあたたかくなる。",
+      "gloss": "When spring comes, it gets warm."
+    },
+    {
+      "japanese": "このボタンを押すと音が出る。",
+      "reading": "このボタンをおすとおとがでる。",
+      "gloss": "If you press this button, a sound comes out."
+    },
+    {
+      "japanese": "右に曲がると駅がある。",
+      "reading": "みぎにまがるとえきがある。",
+      "gloss": "If you turn right, there is a station."
+    }
+  ],
+  "usage": [
+    "Natural consequence: whenever X happens, Y follows. 春になると暖かくなる.",
+    "Used for habits, rules, directions and discoveries: 開けると猫がいた.",
+    "The second clause cannot be a request, command or the speaker's own plan."
+  ],
+  "compare": [
+    {
+      "id": "tara",
+      "difference": "たら allows requests and plans in the second clause. と does not."
+    },
+    {
+      "id": "ba",
+      "difference": "ば sets a requirement. と describes an automatic result."
+    }
+  ]
+}

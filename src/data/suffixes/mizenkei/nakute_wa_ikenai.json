@@ -1,0 +1,42 @@
+{
+  "id": "nakute_wa_ikenai",
+  "form": "なくてはいけない",
+  "romaji": "nakutewaikenai",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "i-adj",
+  "output_class": "i-adj",
+  "related": [
+    "nakereba_ikenai"
+  ],
+  "meaning": "Must do (softer).",
+  "examples": [
+    {
+      "japanese": "帰らなくてはいけない。",
+      "reading": "かえらなくてはいけない。",
+      "gloss": "I have to go home."
+    },
+    {
+      "japanese": "連絡しなくてはいけない。",
+      "reading": "れんらくしなくてはいけない。",
+      "gloss": "I must get in touch."
+    },
+    {
+      "japanese": "準備しなくてはいけなかった。",
+      "reading": "じゅんびしなくてはいけなかった。",
+      "gloss": "I had to prepare."
+    }
+  ],
+  "usage": [
+    "Close in meaning to なければいけない. Often sounds more personal, as if it is about your own situation.",
+    "The casual contraction is なくちゃ."
+  ],
+  "compare": [
+    {
+      "id": "nakereba_ikenai",
+      "difference": "なければいけない and なくてはいけない are very close. なくては tends to sound more personal."
+    }
+  ]
+}

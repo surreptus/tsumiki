@@ -1,0 +1,50 @@
+{
+  "id": "tari",
+  "form": "り",
+  "romaji": "tari",
+  "attaches_to": "ta_stem",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "display": "たり",
+  "related": [
+    "te"
+  ],
+  "meaning": "Doing things such as… (a partial list).",
+  "examples": [
+    {
+      "japanese": "週末は映画を見たり、本を読んだりする。",
+      "reading": "しゅうまつはえいがをみたり、ほんをよんだりする。",
+      "gloss": "On weekends I do things like watch films and read."
+    },
+    {
+      "japanese": "天気がよかったり悪かったりする。",
+      "reading": "てんきがよかったりわるかったりする。",
+      "gloss": "The weather is sometimes good and sometimes bad."
+    },
+    {
+      "japanese": "部屋で歌ったり踊ったりした。",
+      "reading": "へやでうたったりおどったりした。",
+      "gloss": "We sang and danced in the room."
+    }
+  ],
+  "usage": [
+    "Lists examples of actions or states and implies there are others. Repeat たり for each item, and end with する (or its past).",
+    "The tense is on the final する, not on たり.",
+    "Two opposites often appear together: 行ったり来たり."
+  ],
+  "compare": [
+    {
+      "id": "te",
+      "difference": "て links actions in a sequence. たり lists examples in any order."
+    },
+    {
+      "id": "shi",
+      "difference": "し lists reasons. たり lists actions."
+    }
+  ]
+}

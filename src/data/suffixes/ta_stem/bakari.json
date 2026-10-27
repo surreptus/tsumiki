@@ -1,0 +1,47 @@
+{
+  "id": "bakari",
+  "form": "ばかり",
+  "romaji": "bakari",
+  "attaches_to": "ta_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "noun",
+  "display": "たばかり",
+  "output_class": "noun",
+  "meaning": "Just did (recently).",
+  "examples": [
+    {
+      "japanese": "日本に来たばかりだ。",
+      "reading": "にほんにきたばかりだ。",
+      "gloss": "I have only just come to Japan."
+    },
+    {
+      "japanese": "さっき食べたばかりなのに、もうお腹がすいた。",
+      "reading": "さっきたべたばかりなのに、もうおなかがすいた。",
+      "gloss": "I only just ate, but I am hungry already."
+    },
+    {
+      "japanese": "買ったばかりの車。",
+      "reading": "かったばかりのくるま。",
+      "gloss": "A car I have only just bought."
+    }
+  ],
+  "usage": [
+    "Recent past, felt as \"not long ago\". It can span days or months.",
+    "On a noun, ばかり means \"only\": 肉ばかり食べる. This is a different use."
+  ],
+  "compare": [
+    {
+      "id": "tokoro_just",
+      "difference": "たところ is a moment ago. たばかり is recent."
+    },
+    {
+      "id": "te_kara",
+      "difference": "てから says what happened after. たばかり says how recent it was."
+    }
+  ],
+  "related": [
+    "bakari_only"
+  ]
+}

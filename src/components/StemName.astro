@@ -1,0 +1,28 @@
+---
+// How to read a stem's name: each character with its reading and meaning, then a memory hook.
+import { getEntry } from 'astro:content';
+import Ja from './Ja.astro';
+
+interface Props {
+  id: string;
+}
+const entry = await getEntry('stems', Astro.props.id);
+if (!entry) throw new Error(`<StemName>: unknown stem "${Astro.props.id}"`);
+const { name, romaji, etymology: ety } = entry.data;
+---
+<div class="stem-name">
+  <p>
+    <Ja text={name} /> is read <Ja text={ety.reading} /> (<em>{romaji}</em>). Word for word: <strong>{ety.literal}</strong>.
+  </p>
+  <div class="table-scroll" tabindex="0" role="region" aria-label={`Characters in ${name}`}>
+    <table>
+      <thead><tr><th>Character</th><th>Reading</th><th>Meaning</th></tr></thead>
+      <tbody>
+        {ety.parts.map((p) => (
+          <tr><td><Ja text={p.char} /></td><td>{p.reading}</td><td>{p.meaning}</td></tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Memory hook.</strong> {ety.mnemonic}</p>
+</div>

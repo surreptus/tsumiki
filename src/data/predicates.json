@@ -1,0 +1,90 @@
+[
+  {
+    "id": "takai",
+    "kanji": "高い",
+    "kana": "たかい",
+    "class": "i-adj",
+    "meaning": "high, expensive"
+  },
+  {
+    "id": "oishii",
+    "kanji": "美味しい",
+    "kana": "おいしい",
+    "class": "i-adj",
+    "meaning": "delicious"
+  },
+  {
+    "id": "isogashii",
+    "kanji": "忙しい",
+    "kana": "いそがしい",
+    "class": "i-adj",
+    "meaning": "busy"
+  },
+  {
+    "id": "ii",
+    "kanji": "いい",
+    "kana": "いい",
+    "class": "i-adj",
+    "meaning": "good",
+    "notes": "Only the dictionary form is いい; everything else is built on よい."
+  },
+  {
+    "id": "kakkoii",
+    "kanji": "かっこいい",
+    "kana": "かっこいい",
+    "class": "i-adj",
+    "meaning": "cool, stylish",
+    "conjugates_like": "ii",
+    "notes": "Compound of いい, so it inherits the よい forms."
+  },
+  {
+    "id": "shizuka",
+    "kanji": "静か",
+    "kana": "しずか",
+    "class": "na-adj",
+    "meaning": "quiet"
+  },
+  {
+    "id": "kirei",
+    "kanji": "きれい",
+    "kana": "きれい",
+    "class": "na-adj",
+    "meaning": "pretty, clean",
+    "notes": "Ends in い but is a な-adjective."
+  },
+  {
+    "id": "genki",
+    "kanji": "元気",
+    "kana": "げんき",
+    "class": "na-adj",
+    "meaning": "healthy, energetic"
+  },
+  {
+    "id": "benri",
+    "kanji": "便利",
+    "kana": "べんり",
+    "class": "na-adj",
+    "meaning": "convenient"
+  },
+  {
+    "id": "gakusei",
+    "kanji": "学生",
+    "kana": "がくせい",
+    "class": "noun",
+    "meaning": "student"
+  },
+  {
+    "id": "sensei",
+    "kanji": "先生",
+    "kana": "せんせい",
+    "class": "noun",
+    "meaning": "teacher"
+  },
+  {
+    "id": "ame",
+    "kanji": "雨",
+    "kana": "あめ",
+    "class": "noun",
+    "meaning": "rain"
+  }
+]

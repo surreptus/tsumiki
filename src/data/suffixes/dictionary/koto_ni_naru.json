@@ -1,0 +1,46 @@
+{
+  "id": "koto_ni_naru",
+  "form": "ことになる",
+  "romaji": "kotoninaru",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "godan",
+  "related": [
+    "koto_ni_suru"
+  ],
+  "meaning": "It has been decided that.",
+  "examples": [
+    {
+      "japanese": "来月、大阪に引っ越すことになった。",
+      "reading": "らいげつ、おおさかにひっこすことになった。",
+      "gloss": "It has been decided that I will move to Osaka next month."
+    },
+    {
+      "japanese": "会議は三時から始まることになっている。",
+      "reading": "かいぎはさんじからはじまることになっている。",
+      "gloss": "The meeting is set to begin at three."
+    },
+    {
+      "japanese": "彼と結婚することになった。",
+      "reading": "かれとけっこんすることになった。",
+      "gloss": "I am going to be married to him."
+    }
+  ],
+  "usage": [
+    "A decision made by others or by circumstances, even if you were involved.",
+    "ことになっている is a rule or an arrangement."
+  ],
+  "compare": [
+    {
+      "id": "koto_ni_suru",
+      "difference": "ことにする is your own decision. ことになる is a decision that came from outside."
+    },
+    {
+      "id": "you_ni_naru",
+      "difference": "ようになる is a gradual change. ことになる is a fixed arrangement."
+    }
+  ]
+}

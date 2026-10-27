@@ -1,0 +1,48 @@
+{
+  "id": "no_ato_de",
+  "form": "あとで",
+  "written": "後で",
+  "display": "の後で",
+  "romaji": "noatode",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "na-no",
+  "meaning": "After (a noun).",
+  "examples": [
+    {
+      "japanese": "食事の後で、散歩する。",
+      "reading": "しょくじのあとで、さんぽする。",
+      "gloss": "I take a walk after the meal."
+    },
+    {
+      "japanese": "授業の後で、先生に聞いた。",
+      "reading": "じゅぎょうのあとで、せんせいにきいた。",
+      "gloss": "I asked the teacher after class."
+    },
+    {
+      "japanese": "仕事の後で、飲みに行く。",
+      "reading": "しごとのあとで、のみにいく。",
+      "gloss": "I go for a drink after work."
+    }
+  ],
+  "usage": [
+    "A noun links with の: 食事の後で. After a verb, use the た-form instead: 食べた後で."
+  ],
+  "compare": [
+    {
+      "id": "ato_de",
+      "difference": "Same meaning, but 後で on a verb follows the た-form: 食べた後で."
+    },
+    {
+      "id": "no_ato_ni",
+      "difference": "後に is more written. 後で is the everyday form."
+    }
+  ],
+  "related": [
+    "ato_de",
+    "no_ato_ni"
+  ]
+}

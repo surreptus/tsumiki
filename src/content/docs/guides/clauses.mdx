@@ -1,0 +1,185 @@
+---
+title: Relative clauses, nominalization, quotation
+description: "How a whole clause modifies a noun, becomes a noun, or is quoted, and how time clauses with とき and 間 work."
+---
+
+import Derivation from '../../../components/Derivation.astro';
+
+:::note[Where the function model stops]
+The Reference builds one *predicate* at a time. Here a finished clause becomes a part of a bigger sentence, and the clauses themselves can say anything. The few connecting words (の, こと, と, とき) behave almost like functions, but the content they wrap is open-ended, so this guide explains the pattern and not a list of forms.
+:::
+
+## The one rule (連体修飾)
+
+In Japanese, a modifier always comes **before** the noun, and a clause is no exception. The clause ends in its plain form, and the noun follows directly. There is no word for "who", "which" or "that".
+
+| Role | Pattern | Example |
+|---|---|---|
+| Single word | adjective + noun | 赤い本 (a red book) |
+| Whole clause | plain clause + noun | 私が昨日買った本 (the book I bought yesterday) |
+
+Build the clause, then put the noun after it.
+
+<Derivation verb="買う" chain={["past"]} />
+
+買った is the plain past. Place 本 after it and you have the clause modifier 買った本.
+
+## Relative clauses
+
+Take a sentence, then take any noun out of it and attach it to the end.
+
+| Sentence | Noun taken out | Relative clause |
+|---|---|---|
+| 友達が本を買った。 | 本 | 友達が買った本 |
+| 友達が本を買った。 | 友達 | 本を買った友達 |
+| 先生が学校にいる。 | 学校 | 先生がいる学校 |
+
+The removed noun leaves a gap, and its particle is dropped. The sentence 本を買った becomes 買った本, with no を.
+
+### Rules
+
+- **The clause is always plain form.** Even in polite speech: 先生が書いた本, not 先生が書きました本. A polite ending belongs only at the end of the whole sentence.
+- **The topic marker is not allowed inside.** Use が: 私が作ったケーキ, not 私は作ったケーキ. See [Particles](/guides/particles/).
+- **な-adjectives and nouns keep the same form:** 静かな町 for a な-adjective; 学生の友達 for a noun. In a relative clause, だ becomes な or の, or disappears: 学生だった友達 (a friend who was a student).
+- **A が subject can become の:** 私が作ったケーキ → 私の作ったケーキ. This is slightly more formal.
+
+### Ambiguity
+
+There is no marker saying which noun the clause modifies, so one phrase can mean two things:
+
+| Phrase | Reading 1 | Reading 2 |
+|---|---|---|
+| 昨日買った本の値段 | the price of the book I bought yesterday | the book whose price I bought yesterday |
+
+Context settles it. When it cannot, rewrite with two sentences.
+
+## Nominalization: turning a clause into a noun
+
+Two nouns do the job: の and こと. Both attach to the plain form.
+
+| Pattern | Example | Means |
+|---|---|---|
+| clause + の | 泳ぐのが好きだ。 | I like swimming. |
+| clause + こと | 泳ぐことが好きだ。 | I like swimming. |
+
+### Which one
+
+| Use | の | こと |
+|---|---|---|
+| Direct experience: seeing, hearing, feeling | ✓ 犬が走るのを見た。 | ✗ |
+| Stops, helps, waits | ✓ 彼が来るのを待つ。 | ✗ |
+| Abstract ideas, plans, rules, ability | | ✓ 日本語を話すことができる。 |
+| Fixed patterns | | ✓ 行ったことがある / ことにする / ことになる |
+| Casual, everyday | ✓ common | formal, written |
+
+When in doubt: if you can see or hear it happening, use の. If it is an idea or a fact, use こと. Many sentences accept both.
+
+See [こと](/reference/suffixes/dictionary/koto/), [ことができる](/reference/suffixes/dictionary/koto_ga_dekiru/), [ことにする](/reference/suffixes/dictionary/koto_ni_suru/) and [ことになる](/reference/suffixes/dictionary/koto_ni_naru/).
+
+### Nouns and な-adjectives
+
+Before の, they take な: 静かなのが好きだ (I like it quiet). Before こと, use である: 学生であること.
+
+## Quotation
+
+The particle と marks a quotation. It comes after the quoted clause, then the verb of saying or thinking.
+
+| Pattern | Example | Means |
+|---|---|---|
+| Direct | 彼は「行く」と言った。 | He said "I'm going." |
+| Indirect | 彼は行くと言った。 | He said he is going. |
+| Thought | 雨が降ると思う。 | I think it will rain. |
+| Hearsay | 来週休みだと聞いた。 | I heard next week is a holiday. |
+
+### Plain form inside the quote
+
+Inside an indirect quote, use the plain form, whatever the original politeness was. The tense is the one at the time of speaking, not at the time of reporting.
+
+| Original | Reported |
+|---|---|
+| 「行きます」 | 行くと言った |
+| 「行きました」 | 行ったと言った |
+| 「行きません」 | 行かないと言った |
+| 「静かです」 | 静かだと言った |
+
+Note the だ after nouns and な-adjectives: 学生だと言った, 静かだと思う. It is the plain copula. See [と (conditional)](/reference/suffixes/dictionary/to_conditional/) for a different use of the same particle.
+
+### と思う and と言う
+
+| Pattern | Used for | Example |
+|---|---|---|
+| 〜と思う | Your own opinion or guess | あの人は先生だと思う。 |
+| 〜と思っている | Someone's ongoing thought, or a third person's | 彼は行くと思っている。 |
+| 〜と言う | What someone says | 先生は明日休みだと言った。 |
+| 〜という + noun | "called", "named" | 田中という人 |
+
+Use と思う for yourself and と思っている for others. Saying 彼は行くと思う would mean *you* think he'll go.
+
+### Quoting a request or command
+
+A quoted command or request uses ように:
+
+| Original | Reported |
+|---|---|
+| 「早く寝なさい」 | 早く寝るように言われた。 |
+| 「窓を開けてください」 | 窓を開けるように頼んだ。 |
+| 「行かないでください」 | 行かないように言った。 |
+
+See [ように](/reference/suffixes/dictionary/you_ni/). The verb in the quote is plain, and ように replaces と.
+
+### Questions inside a sentence
+
+An embedded question uses か, with no と:
+
+| Direct | Embedded |
+|---|---|
+| 誰が来ますか。 | 誰が来るか分からない。 |
+| 行きますか。 | 行くかどうか聞いた。 |
+
+For yes/no, add かどうか: "whether or not".
+
+## Time clauses: とき and 間
+
+A time clause is a clause + a time noun.
+
+| Word | Meaning | Pattern | Example |
+|---|---|---|---|
+| とき | when | plain + とき | 日本に行くとき、パスポートが要る。 |
+| 間 | while | plain (ongoing) + 間 | 寝ている間に、雨が降った。 |
+| 前に | before | dictionary + 前に | 寝る前に、歯を磨く。 |
+| 後で | after | た-form + 後で | 食べた後で、歯を磨く。 |
+| まで | until | dictionary + まで | 来るまで待つ。 |
+| うちに | while, before it changes | plain + うちに | 若いうちに勉強する。 |
+
+See [前に](/reference/suffixes/dictionary/mae_ni/), [まで](/reference/suffixes/dictionary/made/) and [うちに](/reference/suffixes/dictionary/uchi_ni/).
+
+### The tense in a time clause
+
+The tense of とき depends on whether the main action has happened *relative to* the clause.
+
+| Clause | Tense | Example | Means |
+|---|---|---|---|
+| Not done yet when the main action happens | dictionary | 日本に行くとき、買った。 | Before leaving for Japan, I bought it. |
+| Already done when the main action happens | past | 日本に行ったとき、買った。 | While in Japan, I bought it. |
+
+For 行くとき, the going is still ahead. For 行ったとき, it has happened. The main verb's own tense does not decide it.
+
+### Noun and adjective + とき
+
+| Type | Pattern | Example |
+|---|---|---|
+| い-adjective | plain + とき | 忙しいとき |
+| な-adjective | な + とき | 暇なとき |
+| Noun | の + とき | 子供のとき |
+
+## Summary
+
+| Task | Pattern |
+|---|---|
+| Modify a noun with a clause | plain clause + noun |
+| Make a clause a noun | plain + の / こと |
+| Quote or report | plain + と + 言う / 思う |
+| Quote a request | plain + ように + 言う |
+| Embedded question | plain + か (+ どうか) |
+| "When" | plain + とき |
+| "While" | plain + 間 |

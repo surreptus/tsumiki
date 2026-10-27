@@ -1,0 +1,44 @@
+{
+  "id": "te_kara",
+  "form": "から",
+  "romaji": "tekara",
+  "display": "てから",
+  "attaches_to": "te_stem",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "clause",
+  "meaning": "After doing (and only then).",
+  "examples": [
+    {
+      "japanese": "食べてから、薬を飲む。",
+      "reading": "たべてから、くすりをのむ。",
+      "gloss": "I take the medicine after I eat."
+    },
+    {
+      "japanese": "宿題をしてから遊ぶ。",
+      "reading": "しゅくだいをしてからあそぶ。",
+      "gloss": "I play after I do my homework."
+    },
+    {
+      "japanese": "日本に来てから三年になります。",
+      "reading": "にほんにきてからさんねんになります。",
+      "gloss": "It has been three years since I came to Japan."
+    }
+  ],
+  "usage": [
+    "Marks the order of two actions and stresses that the second follows the first.",
+    "Also means \"since\": 来てから三年.",
+    "Do not mix it up with から (reason), which attaches to a plain clause."
+  ],
+  "compare": [
+    {
+      "id": "kara_reason",
+      "difference": "から (reason) attaches to a plain clause and gives a cause. てから attaches to the て-form and gives an order."
+    },
+    {
+      "id": "tara",
+      "difference": "たら means \"if\" or \"when\". てから is a plain \"after\"."
+    }
+  ]
+}

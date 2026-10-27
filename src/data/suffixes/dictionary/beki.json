@@ -1,0 +1,44 @@
+{
+  "id": "beki",
+  "form": "べき",
+  "romaji": "beki",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "noun",
+  "output_class": "noun",
+  "meaning": "Ought to do.",
+  "examples": [
+    {
+      "japanese": "約束は守るべきだ。",
+      "reading": "やくそくはまもるべきだ。",
+      "gloss": "One ought to keep promises."
+    },
+    {
+      "japanese": "もっと早く寝るべきだった。",
+      "reading": "もっとはやくねるべきだった。",
+      "gloss": "I should have gone to bed earlier."
+    },
+    {
+      "japanese": "嘘をつくべきではない。",
+      "reading": "うそをつくべきではない。",
+      "gloss": "One should not tell lies."
+    }
+  ],
+  "usage": [
+    "A moral or social \"should\". It sounds firm and general, close to \"it is right that\".",
+    "With する, both するべき and すべき are used.",
+    "The negative is べきではない or べきじゃない."
+  ],
+  "compare": [
+    {
+      "id": "hou_ga_ii",
+      "difference": "たほうがいい is advice for a specific person. べき is a general or moral obligation."
+    },
+    {
+      "id": "nakereba_naranai",
+      "difference": "なければならない is a necessity. べき is what is right."
+    }
+  ]
+}

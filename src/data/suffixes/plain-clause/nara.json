@@ -1,0 +1,47 @@
+{
+  "id": "nara",
+  "form": "なら",
+  "romaji": "nara",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun"
+  ],
+  "output_type": "clause",
+  "noun_link": "bare",
+  "meaning": "If that is the case (given what was said).",
+  "examples": [
+    {
+      "japanese": "行くなら、一緒に行こう。",
+      "reading": "いくなら、いっしょにいこう。",
+      "gloss": "If you are going, let us go together."
+    },
+    {
+      "japanese": "安いなら、買う。",
+      "reading": "やすいなら、かう。",
+      "gloss": "If it is cheap, I will buy it."
+    },
+    {
+      "japanese": "学生なら、割引がある。",
+      "reading": "がくせいなら、わりびきがある。",
+      "gloss": "If you are a student, there is a discount."
+    }
+  ],
+  "usage": [
+    "Takes a situation the speaker has just heard or accepted, and gives advice or a reaction.",
+    "Attaches to a plain clause. Nouns and な-adjectives take なら without だ.",
+    "The condition is not required to happen before the result."
+  ],
+  "compare": [
+    {
+      "id": "tara",
+      "difference": "たら is a general \"if or when\". なら is \"if that is so\", based on given information."
+    },
+    {
+      "id": "to_conditional",
+      "difference": "と is a natural consequence. なら is advice or a response."
+    }
+  ]
+}

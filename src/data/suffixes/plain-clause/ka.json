@@ -1,0 +1,56 @@
+{
+  "id": "ka",
+  "form": "か",
+  "romaji": "ka",
+  "attaches_to": "plain-clause",
+  "input_type": [
+    "verb",
+    "i-adj",
+    "na-adj",
+    "noun",
+    "clause"
+  ],
+  "output_type": "clause",
+  "noun_link": "bare",
+  "accepts": [
+    "lemma",
+    "past",
+    "closed"
+  ],
+  "constraints": {
+    "politeness": "any"
+  },
+  "meaning": "Question marker.",
+  "examples": [
+    {
+      "japanese": "食べますか。",
+      "reading": "たべますか。",
+      "gloss": "Will you eat?"
+    },
+    {
+      "japanese": "一緒に行きませんか。",
+      "reading": "いっしょにいきませんか。",
+      "gloss": "Won't you come with me?"
+    },
+    {
+      "japanese": "コーヒーを飲みましょうか。",
+      "reading": "コーヒーをのみましょうか。",
+      "gloss": "Shall we have coffee?"
+    }
+  ],
+  "usage": [
+    "Closes a sentence and makes it a question. No question mark is needed.",
+    "ませんか is an invitation, from the ます paradigm: 行きませんか. ましょうか offers or suggests: 手伝いましょうか.",
+    "Attaches to plain and polite forms, including the past and negative."
+  ],
+  "compare": [
+    {
+      "label": "の",
+      "difference": "In casual speech a rising tone or の replaces か. か would sound blunt."
+    },
+    {
+      "id": "deshou",
+      "difference": "でしょうか is a polite, indirect question, softer than か alone."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "id": "made_ni",
+  "form": "までに",
+  "romaji": "madeni",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb",
+    "i-adj"
+  ],
+  "output_type": "clause",
+  "meaning": "By the time.",
+  "examples": [
+    {
+      "japanese": "彼が来るまでに掃除しておく。",
+      "reading": "かれがくるまでにそうじしておく。",
+      "gloss": "I will clean before he comes."
+    },
+    {
+      "japanese": "日が暮れるまでに帰る。",
+      "reading": "ひがくれるまでにかえる。",
+      "gloss": "I will be home by sunset."
+    },
+    {
+      "japanese": "授業が始まるまでに宿題を終える。",
+      "reading": "じゅぎょうがはじまるまでにしゅくだいをおえる。",
+      "gloss": "I will finish my homework before class starts."
+    }
+  ],
+  "usage": [
+    "A deadline. The main action happens once, before or at the given point.",
+    "Combine it with ておく for preparation: 来るまでに掃除しておく."
+  ],
+  "compare": [
+    {
+      "id": "made",
+      "difference": "まで means \"until\" and the action goes on. までに means \"by\" and the action happens once."
+    }
+  ]
+}

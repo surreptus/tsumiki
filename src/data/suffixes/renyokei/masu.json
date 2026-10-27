@@ -1,0 +1,53 @@
+{
+  "id": "masu",
+  "form": "ます",
+  "romaji": "masu",
+  "attaches_to": "renyokei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "masu",
+  "effects": {
+    "polite": true
+  },
+  "layer": 70,
+  "register": "Polite; the default in conversation with strangers and in writing aimed at readers.",
+  "related": [
+    "desu",
+    "tai"
+  ],
+  "meaning": "Polite verb ending.",
+  "examples": [
+    {
+      "japanese": "毎日コーヒーを飲みます。",
+      "reading": "まいにちコーヒーをのみます。",
+      "gloss": "I drink coffee every day."
+    },
+    {
+      "japanese": "日本語を勉強します。",
+      "reading": "にほんごをべんきょうします。",
+      "gloss": "I study Japanese."
+    },
+    {
+      "japanese": "明日、学校に行きます。",
+      "reading": "あした、がっこうにいきます。",
+      "gloss": "I will go to school tomorrow."
+    }
+  ],
+  "usage": [
+    "Adds politeness and nothing else. The meaning of the sentence does not change.",
+    "A ます-form has its own small paradigm: ません, ました, ませんでした, ましょう, まして. Nothing else attaches to it, so there is no 食べますたい and no 食べますない.",
+    "Put the other suffixes before ます: 食べさせます, 食べられます. たい stays before です instead: 食べたいです."
+  ],
+  "compare": [
+    {
+      "id": "desu",
+      "difference": "です does the same job for い-adjectives and nouns. ます is only for verbs."
+    },
+    {
+      "label": "Plain form",
+      "difference": "Plain forms (食べる) are for friends, family and for clauses inside a longer sentence. Even in a polite sentence, a clause in the middle is usually plain."
+    }
+  ]
+}

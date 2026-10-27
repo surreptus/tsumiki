@@ -1,0 +1,40 @@
+{
+  "id": "you_ni",
+  "form": "ように",
+  "romaji": "youni",
+  "attaches_to": "dictionary",
+  "input_type": [
+    "verb",
+    "i-adj"
+  ],
+  "output_type": "clause",
+  "meaning": "So that / in order that.",
+  "examples": [
+    {
+      "japanese": "忘れないようにメモする。",
+      "reading": "わすれないようにメモする。",
+      "gloss": "I write a note so I will not forget."
+    },
+    {
+      "japanese": "聞こえるように大きい声で話した。",
+      "reading": "きこえるようにおおきいこえではなした。",
+      "gloss": "I spoke loudly so that they could hear."
+    },
+    {
+      "japanese": "日本語が話せるように毎日練習している。",
+      "reading": "にほんごがはなせるようにまいにちれんしゅうしている。",
+      "gloss": "I practise every day so that I can speak Japanese."
+    }
+  ],
+  "usage": [
+    "Purpose for something that is not under direct control, such as potential verbs and negatives.",
+    "Also found in requests: 早く来るようにお願いします.",
+    "Often combined with する and なる (see ようにする, ようになる)."
+  ],
+  "compare": [
+    {
+      "id": "tame_ni",
+      "difference": "ために is for a deliberate purpose by the same subject. ように is for a result you hope for, or a different subject."
+    }
+  ]
+}
