@@ -71,7 +71,13 @@ export default defineConfig({
             { label: 'Special expressions', slug: 'guides/special-expressions' },
           ],
         },
-        { label: 'About', items: [{ label: 'Acknowledgements and license', slug: 'acknowledgements' }] },
+        {
+          label: 'About',
+          items: [
+            { label: 'Acknowledgements and license', slug: 'acknowledgements' },
+            { label: 'Privacy and terms of use', slug: 'privacy-and-terms' },
+          ],
+        },
       ],
     }),
   ],
