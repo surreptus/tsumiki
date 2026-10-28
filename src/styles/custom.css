@@ -220,6 +220,9 @@ td a.fn-stem { text-decoration: underline dotted; text-underline-offset: 3px; }
 .conj-field { display: grid; gap: var(--s-2); font-size: var(--text-xs); font-weight: 700; color: var(--sl-color-gray-3); }
 .conjugator select { width: 100%; min-width: 0; padding: var(--s-3) var(--s-4); max-width: 100%; font: inherit; font-weight: 700; font-size: var(--text-base); color: var(--sl-color-white); background: var(--sl-color-gray-6); border: 2px solid var(--sl-color-gray-3); border-radius: var(--radius); }
 .conj-actions { display: flex; gap: var(--s-2); }
+.conj-actions button { min-width: 5.5rem; }
+/* Starlight adds a top margin between siblings in content, which pushed Clear down and stretched Undo */
+.sl-markdown-content .conj-actions > button { margin-top: 0; }
 
 /* raised buttons that press down */
 .conjugator button { cursor: pointer; font: inherit; font-weight: 700; font-size: var(--text-sm); color: var(--sl-color-white); background: var(--sl-color-gray-6); border: 2px solid var(--sl-color-gray-3); border-bottom-width: 4px; border-radius: 12px; padding: var(--s-1) var(--s-4); transition: transform 0.05s; }
@@ -233,8 +236,10 @@ td a.fn-stem { text-decoration: underline dotted; text-underline-offset: 3px; }
 .conj-palette legend { padding: 0 var(--s-2); font-size: var(--text-xs); font-weight: 700; color: var(--sl-color-gray-3); }
 .conj-palette button { display: inline-flex; flex-direction: column; align-items: flex-start; line-height: 1.25; min-width: 4.5rem; }
 .conj-palette small { font-size: var(--text-xs); color: var(--sl-color-gray-3); }
-/* would be a type error as the next step: same text contrast, but a dashed outline */
-.conj-dim { border-style: dashed; border-bottom-style: dashed; }
+/* would be a type error as the next step: dashed, flat and muted, but the text stays readable (still clickable) */
+.conj-palette button.conj-dim { border-style: dashed; background: transparent; border-color: var(--sl-color-gray-4); color: var(--sl-color-gray-2); }
+.conj-palette button.conj-dim small { color: var(--sl-color-gray-2); }
+.conj-palette button.conj-dim:hover { border-color: var(--sl-color-gray-2); }
 
 /* compact cells for the step tables; function names are links but read as code, so no underline */
 .derivation-table :is(th, td) { padding: var(--s-2) var(--s-3); }
