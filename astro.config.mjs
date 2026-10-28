@@ -31,6 +31,7 @@ export default defineConfig({
       title: '積み木 · Functional Japanese',
       description:
         'A Japanese grammar guide that models verb and adjective morphology as typed function composition.',
+      routeMiddleware: './src/routeData.ts',
       customCss: [
         '@fontsource/zen-maru-gothic/400.css',
         '@fontsource/zen-maru-gothic/700.css',
@@ -44,7 +45,9 @@ export default defineConfig({
         { tag: 'meta', attrs: { property: 'og:image:alt', content: '積み木 Functional Japanese Grammar, with 食べる and its endings as coloured blocks' } },
         { tag: 'meta', attrs: { name: 'twitter:image', content: `${site}${base}/og.png` } },
       ],
-      lastUpdated: false,
+      lastUpdated: true,
+      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/surreptus/tsumiki' }],
+      components: { EditLink: './src/components/ReportLink.astro' },
       sidebar: [
         { label: 'Overview', items: [{ autogenerate: { directory: 'overview' } }] },
         {
@@ -80,6 +83,7 @@ export default defineConfig({
           label: 'About',
           items: [
             { label: 'Acknowledgements and license', slug: 'acknowledgements' },
+            { label: 'Changelog', slug: 'changelog' },
             { label: 'Privacy and terms of use', slug: 'privacy-and-terms' },
           ],
         },
