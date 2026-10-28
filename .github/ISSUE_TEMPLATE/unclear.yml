@@ -1,0 +1,26 @@
+name: Something is unclear
+description: A page or explanation that lost you.
+labels: [clarity]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: Where you got lost
+      description: The sentence, table or picture, and what you expected it to say.
+    validations:
+      required: true
+  - type: dropdown
+    id: background
+    attributes:
+      label: Your background
+      options:
+        - Learning Japanese, no programming
+        - Learning Japanese, some programming
+        - Teacher or native speaker
+        - Other

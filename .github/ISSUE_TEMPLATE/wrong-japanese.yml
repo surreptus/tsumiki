@@ -1,0 +1,25 @@
+name: Wrong or unnatural Japanese
+description: An example, note or explanation that is incorrect, unnatural or misleading.
+labels: [content]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The address or title of the page.
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: The text
+      description: Paste the sentence, table row or note.
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: What would be right, and why
+      description: A short reason is enough. Say if you are a native speaker or a teacher.
+    validations:
+      required: true

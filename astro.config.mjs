@@ -38,7 +38,12 @@ export default defineConfig({
         '@fontsource/jetbrains-mono/latin-700.css',
         './src/styles/custom.css',
       ],
-      head: [{ tag: 'script', attrs: { src: `${base}/a11y.js`, defer: true } }],
+      head: [
+        { tag: 'script', attrs: { src: `${base}/a11y.js`, defer: true } },
+        { tag: 'meta', attrs: { property: 'og:image', content: `${site}${base}/og.png` } },
+        { tag: 'meta', attrs: { property: 'og:image:alt', content: '積み木 Functional Japanese Grammar, with 食べる and its endings as coloured blocks' } },
+        { tag: 'meta', attrs: { name: 'twitter:image', content: `${site}${base}/og.png` } },
+      ],
       lastUpdated: false,
       sidebar: [
         { label: 'Overview', items: [{ autogenerate: { directory: 'overview' } }] },

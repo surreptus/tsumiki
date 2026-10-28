@@ -67,3 +67,7 @@ components keep their own licenses: credits and licenses (including the SIL OFL 
 The site is configured for `https://surreptus.github.io/tsumiki/` (see `site` and `base` in `astro.config.mjs`). If the repository has a different name, or the site moves to a custom domain, build with `SITE` and `BASE` set, for example `SITE=https://example.com BASE=/ npm run build`.
 
 To publish: push to `main` and, in the repository settings under Pages, set the source to "GitHub Actions". `.github/workflows/deploy.yml` runs the tests, builds, and deploys.
+
+## Contributing
+
+Corrections to the Japanese are especially welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
