@@ -1,0 +1,83 @@
+---
+title: Common mistakes
+description: The slips learners make most often when building verb and adjective forms, why each one fails, and the form to use instead.
+sidebar:
+  order: 7
+---
+
+import Derivation from '../../../components/Derivation.astro';
+
+Most mistakes with endings come from one of three things: putting the pieces in the wrong order, giving an ending the wrong stem, or confusing two forms that look alike. Each one below says what is wrong, why, and what to write.
+
+## Wrong order
+
+An ending needs a certain kind of word. If the previous step gives a different kind, the chain breaks. The tables below say what is wrong, and the blocks underneath show the same error step by step.
+
+| Wrong | Why | Right |
+| --- | --- | --- |
+| 食べないたい | ない gives an い-adjective, and たい needs a verb | 食べたくない |
+| 食べますたい | ます closes the verb, so たい has nothing to attach to | 食べたい, then です: 食べたいです |
+| 食べたない | た ends the word, so ない cannot follow | 食べなかった |
+| 食べたいない | ない on an い-adjective takes the く form | 食べたくない |
+| 食べたかったない | the past is already on, so ない is too late | 食べたくなかった |
+| 食べるです | です does not attach to a verb | 食べます, or 食べるんです |
+
+The rule behind most of these is the same: **the past tense goes on last**. Put ない, たい and every other ending on first, then た.
+
+<Derivation verb="食べる" chain={["neg", "tai"]} expectError />
+
+<Derivation verb="食べる" chain={["past", "neg"]} expectError />
+
+Done in the right order, the same pieces work:
+
+<Derivation verb="食べる" chain={["tai", "neg", "past"]} />
+
+## Right ending, wrong stem
+
+Each ending takes one particular stem, and the dictionary form is almost never it.
+
+| Wrong | Why | Right |
+| --- | --- | --- |
+| 食べるたい | たい takes the ます-stem, not the dictionary form | 食べたい |
+| 行くました | ます takes the ます-stem | 行きました |
+| 見るられる | the passive takes the ない-stem, and 見る drops る | 見られる |
+| 飲むて, 飲みて | the て-form of む verbs ends in んで | 飲んで |
+| 来らない | 来る is irregular | 来ない (こない) |
+
+The stem pages show every pattern. For a verb you can look up, the [conjugator](/reference/conjugator/) builds the form and names the stem used at each step.
+
+<Derivation verb="見る" chain={["passive"]} stems />
+
+## Adjectives
+
+い-adjectives and な-adjectives take different endings.
+
+| Wrong | Why | Right |
+| --- | --- | --- |
+| 高いかった | the past of an い-adjective replaces い | 高かった |
+| 高いくない | the negative of an い-adjective replaces い | 高くない |
+| 静かくない | な-adjectives are not い-adjectives | 静かじゃない |
+| いいかった | いい is irregular in the stem | よかった |
+
+<Derivation verb="高い" chain={["neg", "past"]} stems />
+
+<Derivation verb="静か" chain={["neg", "past"]} stems />
+
+## Forms that look alike
+
+| You wrote | It means | For the other meaning |
+| --- | --- | --- |
+| 行かれる | passive ("is gone to"), or honorific | 行ける, can go |
+| 食べれる | can eat, in casual speech | 食べられる, in writing and careful speech |
+
+The potential and passive of a verb often look the same (食べられる is both), but they are separate endings. 食べれる is common in speech and is not accepted in writing or formal speech, so use 食べられる unless you are being casual.
+
+<Derivation verb="行く" chain={["potential"]} />
+
+<Derivation verb="行く" chain={["passive"]} />
+
+## How to check yourself
+
+1. Say what you want to express, one piece at a time: *want, not, past*.
+2. Apply the pieces from the inside out, in the order on [the cheat sheet](/overview/cheat-sheet/).
+3. Type the verb into the [conjugator](/reference/conjugator/) and add the pieces in turn. If a step fails, the message says which kind of word it needed.

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import * as data from './data';
+import meaningIndex from '../data/meaning-index.json';
 import {
   IrregularSchema, PredicateSchema, StemSchema, SuffixSchema, VerbSchema, MIN_EXAMPLES,
 } from './schemas';
@@ -19,5 +20,9 @@ describe('JSON files satisfy the Zod schemas', () => {
   it('irregulars', () => expect(IrregularSchema.array().safeParse(data.irregulars).success).toBe(true));
   it('every suffix has at least MIN_EXAMPLES examples', () => {
     for (const s of data.suffixes) expect(s.examples.length, s.id).toBeGreaterThanOrEqual(MIN_EXAMPLES);
+  });
+  it('the meaning index lists every suffix exactly once', () => {
+    const listed = meaningIndex.flatMap((g) => g.ids).sort();
+    expect(listed).toEqual(data.suffixes.map((s) => s.id).sort());
   });
 });

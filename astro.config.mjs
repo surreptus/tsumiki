@@ -53,6 +53,7 @@ export default defineConfig({
         {
           label: 'Reference',
           items: [
+            { label: 'Find by meaning', slug: 'reference/by-meaning' },
             { label: 'Stems', items: [{ autogenerate: { directory: 'reference/stems' } }] },
             {
               label: 'Suffixes by stem',

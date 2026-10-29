@@ -1,0 +1,44 @@
+---
+// Every suffix grouped by what it says, so a learner can start from the meaning. The grouping is
+// hand-written in data/meaning-index.json; a test makes sure each suffix appears exactly once.
+import { getCollection } from 'astro:content';
+import index from '../data/meaning-index.json';
+import { stems } from '../lib/data';
+import { suffixHref } from '../lib/paths';
+import { suffixName } from '../lib/names';
+import Ja from './Ja.astro';
+
+const byId = new Map((await getCollection('suffixes')).map((e) => [e.data.id, e.data]));
+const ATTACH = new Map<string, string>([
+  ...stems.map((s) => [s.id, s.name] as [string, string]),
+  ['dictionary', 'dictionary form'],
+  ['plain-clause', 'plain form'],
+]);
+const slug = (t: string) => t.toLowerCase().replace(/[^a-z]+/g, '-').replace(/^-|-$/g, '');
+---
+<nav aria-label="Meanings" class="meaning-nav">
+  {index.map((g) => <a href={`#${slug(g.title)}`}>{g.title}</a>)}
+</nav>
+
+{index.map((g) => (
+  <section>
+    <h2 id={slug(g.title)}>{g.title}</h2>
+    <div class="table-scroll" tabindex="0" role="region" aria-label={g.title}>
+      <table>
+        <thead><tr><th>Ending</th><th>Meaning</th><th>Attaches to</th></tr></thead>
+        <tbody>
+          {g.ids.map((id) => {
+            const s = byId.get(id)!;
+            return (
+              <tr>
+                <td><a href={suffixHref(s)}><Ja text={suffixName(s)} /></a></td>
+                <td>{s.meaning.split('. ')[0].replace(/\.$/, '')}</td>
+                <td><Ja text={ATTACH.get(s.attaches_to) ?? s.attaches_to} /></td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+  </section>
+))}

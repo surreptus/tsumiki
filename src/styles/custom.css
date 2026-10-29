@@ -288,6 +288,11 @@ a:has(> code) { text-decoration: none; }
 .il-bad-h { fill: var(--danger-text); }
 .il-t.il-bad-t, .il-s.il-bad-t { fill: var(--danger-text); }
 
+/* ---- find by meaning ----------------------------------------------------- */
+.meaning-nav { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-6); }
+.meaning-nav a { padding: var(--s-1) var(--s-3); border: 2px solid var(--sl-color-gray-4); border-radius: 999px; font-size: var(--text-sm); text-decoration: none; color: var(--sl-color-white); }
+.meaning-nav a:hover { border-color: var(--sl-color-white); }
+
 /* ---- print ---------------------------------------------------------------
  * Starlight already hides the header and sidebar and flattens its own colours; ours must follow,
  * or a dark-theme reader prints pale text. Paper is white, so Alucard's values on pure white.
