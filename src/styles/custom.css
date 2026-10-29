@@ -254,7 +254,7 @@ a:has(> code) { text-decoration: none; }
 }
 
 /* keyboard focus on scrollable regions */
-:is(pre.code-block, .derivation-table, .stem-table, .suffix-table, .table-scroll):focus-visible { outline: 3px solid var(--sl-color-text-accent); outline-offset: 2px; }
+:is(pre.code-block, .derivation-table, .stem-table, .suffix-table, .table-scroll, .il-anatomy):focus-visible { outline: 3px solid var(--sl-color-text-accent); outline-offset: 2px; }
 
 /* previous / next links: raised-button border instead of a drop shadow */
 .pagination-links a {
@@ -280,12 +280,15 @@ a:has(> code) { text-decoration: none; }
 .il-s { font-size: 16px; fill: var(--sl-color-gray-2); }
 .il-p { font-size: 14px; font-weight: 700; fill: color-mix(in srgb, var(--c) 70%, var(--sl-color-white)); }
 .il-l { text-anchor: start; dominant-baseline: central; }
-.il-r { text-anchor: end; }
-/* the nested picture: hairline rings, quiet labels, the words do the talking */
-.il-nest .il-blk { fill: none; stroke-width: 1.5; }
-.il-nest .il-t { font-size: 20px; }
-.il-nest .il-m { font-size: 15px; }
-.il-nest .il-ac { fill: var(--sl-color-gray-3); font-weight: 400; }
+/* annotated call: the code line carries colour highlights, labels hang off dotted leaders */
+.il-hl { fill: color-mix(in srgb, var(--c) 22%, transparent); stroke: none; }
+.il-code { font-family: var(--sl-font-mono); font-size: 24px; fill: var(--sl-color-gray-3); dominant-baseline: central; }
+.il-code.il-fn { fill: var(--sl-color-white); font-weight: 700; }
+.il-lead { fill: none; stroke: var(--sl-color-gray-4); stroke-width: 1.5; stroke-dasharray: 2 4; stroke-linecap: round; }
+.il-card { fill: none; stroke: var(--c); stroke-width: 1.5; }
+.il-cardt { font-size: 17px; }
+.il-anatomy { overflow-x: auto; }
+.il-anatomy svg { max-width: 700px; min-width: 520px; }
 
 /* ---- find by meaning ----------------------------------------------------- */
 .meaning-nav { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-6); }
