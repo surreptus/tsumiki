@@ -281,18 +281,11 @@ a:has(> code) { text-decoration: none; }
 .il-p { font-size: 14px; font-weight: 700; fill: color-mix(in srgb, var(--c) 70%, var(--sl-color-white)); }
 .il-l { text-anchor: start; dominant-baseline: central; }
 .il-r { text-anchor: end; }
-/* the nested picture carries the most text, so it is set larger than the others */
+/* the nested picture: hairline rings, quiet labels, the words do the talking */
+.il-nest .il-blk { fill: none; stroke-width: 1.5; }
 .il-nest .il-t { font-size: 20px; }
-.il-nest .il-m { font-size: 17px; }
-/* opaque tints, so the rings do not darken as they nest */
-.il-nest .il-blk { fill: color-mix(in srgb, var(--c) 14%, var(--sl-color-black)); }
-.il-ac { fill: var(--sl-color-white); font-size: 16px; font-weight: 700; }
-.il-a { fill: none; stroke: var(--sl-color-gray-3); stroke-width: 2; }
-.il-ah { fill: var(--sl-color-gray-3); }
-.il-ok { fill: none; stroke: var(--t-i-adj); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
-.il-bad { fill: none; stroke: var(--danger-text); stroke-width: 2; stroke-linecap: round; }
-.il-bad-h { fill: var(--danger-text); }
-.il-t.il-bad-t, .il-s.il-bad-t { fill: var(--danger-text); }
+.il-nest .il-m { font-size: 15px; }
+.il-nest .il-ac { fill: var(--sl-color-gray-3); font-weight: 400; }
 
 /* ---- find by meaning ----------------------------------------------------- */
 .meaning-nav { display: flex; flex-wrap: wrap; gap: var(--s-2); margin-bottom: var(--s-6); }
