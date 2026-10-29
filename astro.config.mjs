@@ -49,11 +49,29 @@ export default defineConfig({
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/surreptus/tsumiki' }],
       components: { EditLink: './src/components/ReportLink.astro' },
       sidebar: [
-        { label: 'Overview', items: [{ autogenerate: { directory: 'overview' } }] },
+        {
+          label: 'Overview',
+          items: [
+            { label: 'The idea', slug: 'overview/idea' },
+            { label: 'Stems', slug: 'overview/stems' },
+            { label: 'Suffixes', slug: 'overview/suffixes' },
+            { label: 'Types and composition', slug: 'overview/types' },
+            { label: 'Worked examples', slug: 'overview/examples' },
+            { label: 'Using this with a course', slug: 'overview/with-a-course' },
+          ],
+        },
+        {
+          label: 'Tools and quick help',
+          items: [
+            { label: 'Find by meaning', slug: 'reference/by-meaning' },
+            { label: 'Conjugator', slug: 'reference/conjugator' },
+            { label: 'Common mistakes', slug: 'overview/common-mistakes' },
+            { label: 'Cheat sheet', slug: 'overview/cheat-sheet' },
+          ],
+        },
         {
           label: 'Reference',
           items: [
-            { label: 'Find by meaning', slug: 'reference/by-meaning' },
             { label: 'Stems', items: [{ autogenerate: { directory: 'reference/stems' } }] },
             {
               label: 'Suffixes by stem',
@@ -65,7 +83,6 @@ export default defineConfig({
             },
             { label: 'Composition rules', slug: 'reference/composition-rules' },
             { label: 'Irregulars', slug: 'reference/irregulars' },
-            { label: 'Conjugator', slug: 'reference/conjugator' },
           ],
         },
         {
