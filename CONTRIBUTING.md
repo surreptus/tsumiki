@@ -24,9 +24,12 @@ Before opening a pull request:
 npm ci
 npm test
 npm run build
+npm run check:links
 ```
 
-Both must pass. Keep the style of the surrounding text: short sentences, a plain table next to any notation, Japanese-only titles for suffixes, and no furigana.
+All must pass. `npm run check:a11y` runs an accessibility audit of every page in both themes; it needs a browser (`npx playwright-core install chromium` once) and takes about a minute and a half, and the deploy runs it too.
+
+Keep the style of the surrounding text: short sentences, a plain table next to any notation, Japanese-only titles for suffixes, and no furigana.
 
 ## License
 

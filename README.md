@@ -19,6 +19,8 @@ npm install
 npm run dev              # dev server (search is disabled here, see below)
 npm run build            # type-check (astro check) + build + index search
 npm run preview          # serve the production build
+npm run check:links      # after a build: every internal link and #anchor resolves
+npm run check:a11y       # after a build: axe over every page, dark and light (needs a browser)
 npm test                 # Vitest: the conjugation engine and the data
 ```
 
@@ -48,12 +50,12 @@ See [PLAN.md](PLAN.md) for the content inventory and what is planned for Phases 
 
 ## Accessibility
 
-Target: WCAG 2.2 level AA. Checked so far with axe-core (WCAG 2.0, 2.1 and 2.2 A/AA plus best-practice
-rules) on 12 pages in both themes with no violations, and by hand for reflow at 320px, reduced motion,
+Target: WCAG 2.2 level AA. `npm run check:a11y` runs axe-core (WCAG 2.0, 2.1 and 2.2 A/AA plus best-practice
+rules) over every page in both themes, and the deploy fails on any violation. Checked by hand for reflow at 320px, reduced motion,
 visible focus, and information that is not conveyed by colour alone. Automated tools find only part of the
 issues, so this is not a certification: a screen-reader pass and keyboard walkthrough are still worth doing.
 Colours are Dracula (dark) and Alucard (light) with text variants adjusted for contrast, see `src/styles/custom.css`.
-`axe-core` is a dev dependency; to re-run it, serve `dist/` and inject `node_modules/axe-core/axe.min.js` into a page.
+The check needs a browser: run `npx playwright-core install chromium` once.
 
 ## License
 

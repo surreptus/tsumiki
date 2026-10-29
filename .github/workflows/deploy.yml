@@ -23,11 +23,14 @@ jobs:
           fetch-depth: 0 # full history, so each page's last-updated date is its own
       - uses: actions/setup-node@v4
         with:
-          node-version: 26
+          node-version-file: .nvmrc
           cache: npm
       - run: npm ci
       - run: npm test
       - run: npm run build
+      - run: npm run check:links
+      - run: npx playwright-core install --with-deps chromium
+      - run: npm run check:a11y
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
