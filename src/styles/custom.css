@@ -280,6 +280,7 @@ a:has(> code) { text-decoration: none; }
 .il-s { font-size: 16px; fill: var(--sl-color-gray-2); }
 .il-p { font-size: 14px; font-weight: 700; fill: color-mix(in srgb, var(--c) 70%, var(--sl-color-white)); }
 .il-l { text-anchor: start; dominant-baseline: central; }
+.il-r { text-anchor: end; }
 .il-ac { fill: var(--sl-color-white); font-size: 16px; font-weight: 700; }
 .il-a { fill: none; stroke: var(--sl-color-gray-3); stroke-width: 2; }
 .il-ah { fill: var(--sl-color-gray-3); }
