@@ -281,6 +281,11 @@ a:has(> code) { text-decoration: none; }
 .il-p { font-size: 14px; font-weight: 700; fill: color-mix(in srgb, var(--c) 70%, var(--sl-color-white)); }
 .il-l { text-anchor: start; dominant-baseline: central; }
 .il-r { text-anchor: end; }
+/* the nested picture carries the most text, so it is set larger than the others */
+.il-nest .il-t { font-size: 20px; }
+.il-nest .il-m { font-size: 17px; }
+/* opaque tints, so the rings do not darken as they nest */
+.il-nest .il-blk { fill: color-mix(in srgb, var(--c) 14%, var(--sl-color-black)); }
 .il-ac { fill: var(--sl-color-white); font-size: 16px; font-weight: 700; }
 .il-a { fill: none; stroke: var(--sl-color-gray-3); stroke-width: 2; }
 .il-ah { fill: var(--sl-color-gray-3); }
