@@ -15,8 +15,10 @@ interface Props {
   expectError?: boolean;
   /** Also print the notation with the stem step written out: tai(renyokei(書く)). */
   stems?: boolean;
+  /** Show the step table under the notation (default). Off for a one-line teaser. */
+  table?: boolean;
 }
-const { verb, chain, expectError = false, stems = false } = Astro.props;
+const { verb, chain, expectError = false, stems = false, table = true } = Astro.props;
 
 const word = findWord(verb);
 if (!word) throw new Error(`<Derivation>: unknown word "${verb}"`);
@@ -50,7 +52,7 @@ const e = derivation.error;
 <>{'\n'}<span class="code-error">// type error at step {e.step + 1} ({chain[e.step]}), see below</span></>
 )}</code></pre>
 
-  <div class="derivation-table" tabindex="0" role="region" aria-label={`Derivation steps: ${notation}`}>
+  {table && <div class="derivation-table" tabindex="0" role="region" aria-label={`Derivation steps: ${notation}`}>
     <table>
       <thead>
         <tr><th>#</th><th>Function</th><th>Attaches to</th><th>Result</th><th>Type</th></tr>
@@ -88,7 +90,7 @@ const e = derivation.error;
         )}
       </tbody>
     </table>
-  </div>
+  </div>}
 
   {derivation.steps.some((s) => s.warnings.length) && (
     <ul class="derivation-warnings">
