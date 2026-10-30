@@ -6,6 +6,9 @@ import { CLASS_LABELS } from '../lib/conjugate';
 import { GODAN_FINALS, type Rule } from '../lib/schemas';
 import StemName from './StemName.astro';
 import SuffixTable from './SuffixTable.astro';
+import PracticePrompt from './PracticePrompt.astro';
+import { suffixName } from '../lib/names';
+import { stemPrompt } from '../lib/tutor-prompt';
 
 interface Props {
   id: string;
@@ -19,6 +22,12 @@ const describeRule = (r: Rule) =>
   (r.reading ?? r).drop === 0 ? `add ${(r.reading ?? r).add}` : `drop ${(r.reading ?? r).drop}, add ${(r.reading ?? r).add || '∅'}`;
 
 const classRows = Object.entries(stem.rules).filter(([k]) => k !== 'godan') as [string, Rule][];
+const rules = [
+  ...classRows.map(([cls, rule]) => `${CLASS_LABELS[cls as keyof typeof CLASS_LABELS]}: ${describeRule(rule)}`),
+  ...(stem.rules.godan ? GODAN_FINALS.map((f) => `godan, ends in ${f}: ${describeRule(stem.rules.godan![f]!)}`) : []),
+];
+const attached = (await getCollection('suffixes')).map((e) => e.data).filter((x) => x.attaches_to === stem.id).map(suffixName);
+const prompt = stemPrompt({ name: stem.name, label: stem.label, description: stem.description, rules, suffixes: attached, path: `/reference/stems/${stem.id}/` });
 ---
 <div class="stem-card">
   <p>{stem.description}</p>
@@ -55,4 +64,6 @@ const classRows = Object.entries(stem.rules).filter(([k]) => k !== 'godan') as [
 
   <h2 id="suffixes">Suffixes that attach here</h2>
   <SuffixTable attachesTo={stem.id} />
+
+  <PracticePrompt prompt={prompt} />
 </div>

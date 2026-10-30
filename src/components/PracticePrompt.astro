@@ -1,0 +1,39 @@
+---
+// "Practise this with an AI tutor": a collapsed box holding a copy-paste prompt. Nothing is sent anywhere;
+// the text is built at build time and the button only copies it to the clipboard.
+interface Props {
+  prompt: string;
+}
+const { prompt } = Astro.props;
+---
+<details class="practice" data-pagefind-ignore>
+  <summary>Practise this with an AI tutor</summary>
+  <p>Copy this prompt into an AI chat. It sets the tutor to teach by questions and to be hard on you. The tutor can still make mistakes, so check anything that matters with a teacher or a native speaker.</p>
+  <div class="practice-bar">
+    <button type="button" data-copy>Copy the prompt</button>
+    <span role="status" aria-live="polite" data-status></span>
+  </div>
+  <pre class="code-block" tabindex="0" aria-label="Prompt for an AI tutor"><code data-prompt>{prompt}</code></pre>
+</details>
+
+<script>
+  document.querySelectorAll<HTMLElement>('.practice').forEach((box) => {
+    const button = box.querySelector<HTMLButtonElement>('[data-copy]');
+    const status = box.querySelector<HTMLElement>('[data-status]');
+    const code = box.querySelector<HTMLElement>('[data-prompt]');
+    if (!button || !status || !code) return;
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(code.textContent ?? '');
+        status.textContent = 'Copied.';
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(code);
+        const selection = window.getSelection();
+        selection?.removeAllRanges();
+        selection?.addRange(range);
+        status.textContent = 'Press Ctrl or Cmd + C to copy the selected text.';
+      }
+    });
+  });
+</script>

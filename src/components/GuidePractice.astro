@@ -1,0 +1,15 @@
+---
+// The tutor prompt for a guide, built from the guide's own title and summary.
+import { getEntry } from 'astro:content';
+import { guidePrompt } from '../lib/tutor-prompt';
+import PracticePrompt from './PracticePrompt.astro';
+
+interface Props {
+  slug: string;
+}
+const { slug } = Astro.props;
+const entry = await getEntry('docs', `guides/${slug}`);
+if (!entry) throw new Error(`<GuidePractice>: unknown guide "${slug}"`);
+const prompt = guidePrompt({ title: entry.data.title, description: entry.data.description ?? '', path: `/guides/${slug}/` });
+---
+<PracticePrompt prompt={prompt} />

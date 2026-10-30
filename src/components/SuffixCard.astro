@@ -6,6 +6,9 @@ import { suffixHref, stemHref } from '../lib/paths';
 import { suffixName } from '../lib/names';
 import Ja from './Ja.astro';
 import Construction from './Construction.astro';
+import PracticePrompt from './PracticePrompt.astro';
+import { construction } from '../lib/construction';
+import { suffixPrompt } from '../lib/tutor-prompt';
 
 interface Props {
   id: string;
@@ -22,6 +25,13 @@ const nameOf = (id: string) => {
   return suffixName(r);
 };
 const compared = new Set(s.compare.map((c) => c.id));
+const prompt = suffixPrompt({
+  suffix: { ...s, title: suffixName(s) },
+  attach: attach ? `${attach.name} (${attach.label})` : s.attaches_to === 'dictionary' ? 'the dictionary form' : 'a plain clause',
+  rows: construction(s.id),
+  compare: s.compare.map((c) => ({ label: c.id ? nameOf(c.id) : c.label ?? '', difference: c.difference })),
+  path: `/reference/suffixes/${s.attaches_to}/${s.id}/`,
+});
 const related = allSuffixes.filter((r) => s.related.includes(r.id) && !compared.has(r.id));
 ---
 <div class="suffix-card">
@@ -80,4 +90,6 @@ const related = allSuffixes.filter((r) => s.related.includes(r.id) && !compared.
       <li><Ja text={ex.japanese} /><br /><span class="gloss">{ex.gloss}</span></li>
     ))}
   </ul>
+
+  <PracticePrompt prompt={prompt} />
 </div>
