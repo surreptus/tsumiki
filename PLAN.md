@@ -9,7 +9,7 @@ Phases 1 to 4 are written and live at https://surreptus.github.io/tsumiki/. Rema
 - **Phase 1:** scaffold, data model and conjugation engine.
 - **Phase 2:** 101 suffix pages (three or more examples each, plus usage notes and comparisons), the stem pages, the composition rules and the irregulars. Engine additions: the `adverb` type, 語幹-attached suffixes, the `prefix` field with honorific and humble irregulars, `display` names, a sentence-level か, and noun-attached ばかり, の後に and の後で. Hearsay そうだ has no past form, so there is nothing to add.
 - **Phase 3:** seven guides: particles, sentence-ending particles, keigo, casual speech, clauses, special expressions and conditionals.
-- **Phase 4:** learner aids and publishing. A find-by-meaning index, a common-mistakes page (chain errors checked by the engine at build time), a printable cheat sheet, a page on using the site beside a course, and a home-page notice that the Japanese is unreviewed. Also GitHub Pages deploy, search, social preview image, `robots.txt`, a "report a mistake" link on every page, per-page last-updated dates, a changelog, print styles, a privacy and terms page, contributing notes and issue templates.
+- **Phase 4:** learner aids and publishing. A find-by-meaning index, a common-mistakes page (chain errors checked by the engine at build time), a printable cheat sheet, a page on using the site beside a course, and a home-page notice that the Japanese is unreviewed. Also GitHub Pages deploy, search, social preview image, `robots.txt`, a "report a mistake" link on every page, per-page last-updated dates, a changelog, print styles, a privacy and terms page, contributing notes and issue templates, CI checks for links and accessibility, and a copy-paste AI tutor prompt on every ending, stem and guide page.
 
 ## Roadmap
 
@@ -25,7 +25,7 @@ Phases 1 to 4 are written and live at https://surreptus.github.io/tsumiki/. Rema
 
 **Later: only if the feedback supports it.**
 
-- **Practice app** in a separate repository: build the form, find the broken step, take a form apart. It needs the engine and data split into a shared package first. Decision, 28 October 2026: wait for learner feedback.
+- **Practice app** in a separate repository: build the form, find the broken step, take a form apart, with progress kept in the browser. For now the copy-paste tutor prompt on every page covers practice, and it works well. Build an app only if learners ask for something the prompt cannot give, such as progress tracking or drills that do not depend on an outside AI service. It would need the engine and data split into a shared package first. Decision, 28 October 2026: wait for learner feedback.
 - **Spanish:** a draft sketch of compound tenses and pronouns that attach to verbs is in `drafts/spanish-prototype.md`. Judge it after review. If it goes ahead it needs its own data model and native review.
 
 **Open questions.**
