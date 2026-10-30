@@ -52,7 +52,7 @@ export default defineConfig({
         {
           label: 'Overview',
           items: [
-            { label: 'The idea', slug: 'overview/idea', badge: { text: 'Start here', variant: 'success' } },
+            { label: 'The idea', slug: 'overview/idea' },
             { label: 'Stems', slug: 'overview/stems' },
             { label: 'Suffixes', slug: 'overview/suffixes' },
             { label: 'Types and composition', slug: 'overview/types' },
