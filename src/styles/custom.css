@@ -280,6 +280,13 @@ a:has(> code) { text-decoration: none; }
 .il-s { font-size: 16px; fill: var(--sl-color-gray-2); }
 .il-p { font-size: 14px; font-weight: 700; fill: color-mix(in srgb, var(--c) 70%, var(--sl-color-white)); }
 .il-l { text-anchor: start; dominant-baseline: central; }
+.il-ac { fill: var(--sl-color-white); font-size: 16px; font-weight: 700; }
+.il-a { fill: none; stroke: var(--sl-color-gray-3); stroke-width: 2; }
+.il-ah { fill: var(--sl-color-gray-3); }
+.il-ok { fill: none; stroke: var(--t-i-adj); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.il-bad { fill: none; stroke: var(--danger-text); stroke-width: 2; stroke-linecap: round; }
+.il-bad-h { fill: var(--danger-text); }
+.il-t.il-bad-t, .il-s.il-bad-t { fill: var(--danger-text); }
 /* annotated call: the code line carries colour highlights, labels hang off dotted leaders */
 .il-hl { fill: color-mix(in srgb, var(--c) 22%, transparent); stroke: none; }
 .il-code { font-family: var(--sl-font-mono); font-size: 24px; fill: var(--sl-color-gray-3); dominant-baseline: central; }
