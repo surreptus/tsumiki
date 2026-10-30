@@ -107,7 +107,7 @@ export default function Conjugator({ initialWord = 'taberu', initialChain = [] a
               {error && (
                 <tr class="derivation-error" role="alert">
                   <td>{error.step + 1}</td><td><code>{chain[error.step]}</code></td>
-                  <td colspan={3}><strong>Type error.</strong> {error.message}</td>
+                  <td colspan={3}><strong>Type error.</strong> {error.message} Click Undo, then try a different ending.</td>
                 </tr>
               )}
             </tbody>

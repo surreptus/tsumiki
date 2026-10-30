@@ -1,0 +1,13 @@
+---
+// A small key for the type colours, placed under an illustration that uses them.
+import { TYPE_LABELS } from '../lib/conjugate';
+import type { Type } from '../lib/schemas';
+
+interface Props {
+  types: Type[];
+}
+const { types } = Astro.props;
+---
+<div class="type-legend" role="list" aria-label="Colour key">
+  {types.map((t) => <span role="listitem" class={`type-chip type-${t}`}>{TYPE_LABELS[t]}</span>)}
+</div>

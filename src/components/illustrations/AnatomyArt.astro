@@ -1,5 +1,6 @@
 ---
 // The anatomy of one long form: the nested call, with a plain-English label on each function.
+import TypeLegend from '../TypeLegend.astro';
 ---
 <figure class="illus il-anatomy" tabindex="0" aria-label="Annotated function call, scrolls sideways on narrow screens">
   <svg viewBox="-16 0 682 280" role="img" aria-labelledby="anatomy-art-t">
@@ -42,4 +43,5 @@
     <text class="il-t il-cardt" x="512.4" y="240">the verb: eat</text>
   </svg>
   <figcaption>One word, five function calls, read from the inside out. Colour is the type of what each call returns.</figcaption>
+  <TypeLegend types={['verb', 'i-adj']} />
 </figure>

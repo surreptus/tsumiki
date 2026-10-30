@@ -297,6 +297,15 @@ a:has(> code) { text-decoration: none; }
 .il-anatomy { overflow-x: auto; }
 .il-anatomy svg { max-width: 700px; min-width: 520px; }
 
+/* ---- home page ------------------------------------------------------------ */
+.cta p { display: flex; flex-wrap: wrap; gap: var(--s-3); margin: 0; }
+.sl-markdown-content .cta a:not(.x) { padding: var(--s-2) var(--s-5); border: 2px solid var(--sl-color-gray-3); border-bottom-width: 4px; border-radius: 12px; font-weight: 700; text-decoration: none; color: var(--sl-color-white); }
+.sl-markdown-content .cta a:not(.x):first-child { background: var(--accent-text); border-color: var(--accent-text); color: var(--on-accent); }
+.sl-markdown-content .cta a:hover { border-color: var(--sl-color-white); }
+.notice { font-size: var(--text-sm); color: var(--sl-color-gray-2); border-left: 3px solid var(--sl-color-gray-4); padding-left: var(--s-4); }
+.notice p { margin: 0; }
+.type-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s-2); margin-top: var(--s-3); }
+
 /* ---- practice prompt ---------------------------------------------------- */
 .practice { margin-top: var(--s-12); border: var(--outline); border-radius: var(--radius); padding: var(--s-4); }
 .practice summary { cursor: pointer; font-weight: 700; }
@@ -340,6 +349,6 @@ a:has(> code) { text-decoration: none; }
     --accent-text: var(--sl-color-accent-high);
     --sl-color-bg-nav: #ffffff;
   }
-  .conj-actions, .conj-palette, .pagination-links, .practice { display: none; }
+  .conj-actions, .conj-palette, .pagination-links, .practice, .cta { display: none; }
   tr, figure, .illus, pre.code-block { break-inside: avoid; }
 }

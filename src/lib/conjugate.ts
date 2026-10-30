@@ -98,6 +98,9 @@ export const TYPE_LABELS: Record<Type, string> = {
   clause: 'closed clause',
 };
 
+/** "a verb", "an い-adjective": the article that goes before a type's name. */
+export const withArticle = (t: Type) => `${t === 'i-adj' || t === 'adverb' ? 'an' : 'a'} ${TYPE_LABELS[t]}`;
+
 /** Compact names for chips and tables, where the full label overflows. */
 export const TYPE_SHORT: Record<Type, string> = {
   ...TYPE_LABELS,
@@ -352,7 +355,7 @@ export function createEngine(db: EngineData) {
     if (!eff.input_type.includes(form.type)) {
       const expected = allInputTypes(suffix).map((t) => TYPE_LABELS[t]);
       return fail(suffixId, 'type-mismatch',
-        `${label} attaches to a ${expected.join(' / ')}, but ${describe(form)} is a ${TYPE_LABELS[form.type]}.`,
+        `${label} needs ${allInputTypes(suffix).map(withArticle).join(' or ')}, but ${form.text} is ${withArticle(form.type)}.`,
         { expected, got: TYPE_LABELS[form.type] });
     }
 

@@ -2,7 +2,7 @@
 // The suffix as a function: a formula per shape, then a table that builds a real word step by step.
 // Computed from the engine, so it always matches what the Conjugator does.
 import { getEntry } from 'astro:content';
-import { TYPE_SHORT } from '../lib/conjugate';
+import { TYPE_SHORT, withArticle } from '../lib/conjugate';
 import { construction, summariseLabels } from '../lib/construction';
 import { stemHref } from '../lib/paths';
 import Ja from './Ja.astro';
@@ -19,6 +19,8 @@ const rows = construction(s.id);
 const ATTACH_NAMES: Record<string, string> = { dictionary: 'dictionary form', 'plain-clause': 'plain form' };
 const types = [...new Set(rows.map((r) => TYPE_SHORT[r.type]))].join(' | ');
 const inputs = [...new Set([...s.input_type, ...(s.variants ?? []).flatMap((v) => v.input_type ?? [])])].map((t) => TYPE_SHORT[t]).join(' | ');
+const takes = [...new Set([...s.input_type, ...(s.variants ?? []).flatMap((v) => v.input_type ?? [])])].map(withArticle).join(' or ');
+const gives = [...new Set(rows.map((r) => r.type))].map(withArticle).join(' or ');
 const notes = rows.map((r) => summariseLabels(r.labels) + (r.piece === undefined ? ', irregular' : r.stem ? '' : `, as the ${ATTACH_NAMES[s.attaches_to]}`));
 ---
 <div class="construction">
@@ -28,6 +30,7 @@ const notes = rows.map((r) => summariseLabels(r.labels) + (r.piece === undefined
   ? r.result
   : <>{r.prefix ? `${r.prefix} + ` : ''}{r.stem ? <a class="fn fn-stem" href={stemHref(r.stem)}>{r.stem}</a> : null}{r.stem ? '(word)' : 'word'}{r.piece ? ` + ${r.piece}` : ''}</>}</span>  <span class="code-comment">// {notes[i]}</span>{'\n'}</>
 ))}</code></pre>
+  <p class="construction-gloss">Takes {takes}, gives {gives}.</p>
 
   <div class="table-scroll" tabindex="0" role="region" aria-label={`Building ${s.id} step by step`}>
     <table>

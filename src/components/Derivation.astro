@@ -3,7 +3,7 @@
 // table underneath. Built at build time: an invalid chain fails the build (so a typo cannot
 // ship) unless `expectError` marks it as a deliberate teaching example.
 import { getCollection } from 'astro:content';
-import { TYPE_SHORT, compose, findWord } from '../lib/conjugate';
+import { TYPE_LABELS, TYPE_SHORT, compose, findWord } from '../lib/conjugate';
 import { stemHref, suffixHref } from '../lib/paths';
 import FnChain from './FnChain.astro';
 import Ja from './Ja.astro';
@@ -47,7 +47,7 @@ const e = derivation.error;
   <pre class="code-block" tabindex="0" aria-label="Composition in function notation"><code><span class="code-notation"><FnChain word={word.kanji} fns={compact} />{e && ` → ${chain[e.step]}(…)`}</span>{stems && !e && (
 <>{'\n'}<span class="code-comment">// with stems: </span><span class="code-notation"><FnChain word={word.kanji} fns={expanded} /></span></>
 )}{!e && derivation.result && (
-<>{'\n'}<span class="code-comment">= {derivation.result.text}   // {TYPE_SHORT[derivation.result.type]}{derivation.result.state === 'past' ? ', past' : ''}</span></>
+<>{'\n'}<span class="code-comment">= {derivation.result.text}   // {TYPE_LABELS[derivation.result.type]}{derivation.result.state === 'past' ? ', past' : ''}</span></>
 )}{e && (
 <>{'\n'}<span class="code-error">// type error at step {e.step + 1} ({chain[e.step]}), see below</span></>
 )}</code></pre>
