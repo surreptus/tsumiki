@@ -2,7 +2,7 @@
 // Header block for a suffix page: reading, attach point, meaning, construction, notes, examples.
 // Everything searchable about a suffix is rendered here so Pagefind indexes it.
 import { getEntry, getCollection } from 'astro:content';
-import { suffixHref, stemHref } from '../lib/paths';
+import { suffixHref, stemHref, slug } from '../lib/paths';
 import { suffixName } from '../lib/names';
 import Ja from './Ja.astro';
 import Construction from './Construction.astro';
@@ -30,7 +30,7 @@ const prompt = suffixPrompt({
   attach: attach ? `${attach.name} (${attach.label})` : s.attaches_to === 'dictionary' ? 'the dictionary form' : 'a plain clause',
   rows: construction(s.id),
   compare: s.compare.map((c) => ({ label: c.id ? nameOf(c.id) : c.label ?? '', difference: c.difference })),
-  path: `/reference/suffixes/${s.attaches_to}/${s.id}/`,
+  path: `/reference/suffixes/${slug(s.attaches_to)}/${slug(s.id)}/`,
 });
 const related = allSuffixes.filter((r) => s.related.includes(r.id) && !compared.has(r.id));
 ---

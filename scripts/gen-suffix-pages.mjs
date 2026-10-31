@@ -1,11 +1,12 @@
 // Writes a stub MDX page per suffix in src/data/suffixes/, at
-// src/content/docs/reference/suffixes/<attach point>/<id>.mdx.
+// src/content/docs/reference/suffixes/<attach point>/<id>.mdx, with hyphens for underscores.
 // Never overwrites an existing page, so hand-written prose is safe. Run: node scripts/gen-suffix-pages.mjs
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DATA = 'src/data/suffixes';
 const OUT = 'src/content/docs/reference/suffixes';
+const slug = (id) => id.replace(/_/g, '-');
 const TITLES = { te: 'て形', past: 'た形', imperative: '命令形' };
 
 let created = 0;
@@ -13,9 +14,9 @@ for (const dir of readdirSync(DATA, { withFileTypes: true }).filter((d) => d.isD
   for (const file of readdirSync(join(DATA, dir.name)).filter((f) => f.endsWith('.json'))) {
     const s = JSON.parse(readFileSync(join(DATA, dir.name, file), 'utf8'));
     if (s.attaches_to !== dir.name) throw new Error(`${file}: attaches_to ${s.attaches_to} != folder ${dir.name}`);
-    const target = join(OUT, dir.name, `${s.id}.mdx`);
+    const target = join(OUT, slug(dir.name), `${slug(s.id)}.mdx`);
     if (existsSync(target)) continue;
-    mkdirSync(join(OUT, dir.name), { recursive: true });
+    mkdirSync(join(OUT, slug(dir.name)), { recursive: true });
     // Japanese-only title; the sidebar label adds the short English meaning.
     const title = TITLES[s.id] ?? s.display ?? s.written ?? s.form;
     const label = `${title} · ${s.short}`;

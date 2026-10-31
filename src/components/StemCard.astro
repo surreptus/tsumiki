@@ -1,7 +1,7 @@
 ---
 // Rules for one stem, per verb class, plus its exceptions and the suffixes that attach to it.
 import { getCollection, getEntry } from 'astro:content';
-import { irregularsHref } from '../lib/paths';
+import { irregularsHref, slug } from '../lib/paths';
 import { CLASS_LABELS } from '../lib/conjugate';
 import { GODAN_FINALS, type Rule } from '../lib/schemas';
 import StemName from './StemName.astro';
@@ -27,7 +27,7 @@ const rules = [
   ...(stem.rules.godan ? GODAN_FINALS.map((f) => `godan, ends in ${f}: ${describeRule(stem.rules.godan![f]!)}`) : []),
 ];
 const attached = (await getCollection('suffixes')).map((e) => e.data).filter((x) => x.attaches_to === stem.id).map(suffixName);
-const prompt = stemPrompt({ name: stem.name, label: stem.label, description: stem.description, rules, suffixes: attached, path: `/reference/stems/${stem.id}/` });
+const prompt = stemPrompt({ name: stem.name, label: stem.label, description: stem.description, rules, suffixes: attached, path: `/reference/stems/${slug(stem.id)}/` });
 ---
 <div class="stem-card">
   <p>{stem.description}</p>
