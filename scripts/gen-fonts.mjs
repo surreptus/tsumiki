@@ -11,8 +11,6 @@ const out = join(root, 'src/styles/fonts.css');
 const sources = [
   '@fontsource/zen-maru-gothic/400.css',
   '@fontsource/zen-maru-gothic/700.css',
-  '@fontsource/jetbrains-mono/latin-400.css',
-  '@fontsource/jetbrains-mono/latin-700.css',
 ];
 
 // Every code point used in the site's source, plus printable ASCII and Latin-1 for UI strings.
