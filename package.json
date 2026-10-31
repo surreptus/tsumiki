@@ -4,8 +4,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro check && astro build",
+    "fonts": "node scripts/gen-fonts.mjs",
+    "dev": "npm run fonts && astro dev",
+    "build": "npm run fonts && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",

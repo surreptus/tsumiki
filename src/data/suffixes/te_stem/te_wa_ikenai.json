@@ -1,7 +1,7 @@
 {
   "id": "te_wa_ikenai",
   "form": "はいけない",
-  "romaji": "tewaikenai",
+  "romaji": "te wa ikenai",
   "display": "てはいけない",
   "attaches_to": "te_stem",
   "input_type": [
@@ -9,6 +9,7 @@
   ],
   "output_type": "clause",
   "meaning": "Must not do (prohibition).",
+  "short": "must not",
   "examples": [
     {
       "japanese": "ここで写真を撮ってはいけません。",
@@ -28,13 +29,13 @@
   ],
   "usage": [
     "States a rule or a prohibition. It sounds like a general rule, not a personal order.",
-    "Said to a person, it is mild and polite with ません: いけません.",
+    "With ません (いけません) it is polite in form, but said to someone directly it can sound stern, like a teacher to a child.",
     "Casual speech contracts it to ちゃいけない / ちゃだめ (see the casual speech guide)."
   ],
   "compare": [
     {
       "id": "na_prohibitive",
-      "difference": "な is a blunt command used mostly by men to close friends. てはいけない is a rule."
+      "difference": "The prohibitive な (行くな) is a blunt personal command. てはいけない states a rule."
     },
     {
       "id": "te_mo_ii",

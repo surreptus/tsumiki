@@ -1,7 +1,7 @@
 {
   "id": "sou_hearsay",
   "form": "そうだ",
-  "romaji": "souda",
+  "romaji": "sou da",
   "attaches_to": "plain-clause",
   "input_type": [
     "verb",
@@ -15,6 +15,7 @@
     "sou"
   ],
   "meaning": "I hear that.",
+  "short": "I hear",
   "examples": [
     {
       "japanese": "明日は雨が降るそうだ。",

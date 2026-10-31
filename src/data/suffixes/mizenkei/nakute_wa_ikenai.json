@@ -1,7 +1,7 @@
 {
   "id": "nakute_wa_ikenai",
   "form": "なくてはいけない",
-  "romaji": "nakutewaikenai",
+  "romaji": "nakute wa ikenai",
   "attaches_to": "mizenkei",
   "input_type": [
     "verb"
@@ -12,6 +12,7 @@
     "nakereba_ikenai"
   ],
   "meaning": "Must do (softer).",
+  "short": "must (softer)",
   "examples": [
     {
       "japanese": "帰らなくてはいけない。",

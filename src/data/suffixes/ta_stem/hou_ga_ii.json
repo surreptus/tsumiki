@@ -1,7 +1,7 @@
 {
   "id": "hou_ga_ii",
   "form": "ほうがいい",
-  "romaji": "hougaii",
+  "romaji": "hou ga ii",
   "attaches_to": "ta_stem",
   "input_type": [
     "verb"
@@ -11,6 +11,7 @@
   "output_class": "i-adj",
   "aux_verb": "ii",
   "meaning": "Had better do.",
+  "short": "had better",
   "examples": [
     {
       "japanese": "早く寝たほうがいい。",

@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { construction } from './construction';
 import * as data from './data';
-import { guidePrompt, stemPrompt, suffixPrompt } from './tutor-prompt';
+import { LEVEL_LINE, guidePrompt, stemPrompt, suffixPrompt } from './tutor-prompt';
 import { suffixName } from './names';
 
 describe('tutor prompts', () => {
@@ -19,6 +19,8 @@ describe('tutor prompts', () => {
       for (const e of s.examples) expect(prompt, s.id).toContain(e.japanese);
       expect(prompt, s.id).toContain('Ask, don\'t tell');
       expect(prompt, s.id).not.toMatch(/undefined|\[object/);
+      expect(prompt, s.id).toContain(LEVEL_LINE);
+      expect(prompt, s.id).not.toContain('ground truth');
     }
   });
   it('uses the right article before a type', () => {

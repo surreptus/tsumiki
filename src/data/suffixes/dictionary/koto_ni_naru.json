@@ -1,7 +1,7 @@
 {
   "id": "koto_ni_naru",
   "form": "ことになる",
-  "romaji": "kotoninaru",
+  "romaji": "koto ni naru",
   "attaches_to": "dictionary",
   "input_type": [
     "verb"
@@ -12,6 +12,7 @@
     "koto_ni_suru"
   ],
   "meaning": "It has been decided that.",
+  "short": "it was decided",
   "examples": [
     {
       "japanese": "来月、大阪に引っ越すことになった。",

@@ -1,7 +1,7 @@
 {
   "id": "tokoro_doing",
   "form": "ところ",
-  "romaji": "tokorodoing",
+  "romaji": "te iru tokoro",
   "attaches_to": "dictionary",
   "input_type": [
     "verb"
@@ -14,6 +14,7 @@
     "tokoro_just"
   ],
   "meaning": "In the middle of doing.",
+  "short": "in the middle of",
   "examples": [
     {
       "japanese": "今、食べているところだ。",

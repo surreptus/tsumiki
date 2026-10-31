@@ -25,7 +25,15 @@
     "kanji": "寝る",
     "kana": "ねる",
     "class": "ichidan",
-    "meaning": "to sleep, to go to bed"
+    "meaning": "to sleep, to go to bed",
+    "blocks": [
+      {
+        "suffixes": [
+          "o_ni_naru"
+        ],
+        "note": "お寝になる is not used. The honorific of 寝る is お休みになる."
+      }
+    ]
   },
   {
     "id": "kiru-wear",
@@ -33,7 +41,15 @@
     "kana": "きる",
     "class": "ichidan",
     "meaning": "to wear (on the upper body)",
-    "notes": "Same kana as 切る (to cut), which is godan."
+    "notes": "Same kana as 切る (to cut), which is godan.",
+    "blocks": [
+      {
+        "suffixes": [
+          "o_ni_naru"
+        ],
+        "note": "お着になる is not used. The honorific of 着る is お召しになる."
+      }
+    ]
   },
   {
     "id": "deru",
@@ -69,7 +85,15 @@
     "kana": "いる",
     "class": "ichidan",
     "meaning": "to be, to exist (animate)",
-    "notes": "Same kana as 要る (to need), which is godan. Usually written in kana."
+    "notes": "Same kana as 要る (to need), which is godan. Usually written in kana.",
+    "blocks": [
+      {
+        "suffixes": [
+          "te_iru"
+        ],
+        "note": "いる already describes a state, so it does not take ている."
+      }
+    ]
   },
   {
     "id": "kariru",
@@ -195,7 +219,34 @@
     "kana": "ある",
     "class": "godan",
     "meaning": "to be, to exist (inanimate)",
-    "notes": "The negative is the suppletive ない, not あらない."
+    "notes": "The negative is the suppletive ない, not あらない.",
+    "blocks": [
+      {
+        "suffixes": [
+          "potential"
+        ],
+        "note": "ある has no potential. For \"can be\" or \"is possible\", Japanese uses ありうる or ありえる."
+      },
+      {
+        "suffixes": [
+          "passive",
+          "causative"
+        ],
+        "note": "ある describes a state, so it has no passive or causative."
+      },
+      {
+        "suffixes": [
+          "tai"
+        ],
+        "note": "ある has no たい form. For \"I want there to be\", say あってほしい."
+      },
+      {
+        "suffixes": [
+          "te_iru"
+        ],
+        "note": "ある already describes a state, so it does not take ている. (あっている is 合っている, \"is correct\", a different verb.)"
+      }
+    ]
   },
   {
     "id": "shinu",
@@ -289,7 +340,28 @@
     "kana": "いらっしゃる",
     "class": "godan",
     "meaning": "to be, to go, to come (honorific)",
-    "notes": "Honorific godan: いらっしゃいます."
+    "notes": "Honorific godan: いらっしゃいます.",
+    "blocks": [
+      {
+        "suffixes": [
+          "o_ni_naru"
+        ],
+        "note": "いらっしゃる is already honorific, so it does not take お〜になる as well."
+      },
+      {
+        "suffixes": [
+          "passive"
+        ],
+        "note": "いらっしゃる is already honorific. Adding the honorific られる makes a double honorific, which is common in speech but considered wrong.",
+        "warn": true
+      },
+      {
+        "suffixes": [
+          "o_suru"
+        ],
+        "note": "いらっしゃる is for someone else's action, and お〜する is for your own, so they do not combine."
+      }
+    ]
   },
   {
     "id": "nasaru",
@@ -297,7 +369,28 @@
     "kana": "なさる",
     "class": "godan",
     "meaning": "to do (honorific)",
-    "notes": "Honorific godan: なさいます."
+    "notes": "Honorific godan: なさいます.",
+    "blocks": [
+      {
+        "suffixes": [
+          "o_ni_naru"
+        ],
+        "note": "なさる is already honorific, so it does not take お〜になる as well."
+      },
+      {
+        "suffixes": [
+          "passive"
+        ],
+        "note": "なさる is already honorific. Adding the honorific られる makes a double honorific, which is common in speech but considered wrong.",
+        "warn": true
+      },
+      {
+        "suffixes": [
+          "o_suru"
+        ],
+        "note": "なさる is for someone else's action, and お〜する is for your own, so they do not combine."
+      }
+    ]
   },
   {
     "id": "kudasaru",
@@ -305,7 +398,28 @@
     "kana": "くださる",
     "class": "godan",
     "meaning": "to give (honorific)",
-    "notes": "Honorific godan: くださいます."
+    "notes": "Honorific godan: くださいます.",
+    "blocks": [
+      {
+        "suffixes": [
+          "o_ni_naru"
+        ],
+        "note": "下さる is already honorific, so it does not take お〜になる as well."
+      },
+      {
+        "suffixes": [
+          "passive"
+        ],
+        "note": "下さる is already honorific. Adding the honorific られる makes a double honorific, which is common in speech but considered wrong.",
+        "warn": true
+      },
+      {
+        "suffixes": [
+          "o_suru"
+        ],
+        "note": "下さる is for someone else's action, and お〜する is for your own, so they do not combine."
+      }
+    ]
   },
   {
     "id": "ossharu",
@@ -313,7 +427,28 @@
     "kana": "おっしゃる",
     "class": "godan",
     "meaning": "to say (honorific)",
-    "notes": "Honorific godan: おっしゃいます."
+    "notes": "Honorific godan: おっしゃいます.",
+    "blocks": [
+      {
+        "suffixes": [
+          "o_ni_naru"
+        ],
+        "note": "おっしゃる is already honorific, so it does not take お〜になる as well."
+      },
+      {
+        "suffixes": [
+          "passive"
+        ],
+        "note": "おっしゃる is already honorific. Adding the honorific られる makes a double honorific, which is common in speech but considered wrong.",
+        "warn": true
+      },
+      {
+        "suffixes": [
+          "o_suru"
+        ],
+        "note": "おっしゃる is for someone else's action, and お〜する is for your own, so they do not combine."
+      }
+    ]
   },
   {
     "id": "gozaru",
@@ -321,7 +456,13 @@
     "kana": "ござる",
     "class": "godan",
     "meaning": "to be (humble-polite)",
-    "notes": "Survives mainly as ございます."
+    "notes": "Survives mainly as ございます.",
+    "only": {
+      "suffixes": [
+        "masu"
+      ],
+      "note": "ござる survives only in its polite form ございます (and ございません, ございました)."
+    }
   },
   {
     "id": "suru",
@@ -343,7 +484,15 @@
     "kana": "べんきょうする",
     "class": "suru",
     "meaning": "to study",
-    "notes": "Noun + する compounds conjugate exactly like する."
+    "notes": "Noun + する compounds conjugate exactly like する.",
+    "blocks": [
+      {
+        "suffixes": [
+          "o_suru"
+        ],
+        "note": "お〜する is for an action you do for someone else. Your own studying is not one, so say 勉強いたします."
+      }
+    ]
   },
   {
     "id": "sanpo-suru",
@@ -351,7 +500,15 @@
     "kana": "さんぽする",
     "class": "suru",
     "meaning": "to take a walk",
-    "notes": "Noun + する compounds conjugate exactly like する."
+    "notes": "Noun + する compounds conjugate exactly like する.",
+    "blocks": [
+      {
+        "suffixes": [
+          "o_suru"
+        ],
+        "note": "お〜する is for an action you do for someone else. A walk is not one, so say 散歩いたします."
+      }
+    ]
   },
   {
     "id": "kiku",

@@ -1,7 +1,7 @@
 {
   "id": "uchi_ni",
   "form": "うちに",
-  "romaji": "uchini",
+  "romaji": "uchi ni",
   "attaches_to": "dictionary",
   "input_type": [
     "verb",
@@ -9,6 +9,7 @@
   ],
   "output_type": "clause",
   "meaning": "While / before it changes.",
+  "short": "while it lasts",
   "examples": [
     {
       "japanese": "若いうちに旅行したい。",

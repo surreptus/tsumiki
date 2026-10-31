@@ -55,6 +55,7 @@
     "masu"
   ],
   "meaning": "Negation: do not.",
+  "short": "not",
   "examples": [
     {
       "japanese": "魚は食べない。",
@@ -87,5 +88,6 @@
       "difference": "ないで means 'without doing' or, with ください, 'please do not'. ない is the plain negative.",
       "id": "naide"
     }
-  ]
+  ],
+  "repeatable": true
 }

@@ -9,6 +9,7 @@
   ],
   "output_type": "clause",
   "meaning": "Until.",
+  "short": "until",
   "examples": [
     {
       "japanese": "私が帰るまで待ってください。",

@@ -15,6 +15,8 @@ export const SAMPLES: { cls: string; label: string; word: string }[] = [
 ];
 
 export interface ConstructionRow {
+  /** godan rows are never merged with the others. */
+  group: 'godan' | 'other';
   labels: string[];
   words: string[];
   /** The stem the suffix attached to; undefined for dictionary-form / plain-clause suffixes. */
@@ -43,13 +45,15 @@ export function construction(suffixId: string): ConstructionRow[] {
     // a short prefix before the stem (お, ご) is part of the construction, not an irregularity
     const prefix = at > 0 && at <= 1 ? out.text.slice(0, at) : undefined;
     const piece = at === 0 || prefix ? out.text.slice(at + base.length) : undefined;
-    const same = (r: ConstructionRow) => r.stem === step.stem?.id && r.prefix === prefix && r.type === out.type && (piece !== undefined ? r.piece === piece : r.result === out.text);
+    // godan verbs always get their own row: their stem change (書く → 書き) is the point of the table
+    const group = sample.cls === 'godan' ? 'godan' : 'other';
+    const same = (r: ConstructionRow) => r.group === group && r.stem === step.stem?.id && r.prefix === prefix && r.type === out.type && (piece !== undefined ? r.piece === piece : r.result === out.text);
     const existing = rows.find(same);
     if (existing) {
       existing.labels.push(sample.label);
       existing.words.push(sample.word);
     } else {
-      rows.push({ labels: [sample.label], words: [sample.word], stem: step.stem?.id, base, prefix, piece, result: out.text, type: out.type });
+      rows.push({ group, labels: [sample.label], words: [sample.word], stem: step.stem?.id, base, prefix, piece, result: out.text, type: out.type });
     }
   }
   return rows;

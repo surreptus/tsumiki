@@ -7,7 +7,6 @@ import { join } from 'node:path';
 const DATA = 'src/data/suffixes';
 const OUT = 'src/content/docs/reference/suffixes';
 const TITLES = { te: 'て形', past: 'た形', imperative: '命令形' };
-const LABELS = { te: 'て-form · te', past: 'Past tense · ta', imperative: 'Imperative · meirei' };
 
 let created = 0;
 for (const dir of readdirSync(DATA, { withFileTypes: true }).filter((d) => d.isDirectory())) {
@@ -17,9 +16,9 @@ for (const dir of readdirSync(DATA, { withFileTypes: true }).filter((d) => d.isD
     const target = join(OUT, dir.name, `${s.id}.mdx`);
     if (existsSync(target)) continue;
     mkdirSync(join(OUT, dir.name), { recursive: true });
-    // Japanese-only title; the sidebar label keeps the romaji.
+    // Japanese-only title; the sidebar label adds the short English meaning.
     const title = TITLES[s.id] ?? s.display ?? s.written ?? s.form;
-    const label = LABELS[s.id] ?? `${s.display ?? s.written ?? s.form} · ${s.romaji}`;
+    const label = `${title} · ${s.short}`;
     const description = s.meaning.split('. ')[0].replace(/\.$/, '') + '.';
     writeFileSync(
       target,

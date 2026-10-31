@@ -391,6 +391,78 @@ describe('type errors', () => {
   });
 });
 
+// ------------------------------------------------------------------ forms the types allow but Japanese does not use
+
+describe('forms that type-check but are not used', () => {
+  const notUsed = (word: string, chain: string[]) => {
+    const d = compose(word, chain);
+    expect(d.error?.code, `${word} ${chain.join('>')} should be refused`).toBe('not-used');
+    return d.error!;
+  };
+
+  it('a suffix does not stack on itself, except ない', () => {
+    notUsed('食べる', ['causative', 'causative']);
+    notUsed('食べる', ['sugiru', 'sugiru']);
+    notUsed('食べる', ['te_miru', 'te_miru']);
+    expect(compose('食べる', ['neg', 'neg']).result?.text).toBe('食べなくない');
+  });
+
+  it('passive and potential do not stack on each other', () => {
+    notUsed('食べる', ['potential', 'passive']);
+    notUsed('食べる', ['passive', 'potential']);
+    notUsed('食べる', ['passive', 'passive']);
+  });
+
+  it('始める, 続ける and 終わる do not stack', () => {
+    notUsed('食べる', ['hajimeru', 'owaru']);
+  });
+
+  // Each of these is stated on a suffix page; the engine must agree with the page.
+  it('ある has no potential, passive, causative, たい or ている', () => {
+    for (const s of ['potential', 'passive', 'causative', 'tai', 'te_iru']) notUsed('ある', [s]);
+    expect(compose('ある', ['neg']).result?.text).toBe('ない');
+  });
+
+  it('寝る and 着る have their own honorifics, not お〜になる', () => {
+    expect(notUsed('寝る', ['o_ni_naru']).message).toContain('お休みになる');
+    expect(notUsed('着る', ['o_ni_naru']).message).toContain('お召しになる');
+  });
+
+  it('honorific verbs take no second honorific or humble frame', () => {
+    notUsed('いらっしゃる', ['o_ni_naru']);
+    notUsed('おっしゃる', ['o_suru']);
+    const d = compose('いらっしゃる', ['passive']);
+    expect(d.result?.text).toBe('いらっしゃられる');
+    expect(d.steps[0].warnings[0]).toContain('double honorific');
+  });
+
+  it('ござる survives only as ございます', () => {
+    notUsed('ござる', ['neg']);
+    expect(compose('ござる', ['masu', 'neg']).result?.text).toBe('ございません');
+  });
+
+  it('お〜する needs an action done for someone', () => {
+    notUsed('勉強する', ['o_suru']);
+    expect(compose('案内する', ['o_suru']).result?.text).toBe('ご案内する');
+  });
+
+  it('いい and negatives take さ before そう', () => {
+    expect(compose('いい', ['sou']).result?.text).toBe('よさそう');
+    expect(compose('かっこいい', ['sou']).result?.text).toBe('かっこよさそう');
+    expect(compose('食べる', ['neg', 'sou']).result?.text).toBe('食べなさそう');
+    expect(compose('高い', ['neg', 'sou']).result?.text).toBe('高くなさそう');
+  });
+
+  it('ので follows polite forms', () => {
+    expect(compose('食べる', ['masu', 'node']).result?.text).toBe('食べますので');
+  });
+
+  it('a closed clause error points to the suffix that builds the shape itself', () => {
+    const d = compose('食べる', ['te', 'te_iru']);
+    expect(d.error?.message).toContain('apply it straight to the word');
+  });
+});
+
 describe('declared constraints', () => {
   const db = {
     stems: engine.stems, irregulars: engine.irregulars, words: engine.words,

@@ -1,7 +1,7 @@
 {
   "id": "tokoro_just",
   "form": "ところ",
-  "romaji": "tokorojust",
+  "romaji": "ta tokoro",
   "attaches_to": "ta_stem",
   "input_type": [
     "verb"
@@ -14,6 +14,7 @@
     "tokoro_about"
   ],
   "meaning": "Just did.",
+  "short": "just now",
   "examples": [
     {
       "japanese": "今、帰ったところだ。",

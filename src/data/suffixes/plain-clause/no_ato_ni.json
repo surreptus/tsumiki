@@ -3,7 +3,7 @@
   "form": "あとに",
   "written": "後に",
   "display": "の後に",
-  "romaji": "noatoni",
+  "romaji": "no ato ni",
   "attaches_to": "plain-clause",
   "input_type": [
     "noun"
@@ -11,6 +11,7 @@
   "output_type": "clause",
   "noun_link": "na-no",
   "meaning": "After (a noun, formal).",
+  "short": "after (noun, formal)",
   "examples": [
     {
       "japanese": "会議の後に、食事をした。",

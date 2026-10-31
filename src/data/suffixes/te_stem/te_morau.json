@@ -1,7 +1,7 @@
 {
   "id": "te_morau",
   "form": "もらう",
-  "romaji": "temorau",
+  "romaji": "te morau",
   "display": "てもらう",
   "attaches_to": "te_stem",
   "input_type": [
@@ -16,6 +16,7 @@
     "te_itadaku"
   ],
   "meaning": "Have someone do something for me (I receive the favour).",
+  "short": "get someone to",
   "examples": [
     {
       "japanese": "友達に写真を撮ってもらった。",

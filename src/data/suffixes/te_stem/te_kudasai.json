@@ -1,7 +1,7 @@
 {
   "id": "te_kudasai",
   "form": "ください",
-  "romaji": "tekudasai",
+  "romaji": "te kudasai",
   "display": "てください",
   "attaches_to": "te_stem",
   "input_type": [
@@ -9,6 +9,7 @@
   ],
   "output_type": "clause",
   "meaning": "Please do (polite request).",
+  "short": "please",
   "examples": [
     {
       "japanese": "ちょっと待ってください。",

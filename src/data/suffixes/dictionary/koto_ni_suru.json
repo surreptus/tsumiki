@@ -1,7 +1,7 @@
 {
   "id": "koto_ni_suru",
   "form": "ことにする",
-  "romaji": "kotonisuru",
+  "romaji": "koto ni suru",
   "attaches_to": "dictionary",
   "input_type": [
     "verb"
@@ -13,6 +13,7 @@
     "koto_ni_naru"
   ],
   "meaning": "Decide to do.",
+  "short": "decide to",
   "examples": [
     {
       "japanese": "来月から日本語を勉強することにした。",

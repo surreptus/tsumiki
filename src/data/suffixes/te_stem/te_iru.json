@@ -1,7 +1,7 @@
 {
   "id": "te_iru",
   "form": "いる",
-  "romaji": "teiru",
+  "romaji": "te iru",
   "display": "ている",
   "attaches_to": "te_stem",
   "input_type": [
@@ -13,6 +13,7 @@
   "layer": 30,
   "register": "Casual speech drops the い: 勉強してる.",
   "meaning": "Ongoing action or resulting state.",
+  "short": "-ing, state",
   "examples": [
     {
       "japanese": "今、勉強している。",

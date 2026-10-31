@@ -1,7 +1,7 @@
 {
   "id": "wake_da",
   "form": "わけだ",
-  "romaji": "wakeda",
+  "romaji": "wake da",
   "attaches_to": "plain-clause",
   "input_type": [
     "verb",
@@ -12,6 +12,7 @@
   "output_type": "clause",
   "noun_link": "na-no",
   "meaning": "So that is why / it follows that.",
+  "short": "no wonder",
   "examples": [
     {
       "japanese": "道理で眠いわけだ。",

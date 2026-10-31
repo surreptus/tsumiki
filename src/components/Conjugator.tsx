@@ -1,16 +1,19 @@
 // The only hydrated component. Pick a word, click suffixes in order, see the derivation as a
-// chain of blocks; invalid compositions show a type error at the step that fails.
+// chain of blocks; invalid compositions show the error at the step that fails.
 import { useMemo, useState } from 'preact/hooks';
-import { TYPE_SHORT, apply, compose, engine } from '../lib/conjugate';
+import { ERROR_LABELS, TYPE_SHORT, apply, compose, engine } from '../lib/conjugate';
 
 const Ja = ({ text, class: cls }: { text: string; class?: string }) => (
   <span class={`ja${cls ? ` ${cls}` : ''}`} lang="ja">{text}</span>
 );
 
-const GROUPS: [string, string][] = [
-  ['renyokei', '連用形'], ['mizenkei', '未然形'], ['ishikei', '意志形'], ['kateikei', '仮定形'],
-  ['meireikei', '命令形'], ['te_stem', 'て-form'], ['ta_stem', 'た-form'],
-  ['dictionary', 'Dictionary form'], ['plain-clause', 'Plain clause'],
+// Each group: where its endings attach, as a plain label with the traditional name beside it.
+const GROUPS: [string, string, string?][] = [
+  ['renyokei', 'After the ます-stem', '連用形'], ['mizenkei', 'After the ない-stem', '未然形'],
+  ['ishikei', 'After the う-stem', '意志形'], ['kateikei', 'After the ば-stem', '仮定形'],
+  ['meireikei', 'Command', '命令形'], ['te_stem', 'After the て-form', 'て形'], ['ta_stem', 'After the た-form', 'た形'],
+  ['gokan', 'After an adjective stem', '語幹'],
+  ['dictionary', 'After the dictionary form'], ['plain-clause', 'After a plain sentence'],
 ];
 
 const WORD_GROUPS: [string, (w: (typeof engine.words)[number]) => boolean][] = [
@@ -71,7 +74,7 @@ export default function Conjugator({ initialWord = 'taberu', initialChain = [] a
               {notation}{error && ` → ${chain[error.step]}(…)`}
             </span>
             {error ? (
-              <>{'\n'}<span class="code-error">// type error at step {error.step + 1} ({chain[error.step]}), see below</span></>
+              <>{'\n'}<span class="code-error">// error at step {error.step + 1} ({chain[error.step]}), see below</span></>
             ) : (
               derivation.steps.length > 0 && (
                 <>{'\n'}<span class="code-comment">= {current.text}   // {typeLabel(current.type, current.state === 'past')}</span></>
@@ -107,7 +110,7 @@ export default function Conjugator({ initialWord = 'taberu', initialChain = [] a
               {error && (
                 <tr class="derivation-error" role="alert">
                   <td>{error.step + 1}</td><td><code>{chain[error.step]}</code></td>
-                  <td colspan={3}><strong>Type error.</strong> {error.message} Click Undo, then try a different ending.</td>
+                  <td colspan={3}><strong>{ERROR_LABELS[error.code]}</strong> {error.message} Click Undo, then try a different ending.</td>
                 </tr>
               )}
             </tbody>
@@ -127,21 +130,22 @@ export default function Conjugator({ initialWord = 'taberu', initialChain = [] a
       </div>
 
       <div class="conj-palette">
-        {GROUPS.map(([attach, name]) => {
+        {GROUPS.map(([attach, name, ja]) => {
           const items = engine.suffixes.filter((s) => s.attaches_to === attach);
           return (
             <fieldset>
-              <legend lang="ja">{name}</legend>
+              <legend>{name}{ja && <> <span lang="ja">{ja}</span></>}</legend>
               {items.map((s) => (
                 <button
                   type="button"
                   class={nextOk.has(s.id) ? 'conj-ok' : 'conj-dim'}
-                  title={`${s.id}: ${s.meaning.split('. ')[0]}`}
+                  data-suffix={s.id}
+                  title={s.meaning}
                   onClick={() => setChain([...chain, s.id])}
                 >
                   <span lang="ja">{label(s.id)}</span>
-                  <small>{s.id}</small>
-                  {!nextOk.has(s.id) && <span class="sr-only"> (would be a type error as the next step)</span>}
+                  <small>{s.short}</small>
+                  {!nextOk.has(s.id) && <span class="sr-only"> (would not work as the next step)</span>}
                 </button>
               ))}
             </fieldset>

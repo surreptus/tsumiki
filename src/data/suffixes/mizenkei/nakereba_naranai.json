@@ -1,7 +1,7 @@
 {
   "id": "nakereba_naranai",
   "form": "なければならない",
-  "romaji": "nakerebanaranai",
+  "romaji": "nakereba naranai",
   "attaches_to": "mizenkei",
   "input_type": [
     "verb"
@@ -13,6 +13,7 @@
     "nakute_wa_ikenai"
   ],
   "meaning": "Must do.",
+  "short": "must (formal)",
   "examples": [
     {
       "japanese": "薬を飲まなければならない。",

@@ -1,7 +1,7 @@
 {
   "id": "hazu_da",
   "form": "はずだ",
-  "romaji": "hazuda",
+  "romaji": "hazu da",
   "attaches_to": "plain-clause",
   "input_type": [
     "verb",
@@ -12,6 +12,7 @@
   "output_type": "clause",
   "noun_link": "na-no",
   "meaning": "Should be / is expected to be.",
+  "short": "should be",
   "examples": [
     {
       "japanese": "彼はもう着いているはずだ。",

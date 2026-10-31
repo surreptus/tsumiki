@@ -1,7 +1,7 @@
 {
   "id": "o_suru",
   "form": "する",
-  "romaji": "osuru",
+  "romaji": "o … suru",
   "attaches_to": "renyokei",
   "input_type": [
     "verb"
@@ -29,6 +29,7 @@
     "o_ni_naru"
   ],
   "meaning": "Humble: お + stem + する.",
+  "short": "humble",
   "examples": [
     {
       "japanese": "荷物をお持ちしましょうか。",
@@ -41,8 +42,8 @@
       "gloss": "I will help you."
     },
     {
-      "japanese": "明日、お届けする。",
-      "reading": "あした、おとどけする。",
+      "japanese": "明日、お届けします。",
+      "reading": "あした、おとどけします。",
       "gloss": "I will deliver it tomorrow."
     }
   ],

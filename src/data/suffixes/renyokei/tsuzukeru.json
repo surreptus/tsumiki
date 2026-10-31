@@ -15,6 +15,7 @@
     "owaru"
   ],
   "meaning": "Continue doing.",
+  "short": "keep on",
   "examples": [
     {
       "japanese": "毎日走り続けている。",
@@ -43,6 +44,15 @@
     {
       "id": "te_iru",
       "difference": "ている describes an action in progress. 続ける stresses that it does not stop."
+    }
+  ],
+  "not_after": [
+    {
+      "suffixes": [
+        "hajimeru",
+        "owaru"
+      ],
+      "note": "始める, 続ける and 終わる each describe one phase of the action, so they do not stack on each other."
     }
   ]
 }

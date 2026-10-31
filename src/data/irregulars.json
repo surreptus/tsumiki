@@ -256,6 +256,41 @@
     }
   },
   {
+    "id": "ii-sou",
+    "category": "adjective",
+    "title": "いい → よさそう",
+    "note": "Before そう (\"looks\"), いい becomes よさ: よさそう, not よそう. Compounds such as かっこいい inherit it: かっこよさそう.",
+    "match": {
+      "verbs": [
+        "ii"
+      ]
+    },
+    "suffix": "sou",
+    "target": "form",
+    "rule": {
+      "drop": 2,
+      "add": "よさそう"
+    }
+  },
+  {
+    "id": "nai-sou",
+    "category": "adjective",
+    "title": "ない → なさそう",
+    "note": "Before そう (\"looks\"), a negative ない becomes なさ: 食べなさそう, 高くなさそう.",
+    "match": {
+      "classes": [
+        "i-adj"
+      ],
+      "polarity": "neg"
+    },
+    "suffix": "sou",
+    "target": "form",
+    "rule": {
+      "drop": 1,
+      "add": "さそう"
+    }
+  },
+  {
     "id": "sonkei-taberu",
     "category": "honorific",
     "title": "食べる, 飲む → 召し上がる",

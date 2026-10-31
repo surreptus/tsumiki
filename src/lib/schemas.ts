@@ -100,7 +100,7 @@ export type StemData = z.infer<typeof StemSchema>;
 // ---------------------------------------------------------------- suffixes
 export const ExampleSchema = z.object({
   japanese: z.string(),
-  reading: z.string().describe('Full kana reading of `japanese` (kept as data; not displayed)'),
+  reading: z.string().describe('Full kana reading of `japanese`, shown under the example'),
   gloss: z.string(),
 });
 
@@ -113,6 +113,18 @@ export const MIN_EXAMPLES = 3;
  * where the sound alone cannot decide: 書こう vs 来よう both follow こ). When both
  * are given, both must hold.
  */
+/**
+ * Combinations the type check allows but Japanese does not use (ある has no potential,
+ * 寝る takes お休みになる, not お〜になる). `warn` keeps the form but flags it, for forms
+ * that are heard but considered wrong (いらっしゃられる).
+ */
+export const BlockSchema = z.object({
+  suffixes: z.array(z.string()).min(1),
+  note: z.string().describe('Shown to the learner: why, and what to say instead'),
+  warn: z.boolean().default(false),
+});
+export type BlockData = z.infer<typeof BlockSchema>;
+
 /** How a suffix differs from a neighbour that learners confuse it with. */
 export const CompareSchema = z.object({
   id: z.string().optional().describe('Suffix id, when the neighbour has its own page'),
@@ -173,7 +185,12 @@ export const SuffixSchema = z.object({
     polite: z.literal(true).optional(),
   }).optional(),
   layer: z.number().optional().describe('Canonical stacking rank; see Composition rules'),
+  /** Applying the same suffix twice in a row (食べさせさせる) is refused unless this is set. */
+  repeatable: z.boolean().default(false).describe('May follow itself, as ない does in 食べなくない'),
+  /** Suffixes that may not come directly before this one, with the reason shown to the learner. */
+  not_after: z.array(BlockSchema).default([]),
   meaning: z.string(),
+  short: z.string().describe('Two or three words for buttons and sidebar labels, e.g. "want to"'),
   register: z.string().optional(),
   /** Short usage notes: nuance, restrictions, common mistakes. */
   usage: z.array(z.string()).default([]),
@@ -195,6 +212,10 @@ export const VerbSchema = z.object({
   meaning: z.string(),
   lookalike: z.boolean().default(false).describe('Godan verb that ends in -iru/-eru'),
   notes: z.string().optional(),
+  /** Suffixes this verb does not take, and the forms built on it (via aux_verb or key) inherit. */
+  blocks: z.array(BlockSchema).default([]),
+  /** When set, the only suffixes this verb takes (ござる survives as ございます). */
+  only: z.object({ suffixes: z.array(z.string()).min(1), note: z.string() }).optional(),
 });
 export type VerbData = z.infer<typeof VerbSchema>;
 
@@ -218,6 +239,8 @@ export const IrregularSchema = z.object({
   match: z.object({
     verbs: z.array(z.string()).optional(),
     classes: z.array(ClassSchema).optional(),
+    /** Only negative forms (ない → なさそう). */
+    polarity: z.literal('neg').optional(),
   }),
   /** Restrict to one suffix (e.g. する → さ only before れる/せる). */
   suffix: z.string().optional(),

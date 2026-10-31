@@ -1,15 +1,19 @@
 ---
 // Replaces Starlight's "Edit page" link: most readers cannot edit the source, but anyone can report a mistake.
+// Not shown on the 404 page, which has no content to be wrong.
 import { Icon } from '@astrojs/starlight/components';
 
+const route = Astro.locals.starlightRoute;
 const page = new URL(Astro.url.pathname, Astro.site).href;
 const href = `https://github.com/surreptus/tsumiki/issues/new?template=wrong-japanese.yml&page=${encodeURIComponent(page)}`;
 ---
 
-<a href={href} class="sl-flex print:hidden" rel="noopener">
-  <Icon name="pencil" size="1.2em" />
-  Report a mistake on this page
-</a>
+{route.id !== '404' && (
+  <a href={href} class="sl-flex print:hidden" rel="noopener">
+    <Icon name="pencil" size="1.2em" />
+    Report a mistake on this page (needs a GitHub account)
+  </a>
+)}
 
 <style>
   @layer starlight.core {

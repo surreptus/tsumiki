@@ -1,7 +1,7 @@
 {
   "id": "te_itadaku",
   "form": "いただく",
-  "romaji": "teitadaku",
+  "romaji": "te itadaku",
   "display": "ていただく",
   "attaches_to": "te_stem",
   "input_type": [
@@ -14,6 +14,7 @@
     "te_morau"
   ],
   "meaning": "Humble: receive the favour of someone doing something.",
+  "short": "humbly receive",
   "examples": [
     {
       "japanese": "先生に教えていただいた。",
@@ -28,7 +29,7 @@
     {
       "japanese": "説明していただく。",
       "reading": "せつめいしていただく。",
-      "gloss": "I receive an explanation."
+      "gloss": "I will have it explained to me (said humbly)."
     }
   ],
   "usage": [

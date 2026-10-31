@@ -15,6 +15,7 @@
     "tsuzukeru"
   ],
   "meaning": "Finish doing.",
+  "short": "finish",
   "examples": [
     {
       "japanese": "本を読み終わった。",
@@ -44,6 +45,15 @@
     {
       "id": "hajimeru",
       "difference": "始める begins. 終わる ends."
+    }
+  ],
+  "not_after": [
+    {
+      "suffixes": [
+        "hajimeru",
+        "tsuzukeru"
+      ],
+      "note": "始める, 続ける and 終わる each describe one phase of the action, so they do not stack on each other."
     }
   ]
 }

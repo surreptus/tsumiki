@@ -37,7 +37,7 @@ const related = allSuffixes.filter((r) => s.related.includes(r.id) && !compared.
 <div class="suffix-card">
   <dl>
     <div>
-      <dt>Reading</dt>
+      <dt>Romaji</dt>
       <dd>{s.form && s.form !== (s.display ?? s.written ?? s.form) && <><span lang="ja">{s.form}</span> · </>}{s.romaji}</dd>
     </div>
     <div>
@@ -87,7 +87,11 @@ const related = allSuffixes.filter((r) => s.related.includes(r.id) && !compared.
   <h2 id="examples">Examples</h2>
   <ul class="examples">
     {s.examples.map((ex) => (
-      <li><Ja text={ex.japanese} /><br /><span class="gloss">{ex.gloss}</span></li>
+      <li>
+        <Ja text={ex.japanese} />
+        {ex.reading !== ex.japanese && <><br /><Ja class="reading" text={ex.reading} /></>}
+        <br /><span class="gloss">{ex.gloss}</span>
+      </li>
     ))}
   </ul>
 

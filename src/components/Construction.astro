@@ -21,11 +21,18 @@ const types = [...new Set(rows.map((r) => TYPE_SHORT[r.type]))].join(' | ');
 const inputs = [...new Set([...s.input_type, ...(s.variants ?? []).flatMap((v) => v.input_type ?? [])])].map((t) => TYPE_SHORT[t]).join(' | ');
 const takes = [...new Set([...s.input_type, ...(s.variants ?? []).flatMap((v) => v.input_type ?? [])])].map(withArticle).join(' or ');
 const gives = [...new Set(rows.map((r) => r.type))].map(withArticle).join(' or ');
-const notes = rows.map((r) => summariseLabels(r.labels) + (r.piece === undefined ? ', irregular' : r.stem ? '' : `, as the ${ATTACH_NAMES[s.attaches_to]}`));
+// The formula lines merge rows the table keeps apart (the godan row is separate only to show its stem).
+const formulas = rows.reduce<typeof rows>((acc, r) => {
+  const twin = r.piece !== undefined && acc.find((x) => x.piece === r.piece && x.stem === r.stem && x.prefix === r.prefix && x.type === r.type);
+  if (twin) twin.labels = [...twin.labels, ...r.labels];
+  else acc.push({ ...r, labels: [...r.labels] });
+  return acc;
+}, []);
+const notes = formulas.map((r) => summariseLabels(r.labels) + (r.piece === undefined ? ', irregular' : r.stem ? '' : `, as the ${ATTACH_NAMES[s.attaches_to]}`));
 ---
 <div class="construction">
   <pre class="code-block" tabindex="0" aria-label="How the suffix is built"><code><span class="code-notation">{s.id} : {inputs} → {types}</span>
-{rows.map((r, i) => (
+{formulas.map((r, i) => (
 <><span class="code-notation">{s.id}(<span class="fn-word">{r.piece === undefined ? r.words[0] : 'word'}</span>) = {r.piece === undefined
   ? r.result
   : <>{r.prefix ? `${r.prefix} + ` : ''}{r.stem ? <a class="fn fn-stem" href={stemHref(r.stem)}>{r.stem}</a> : null}{r.stem ? '(word)' : 'word'}{r.piece ? ` + ${r.piece}` : ''}</>}</span>  <span class="code-comment">// {notes[i]}</span>{'\n'}</>

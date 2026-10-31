@@ -22,7 +22,7 @@ try {
       await page.goto(origin + path, { waitUntil: 'load' });
       // the conjugator is only interesting once some steps are dimmed
       if (path.endsWith('/reference/conjugator/')) {
-        await page.locator('.conj-palette button', { hasText: 'neg' }).first().click();
+        await page.locator('.conj-palette button[data-suffix="neg"]').click();
       }
       await page.addScriptTag({ path: axePath });
       const { violations } = await page.evaluate(() =>

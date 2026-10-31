@@ -1,7 +1,7 @@
 {
   "id": "suru_change",
   "form": "にする",
-  "romaji": "surukange",
+  "romaji": "ku suru, ni suru",
   "attaches_to": "gokan",
   "input_type": [
     "na-adj",
@@ -30,6 +30,7 @@
     "adverb"
   ],
   "meaning": "Make (something) so.",
+  "short": "make it",
   "examples": [
     {
       "japanese": "部屋を明るくする。",

@@ -1,7 +1,7 @@
 {
   "id": "te_iku",
   "form": "いく",
-  "romaji": "teiku",
+  "romaji": "te iku",
   "display": "ていく",
   "attaches_to": "te_stem",
   "input_type": [
@@ -15,6 +15,7 @@
     "te_kuru"
   ],
   "meaning": "Do and go on; away from now.",
+  "short": "go on doing",
   "examples": [
     {
       "japanese": "これからも頑張っていく。",

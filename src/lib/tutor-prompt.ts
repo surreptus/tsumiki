@@ -1,5 +1,5 @@
-// The copy-paste prompt on each page. It hands an AI tutor the page's own facts as ground truth, so the
-// tutor teaches the same rules as the site, and asks it to teach in a hard, question-led way.
+// The copy-paste prompt on each page. It hands an AI tutor the page's own facts, so the tutor teaches the
+// same rules as the site, says that they are unreviewed, and asks it to teach in a question-led way.
 import { summariseLabels, type ConstructionRow } from './construction';
 import { TYPE_LABELS, withArticle } from './conjugate';
 import type { SuffixData, Type } from './schemas';
@@ -12,19 +12,22 @@ const HOW_TO_TEACH = `HOW TO TEACH ME (learning mode, and make it challenging)
 - Mix exercise types: build the form from a given word; add more pieces in the right order (negative, past, polite); spot and fix a wrong form; choose between this and a look-alike; translate English into Japanese; a short exchange where I must use it naturally.
 - Include traps: the wrong stem, the wrong order, irregular verbs, and the look-alikes listed above.
 - When I am wrong, do not just correct me. Say which step failed (stem, order or word type), give a hint, and let me try again once before you show the answer.
-- Treat the rules and examples above as ground truth. If you are not sure a Japanese sentence is natural, say so instead of guessing.
-- Write Japanese normally. Give readings or romaji only if I ask.
+- Use the rules and examples above as the guide's view. They have not yet been checked by a native speaker: if one conflicts with standard Japanese, say so and explain. If you are not sure a Japanese sentence is natural, say so instead of guessing.
+- Write Japanese normally, and give the reading in hiragana in brackets after any word with kanji. Stop the readings if I ask.
 - Do not over-praise. Keep each turn short.
 - After about ten questions, summarise what I got right, what I keep missing, and what to practise next.
 - Start now with your first question.
 
-My level: [beginner / intermediate / advanced]. I will tell you if a question is too easy or too hard.`;
+My level: beginner. I will tell you if a question is too easy or too hard.`;
 
 const list = (items: string[]) => items.map((i) => `- ${i}`).join('\n');
 const type = (t: Type) => TYPE_LABELS[t];
 
+/** The level line in HOW_TO_TEACH, which the page's level menu rewrites before copying. */
+export const LEVEL_LINE = 'My level: beginner.';
+
 interface SuffixInput {
-  suffix: Pick<SuffixData, 'id' | 'meaning' | 'attaches_to' | 'input_type' | 'output_type' | 'usage' | 'examples' | 'register'> & { title: string };
+  suffix: Pick<SuffixData, 'id' | 'meaning' | 'attaches_to' | 'input_type' | 'variants' | 'output_type' | 'usage' | 'examples' | 'register'> & { title: string };
   attach: string;
   rows: ConstructionRow[];
   compare: { label: string; difference: string }[];
@@ -39,7 +42,7 @@ export function suffixPrompt({ suffix: s, attach, rows, compare, path }: SuffixI
   const gives = s.output_type === 'same' ? 'the same type of word' : withArticle(s.output_type);
   const parts = [
     `You are a patient, demanding Japanese tutor. I am practising ${s.title} from Tsumiki, a guide that builds verb and adjective forms from small pieces, each of which takes one kind of word and returns another. (${SITE}${path})`,
-    `THE ENDING: ${s.title}\nMeaning: ${s.meaning}\nAttaches to: ${attach}\nTakes: ${s.input_type.map(type).join(' or ')}. Gives: ${gives}.${s.register ? `\nRegister: ${s.register}` : ''}`,
+    `THE ENDING: ${s.title}\nMeaning: ${s.meaning}\nAttaches to: ${attach}\nTakes: ${[...new Set([...s.input_type, ...(s.variants ?? []).flatMap((v) => v.input_type ?? [])])].map(type).join(' or ')}. Gives: ${gives}.${s.register ? `\nRegister: ${s.register}` : ''}`,
     `HOW IT IS BUILT\n${list(built)}`,
     `EXAMPLES\n${list(s.examples.map((e) => `${e.japanese} (${e.gloss})`))}`,
   ];

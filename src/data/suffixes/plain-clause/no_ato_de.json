@@ -3,7 +3,7 @@
   "form": "あとで",
   "written": "後で",
   "display": "の後で",
-  "romaji": "noatode",
+  "romaji": "no ato de",
   "attaches_to": "plain-clause",
   "input_type": [
     "noun"
@@ -11,6 +11,7 @@
   "output_type": "clause",
   "noun_link": "na-no",
   "meaning": "After (a noun).",
+  "short": "after (noun)",
   "examples": [
     {
       "japanese": "食事の後で、散歩する。",

@@ -10,6 +10,7 @@
   "output_type": "noun",
   "output_class": "noun",
   "meaning": "Intention: I plan to.",
+  "short": "intend to",
   "examples": [
     {
       "japanese": "来年、日本へ行くつもりです。",
@@ -29,7 +30,7 @@
   ],
   "usage": [
     "A settled intention or plan: 行くつもりです.",
-    "The negative puts ない before: 行かないつもり, not 行くつもりじゃない.",
+    "For \"I do not intend to\", both 行かないつもり and 行くつもりはない are common. 行くつもりはない is the firmer denial.",
     "In the past, つもりだった means 'I had meant to' and implies it did not happen.",
     "It is a noun, so a copula follows: つもりだ, つもりです."
   ],

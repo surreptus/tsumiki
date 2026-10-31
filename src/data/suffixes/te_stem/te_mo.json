@@ -1,7 +1,7 @@
 {
   "id": "te_mo",
   "form": "も",
-  "romaji": "temo",
+  "romaji": "te mo",
   "display": "ても",
   "attaches_to": "te_stem",
   "input_type": [
@@ -12,6 +12,7 @@
   ],
   "output_type": "clause",
   "meaning": "Even if / even though.",
+  "short": "even if",
   "examples": [
     {
       "japanese": "雨が降っても行きます。",

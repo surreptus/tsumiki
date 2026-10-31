@@ -1,7 +1,7 @@
 {
   "id": "te_ageru",
   "form": "あげる",
-  "romaji": "teageru",
+  "romaji": "te ageru",
   "display": "てあげる",
   "attaches_to": "te_stem",
   "input_type": [
@@ -15,6 +15,7 @@
     "te_morau"
   ],
   "meaning": "Do something for someone (a favour from you).",
+  "short": "do for someone",
   "examples": [
     {
       "japanese": "友達に本を貸してあげた。",

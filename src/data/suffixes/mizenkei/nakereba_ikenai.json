@@ -1,7 +1,7 @@
 {
   "id": "nakereba_ikenai",
   "form": "なければいけない",
-  "romaji": "nakerebaikenai",
+  "romaji": "nakereba ikenai",
   "attaches_to": "mizenkei",
   "input_type": [
     "verb"
@@ -12,6 +12,7 @@
     "nakereba_naranai"
   ],
   "meaning": "Must do (conversational).",
+  "short": "must",
   "examples": [
     {
       "japanese": "行かなければいけない。",

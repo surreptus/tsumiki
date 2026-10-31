@@ -11,4 +11,9 @@ describe('construction', () => {
     expect(rows.find((r) => r.words.includes('書く'))).toMatchObject({ stem: 'mizenkei', base: '書か', piece: 'せる' });
     expect(rows.find((r) => r.words.includes('食べる'))).toMatchObject({ base: '食べ', piece: 'させる' });
   });
+  it('shows the godan stem change in its own row, even when the piece is the same', () => {
+    const rows = construction('tai');
+    expect(rows.find((r) => r.words.includes('書く'))).toMatchObject({ base: '書き', piece: 'たい' });
+    expect(rows.find((r) => r.words.includes('食べる'))).toMatchObject({ base: '食べ', piece: 'たい' });
+  });
 });

@@ -21,6 +21,7 @@
     "politeness": "any"
   },
   "meaning": "Question marker.",
+  "short": "question",
   "examples": [
     {
       "japanese": "食べますか。",

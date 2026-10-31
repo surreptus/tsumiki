@@ -1,7 +1,7 @@
 {
   "id": "made_ni",
   "form": "までに",
-  "romaji": "madeni",
+  "romaji": "made ni",
   "attaches_to": "dictionary",
   "input_type": [
     "verb",
@@ -9,6 +9,7 @@
   ],
   "output_type": "clause",
   "meaning": "By the time.",
+  "short": "by the time",
   "examples": [
     {
       "japanese": "彼が来るまでに掃除しておく。",

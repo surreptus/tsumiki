@@ -1,7 +1,7 @@
 {
   "id": "te_kara",
   "form": "から",
-  "romaji": "tekara",
+  "romaji": "te kara",
   "display": "てから",
   "attaches_to": "te_stem",
   "input_type": [
@@ -9,6 +9,7 @@
   ],
   "output_type": "clause",
   "meaning": "After doing (and only then).",
+  "short": "after",
   "examples": [
     {
       "japanese": "食べてから、薬を飲む。",

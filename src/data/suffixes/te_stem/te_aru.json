@@ -1,7 +1,7 @@
 {
   "id": "te_aru",
   "form": "ある",
-  "romaji": "tearu",
+  "romaji": "te aru",
   "display": "てある",
   "attaches_to": "te_stem",
   "input_type": [
@@ -15,6 +15,7 @@
     "te_iru"
   ],
   "meaning": "State left by a deliberate action.",
+  "short": "has been done",
   "examples": [
     {
       "japanese": "窓が開けてある。",

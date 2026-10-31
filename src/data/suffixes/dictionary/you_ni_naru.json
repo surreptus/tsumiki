@@ -1,7 +1,7 @@
 {
   "id": "you_ni_naru",
   "form": "ようになる",
-  "romaji": "youninaru",
+  "romaji": "you ni naru",
   "attaches_to": "dictionary",
   "input_type": [
     "verb"
@@ -13,6 +13,7 @@
     "koto_ni_naru"
   ],
   "meaning": "Come to the point where.",
+  "short": "come to",
   "examples": [
     {
       "japanese": "日本語が話せるようになった。",

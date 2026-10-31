@@ -1,7 +1,7 @@
 {
   "id": "te_shimau",
   "form": "しまう",
-  "romaji": "teshimau",
+  "romaji": "te shimau",
   "display": "てしまう",
   "attaches_to": "te_stem",
   "input_type": [
@@ -11,6 +11,7 @@
   "output_class": "godan",
   "layer": 30,
   "meaning": "Do completely, or do with regret.",
+  "short": "completely, regret",
   "examples": [
     {
       "japanese": "全部食べてしまった。",

@@ -13,6 +13,7 @@
     "kata"
   ],
   "meaning": "Nominalizer: the act of doing.",
+  "short": "the act of",
   "examples": [
     {
       "japanese": "泳ぐことが好きです。",
@@ -27,7 +28,7 @@
     {
       "japanese": "見ることが大切だ。",
       "reading": "みることがたいせつだ。",
-      "gloss": "Seeing for yourself is important."
+      "gloss": "Seeing is important."
     }
   ],
   "usage": [

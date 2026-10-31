@@ -22,6 +22,7 @@
     "potential"
   ],
   "meaning": "Passive: be done to. Also honorific.",
+  "short": "passive",
   "examples": [
     {
       "japanese": "先生にほめられた。",
@@ -51,6 +52,14 @@
     {
       "id": "causative",
       "difference": "The causative makes someone act. The passive describes what happens to you. They combine as 食べさせられる, 'be made to eat'."
+    }
+  ],
+  "not_after": [
+    {
+      "suffixes": [
+        "potential"
+      ],
+      "note": "The passive does not attach to a potential. 食べられる already covers both meanings, and context decides which."
     }
   ]
 }

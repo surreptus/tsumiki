@@ -3,7 +3,7 @@
 // Pure TypeScript; all rules live in src/data/ and are injected via `createEngine`.
 import { vowelOf } from './kana';
 import type {
-  Cls, IrregularData, Rule, State, StemData, StemId, SuffixData, Type, Variant,
+  BlockData, Cls, IrregularData, Rule, State, StemData, StemId, SuffixData, Type, Variant,
 } from './schemas';
 import * as data from './data';
 
@@ -28,6 +28,8 @@ export interface Form extends Surface {
   polite: boolean;
   /** Lexicon id whose irregularities this form inherits (行く, ある, いい ...). */
   key?: string;
+  /** The suffix that produced this form, for rules about what may follow what. */
+  last?: string;
 }
 
 export type ErrorCode =
@@ -37,7 +39,8 @@ export type ErrorCode =
   | 'wrong-state'
   | 'closed-clause'
   | 'no-stem'
-  | 'constraint';
+  | 'constraint'
+  | 'not-used';
 
 export interface ConjError {
   code: ErrorCode;
@@ -78,6 +81,8 @@ export interface Word {
   type: Type;
   conjugatesLike?: string;
   meaning: string;
+  blocks?: BlockData[];
+  only?: { suffixes: string[]; note: string };
 }
 
 export class ConjugationError extends Error {
@@ -123,6 +128,18 @@ export const CLASS_LABELS: Record<Cls, string> = {
   desu: 'です (after noun / な-adjective)',
   'desu-i': 'です (after い-adjective)',
   clause: 'closed clause',
+};
+
+/** A short heading for each kind of error, shown before the message. */
+export const ERROR_LABELS: Record<ErrorCode, string> = {
+  'unknown-word': 'Unknown word.',
+  'unknown-suffix': 'Unknown ending.',
+  'type-mismatch': 'Wrong kind of word.',
+  'wrong-state': 'Wrong order.',
+  'closed-clause': 'Nothing attaches here.',
+  'no-stem': 'No such stem.',
+  constraint: 'Not allowed here.',
+  'not-used': 'Not used in Japanese.',
 };
 
 /** Why a class lacks a stem, for the classes where that is a rule worth teaching. */
@@ -184,6 +201,7 @@ export function wordsFromLexicon(lex: {
   return [
     ...lex.verbs.map((v): Word => ({
       id: v.id, kanji: v.kanji, kana: v.kana, cls: v.class, type: 'verb', meaning: v.meaning,
+      blocks: v.blocks, only: v.only,
     })),
     ...lex.predicates.map((p): Word => ({
       id: p.id, kanji: p.kanji, kana: p.kana, cls: p.class, type: p.class,
@@ -195,6 +213,7 @@ export function wordsFromLexicon(lex: {
 export function createEngine(db: EngineData) {
   const stemById = new Map(db.stems.map((s) => [s.id, s]));
   const suffixById = new Map(db.suffixes.map((s) => [s.id, s]));
+  const wordById = new Map(db.words.map((w) => [w.id, w]));
 
   // ---------------------------------------------------------------- lexicon
 
@@ -236,6 +255,7 @@ export function createEngine(db: EngineData) {
       const byVerb = !!form.key && !!row.match.verbs?.includes(form.key);
       const byClass = !!row.match.classes?.includes(form.cls);
       if (!byVerb && !byClass) return false;
+      if (row.match.polarity && row.match.polarity !== form.polarity) return false;
       if (row.suffix !== undefined && row.suffix !== suffixId) return false;
       if (target === 'form' && row.suffix === undefined) return false;
       if (stemId !== undefined && row.stems && !row.stems.includes(stemId)) return false;
@@ -342,12 +362,17 @@ export function createEngine(db: EngineData) {
     if (!suffix) return fail(suffixId, 'unknown-suffix', `There is no suffix called "${suffixId}".`);
 
     const eff = resolve(suffix, form);
-    const label = suffix.written ?? (suffix.form || `the ${suffix.romaji}-form`);
+    const label = suffix.display ?? suffix.written ?? (suffix.form || `the ${suffix.romaji}-form`);
 
     // 1. closed clauses accept nothing unless the suffix says so
     if (form.state === 'closed' && !eff.accepts.includes('closed')) {
+      // ている after て, ようと思う after よう: the suffix builds that shape itself.
+      const own = stemById.get(eff.attaches_to as StemId);
+      const hint = own && form.last && suffixById.get(form.last)?.attaches_to === own.id
+        ? ` ${label} makes the ${own.label.replace(/^The /, '')} itself, so apply it straight to the word instead.`
+        : ' Clauses are joined to the sentence by particles (see the Guides).';
       return fail(suffixId, 'closed-clause',
-        `${describe(form)} is a closed clause, so ${label} cannot attach to it. Clauses are joined to the sentence by particles (see the Guides).`,
+        `${form.text} is a closed clause, so ${label} cannot attach to it.${hint}`,
         { got: TYPE_LABELS[form.type] });
     }
 
@@ -421,7 +446,28 @@ export function createEngine(db: EngineData) {
       surface = concat(base, ending);
     }
 
-    // 6. the output form
+    // 6. combinations the types allow but Japanese does not use (checked after the stem, so a
+    // missing stem is reported first, and skipped where an irregular gives the whole form)
+    const warnings: string[] = [];
+    if (form.last === suffixId && !suffix.repeatable) {
+      return fail(suffixId, 'not-used', `${describe(form)} already ends in ${label}, and it does not stack on itself.`);
+    }
+    const before = form.last && (suffix.not_after ?? []).find((b) => b.suffixes.includes(form.last!));
+    if (before) {
+      if (!before.warn) return fail(suffixId, 'not-used', before.note);
+      warnings.push(before.note);
+    }
+    const word = form.key ? wordById.get(form.key) : undefined;
+    if (word?.only && !word.only.suffixes.includes(suffixId)) {
+      return fail(suffixId, 'not-used', word.only.note);
+    }
+    const blocked = wholeForm ? undefined : word?.blocks?.find((b) => b.suffixes.includes(suffixId));
+    if (blocked) {
+      if (!blocked.warn) return fail(suffixId, 'not-used', blocked.note);
+      warnings.push(blocked.note);
+    }
+
+    // 7. the output form
     const type = eff.output_type === 'same' ? form.type : eff.output_type;
     const cls: Cls =
       wholeForm?.output_class ??
@@ -438,8 +484,9 @@ export function createEngine(db: EngineData) {
       tense: suffix.output_state === 'past' ? 'past' : form.tense,
       polite: suffix.effects?.polite ?? form.polite,
       key: wholeForm?.key ?? suffix.aux_verb ?? (eff.output_type === 'same' ? form.key : undefined),
+      last: suffixId,
     };
-    return { ok: true, form: out, type, stem: usedStem, warnings: [] };
+    return { ok: true, form: out, type, stem: usedStem, warnings };
   }
 
   // ---------------------------------------------------------------- compose

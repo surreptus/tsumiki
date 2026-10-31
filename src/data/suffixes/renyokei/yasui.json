@@ -13,6 +13,7 @@
     "nikui"
   ],
   "meaning": "Easy to do.",
+  "short": "easy to",
   "examples": [
     {
       "japanese": "この本は読みやすい。",
@@ -31,7 +32,7 @@
     }
   ],
   "usage": [
-    "Easy to do. It describes how easy the thing is to handle, not what the person does.",
+    "Easy to do. Usually it describes how easy a thing is to use or handle: 読みやすい本.",
     "It also means 'tends to': 怒りやすい (quick to anger), 風邪をひきやすい (catches colds easily)."
   ],
   "compare": [

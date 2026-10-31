@@ -1,7 +1,7 @@
 {
   "id": "ni_iku",
   "form": "にいく",
-  "romaji": "niiku",
+  "romaji": "ni iku",
   "attaches_to": "renyokei",
   "input_type": [
     "verb"
@@ -14,6 +14,7 @@
     "ni_kuru"
   ],
   "meaning": "Go in order to do.",
+  "short": "go to",
   "examples": [
     {
       "japanese": "友達に会いに行く。",

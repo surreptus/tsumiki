@@ -1,7 +1,7 @@
 {
   "id": "koto_ga_aru",
   "form": "ことがある",
-  "romaji": "kotogaaru",
+  "romaji": "koto ga aru",
   "attaches_to": "ta_stem",
   "input_type": [
     "verb"
@@ -10,6 +10,7 @@
   "output_class": "godan",
   "aux_verb": "aru",
   "meaning": "Have done before.",
+  "short": "have done",
   "examples": [
     {
       "japanese": "富士山に登ったことがある。",

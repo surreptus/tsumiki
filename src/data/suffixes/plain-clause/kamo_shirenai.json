@@ -1,7 +1,7 @@
 {
   "id": "kamo_shirenai",
   "form": "かもしれない",
-  "romaji": "kamoshirenai",
+  "romaji": "kamo shirenai",
   "attaches_to": "plain-clause",
   "input_type": [
     "verb",
@@ -16,6 +16,7 @@
     "deshou"
   ],
   "meaning": "Might be.",
+  "short": "might",
   "examples": [
     {
       "japanese": "雨が降るかもしれない。",

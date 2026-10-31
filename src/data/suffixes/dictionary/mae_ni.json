@@ -1,7 +1,7 @@
 {
   "id": "mae_ni",
   "form": "まえに",
-  "romaji": "mae-ni",
+  "romaji": "mae ni",
   "attaches_to": "dictionary",
   "input_type": [
     "verb"
@@ -9,6 +9,7 @@
   "output_type": "clause",
   "written": "前に",
   "meaning": "Before doing.",
+  "short": "before",
   "examples": [
     {
       "japanese": "寝る前に歯を磨く。",

@@ -14,6 +14,7 @@
     "ba"
   ],
   "meaning": "Conditional \"if / when ...\".",
+  "short": "if, when",
   "examples": [
     {
       "japanese": "家に着いたら、電話する。",
@@ -44,5 +45,6 @@
       "id": "to_conditional",
       "difference": "と is for automatic results and cannot be followed by a request or a plan."
     }
-  ]
+  ],
+  "display": "たら"
 }

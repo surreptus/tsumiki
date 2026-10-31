@@ -1,7 +1,7 @@
 {
   "id": "you_da",
   "form": "ようだ",
-  "romaji": "youda",
+  "romaji": "you da",
   "attaches_to": "plain-clause",
   "input_type": [
     "verb",
@@ -16,6 +16,7 @@
     "mitai"
   ],
   "meaning": "Seems like / is like (neutral or formal).",
+  "short": "seems",
   "examples": [
     {
       "japanese": "誰かいるようだ。",

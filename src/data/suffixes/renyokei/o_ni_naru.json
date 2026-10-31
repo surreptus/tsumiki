@@ -1,7 +1,7 @@
 {
   "id": "o_ni_naru",
   "form": "になる",
-  "romaji": "oninaru",
+  "romaji": "o … ni naru",
   "attaches_to": "renyokei",
   "input_type": [
     "verb"
@@ -28,6 +28,7 @@
     "o_suru"
   ],
   "meaning": "Honorific: お + stem + になる.",
+  "short": "honorific",
   "examples": [
     {
       "japanese": "先生はもうお帰りになった。",
@@ -58,6 +59,15 @@
     {
       "id": "passive",
       "difference": "The passive られる can also be honorific, and is plainer. お〜になる is more respectful."
+    }
+  ],
+  "not_after": [
+    {
+      "suffixes": [
+        "passive",
+        "potential"
+      ],
+      "note": "お〜になる attaches to the plain verb. The passive or potential would come after it, not before."
     }
   ]
 }

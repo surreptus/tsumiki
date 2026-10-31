@@ -1,7 +1,7 @@
 {
   "id": "te_mo_ii",
   "form": "もいい",
-  "romaji": "temoii",
+  "romaji": "te mo ii",
   "display": "てもいい",
   "attaches_to": "te_stem",
   "input_type": [
@@ -11,6 +11,7 @@
   "output_class": "i-adj",
   "aux_verb": "ii",
   "meaning": "It is fine to do (permission).",
+  "short": "may",
   "examples": [
     {
       "japanese": "入ってもいいですか。",

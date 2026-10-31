@@ -9,6 +9,7 @@
   ],
   "output_type": "clause",
   "meaning": "Conditional: if.",
+  "short": "if",
   "examples": [
     {
       "japanese": "安ければ買う。",
@@ -28,7 +29,7 @@
   ],
   "usage": [
     "A conditional that treats the first clause as the one requirement for the second: 安ければ買う, 'if it is cheap, I will buy'.",
-    "い-adjectives use ければ. Nouns and な-adjectives use なら.",
+    "い-adjectives use ければ. Nouns and な-adjectives use であれば, or more often なら (see なら).",
     "After an action, a request or command in the second clause often sounds odd. Use たら there.",
     "Also in fixed phrases: よければ, できれば, 見れば分かる."
   ],

@@ -1,7 +1,7 @@
 {
   "id": "you_ni",
   "form": "ように",
-  "romaji": "youni",
+  "romaji": "you ni",
   "attaches_to": "dictionary",
   "input_type": [
     "verb",
@@ -9,6 +9,7 @@
   ],
   "output_type": "clause",
   "meaning": "So that / in order that.",
+  "short": "so that",
   "examples": [
     {
       "japanese": "忘れないようにメモする。",

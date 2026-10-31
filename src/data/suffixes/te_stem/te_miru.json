@@ -1,7 +1,7 @@
 {
   "id": "te_miru",
   "form": "みる",
-  "romaji": "temiru",
+  "romaji": "te miru",
   "display": "てみる",
   "attaches_to": "te_stem",
   "input_type": [
@@ -11,6 +11,7 @@
   "output_class": "ichidan",
   "layer": 30,
   "meaning": "Try doing.",
+  "short": "try",
   "examples": [
     {
       "japanese": "このケーキを食べてみる。",

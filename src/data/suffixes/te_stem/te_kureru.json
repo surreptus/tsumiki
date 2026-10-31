@@ -1,7 +1,7 @@
 {
   "id": "te_kureru",
   "form": "くれる",
-  "romaji": "tekureru",
+  "romaji": "te kureru",
   "display": "てくれる",
   "attaches_to": "te_stem",
   "input_type": [
@@ -15,6 +15,7 @@
     "te_morau"
   ],
   "meaning": "Someone does something for me (or my group).",
+  "short": "do for me",
   "examples": [
     {
       "japanese": "友達が手伝ってくれた。",
@@ -35,7 +36,7 @@
   "usage": [
     "The giver is the subject, and the favour goes to the speaker or their group.",
     "Gratitude is implied. The same event without てくれる sounds neutral.",
-    "The imperative くれ is irregular, so the request てくれ is more casual than ください."
+    "The plain request is てくれ, using the irregular imperative くれ. It is blunt, so it is for close friends and family; てください is the polite request."
   ],
   "compare": [
     {

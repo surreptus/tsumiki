@@ -3,7 +3,7 @@
 // table underneath. Built at build time: an invalid chain fails the build (so a typo cannot
 // ship) unless `expectError` marks it as a deliberate teaching example.
 import { getCollection } from 'astro:content';
-import { TYPE_LABELS, TYPE_SHORT, compose, findWord } from '../lib/conjugate';
+import { ERROR_LABELS, TYPE_LABELS, TYPE_SHORT, compose, findWord } from '../lib/conjugate';
 import { stemHref, suffixHref } from '../lib/paths';
 import FnChain from './FnChain.astro';
 import Ja from './Ja.astro';
@@ -49,7 +49,7 @@ const e = derivation.error;
 )}{!e && derivation.result && (
 <>{'\n'}<span class="code-comment">= {derivation.result.text}   // {TYPE_LABELS[derivation.result.type]}{derivation.result.state === 'past' ? ', past' : ''}</span></>
 )}{e && (
-<>{'\n'}<span class="code-error">// type error at step {e.step + 1} ({chain[e.step]}), see below</span></>
+<>{'\n'}<span class="code-error">// error at step {e.step + 1} ({chain[e.step]}), see below</span></>
 )}</code></pre>
 
   {table && <div class="derivation-table" tabindex="0" role="region" aria-label={`Derivation steps: ${notation}`}>
@@ -85,7 +85,7 @@ const e = derivation.error;
         {e && (
           <tr class="derivation-error">
             <td>{e.step + 1}</td><td><code>{chain[e.step]}</code></td>
-            <td colspan="3"><strong>Type error.</strong> {e.message}</td>
+            <td colspan="3"><strong>{ERROR_LABELS[e.code]}</strong> {e.message}</td>
           </tr>
         )}
       </tbody>

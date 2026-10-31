@@ -1,7 +1,7 @@
 {
   "id": "ato_ni",
   "form": "あとに",
-  "romaji": "atoni",
+  "romaji": "ato ni",
   "attaches_to": "ta_stem",
   "input_type": [
     "verb"
@@ -14,6 +14,7 @@
     "no_ato_ni"
   ],
   "meaning": "After doing (formal).",
+  "short": "after (formal)",
   "examples": [
     {
       "japanese": "会議が終わった後に、食事をした。",
@@ -32,7 +33,7 @@
     }
   ],
   "usage": [
-    "More formal than 後で. Often used when the second event happens at a point in time rather than as a planned action."
+    "More formal than 後で, and common in writing and announcements."
   ],
   "compare": [
     {

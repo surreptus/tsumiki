@@ -12,6 +12,7 @@
   "output_type": "clause",
   "noun_link": "na",
   "meaning": "Because (a softer reason).",
+  "short": "because (softer)",
   "examples": [
     {
       "japanese": "雨が降っているので、家にいます。",
@@ -32,12 +33,15 @@
   "usage": [
     "A reason stated as a fact. Preferred when explaining yourself politely.",
     "Nouns and な-adjectives take な: 休みなので, 静かなので.",
-    "Cannot end with a request or order the way から can."
+    "It can lead into a polite request: 遅れるので、先に始めてください. A blunt command after ので sounds odd; use から there."
   ],
   "compare": [
     {
       "id": "kara_reason",
       "difference": "から states a reason in the speaker's voice and can lead into a request. ので sounds more objective and polite."
     }
-  ]
+  ],
+  "constraints": {
+    "politeness": "any"
+  }
 }

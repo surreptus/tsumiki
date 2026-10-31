@@ -10,6 +10,7 @@
   "output_type": "noun",
   "output_class": "noun",
   "meaning": "The degree or quality of an adjective.",
+  "short": "-ness",
   "examples": [
     {
       "japanese": "山の高さを測る。",
@@ -17,9 +18,9 @@
       "gloss": "I measure the height of the mountain."
     },
     {
-      "japanese": "その静かさに驚いた。",
-      "reading": "そのしずかさにおどろいた。",
-      "gloss": "I was surprised by how quiet it was."
+      "japanese": "この町の便利さに驚いた。",
+      "reading": "このまちのべんりさにおどろいた。",
+      "gloss": "I was surprised by how convenient this town is."
     },
     {
       "japanese": "優しさが大切だ。",
@@ -29,7 +30,8 @@
   ],
   "usage": [
     "Turns an adjective into a noun for its degree or quality. Attaches to the stem: 高い → 高さ, 静か → 静かさ.",
-    "ない becomes なさ, and いい becomes よさ."
+    "ない becomes なさ, and いい becomes よさ.",
+    "Some な-adjectives have an older noun in common use instead: 静けさ is more usual than 静かさ."
   ],
   "compare": [
     {

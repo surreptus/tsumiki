@@ -15,6 +15,7 @@
     "owaru"
   ],
   "meaning": "Begin to do.",
+  "short": "start to",
   "examples": [
     {
       "japanese": "雨が降り始めた。",
@@ -44,6 +45,15 @@
     {
       "id": "owaru",
       "difference": "終わる says an action is finished."
+    }
+  ],
+  "not_after": [
+    {
+      "suffixes": [
+        "owaru",
+        "tsuzukeru"
+      ],
+      "note": "始める, 続ける and 終わる each describe one phase of the action, so they do not stack on each other."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "id": "nakute_mo_ii",
   "form": "なくてもいい",
-  "romaji": "nakutemoii",
+  "romaji": "nakute mo ii",
   "attaches_to": "mizenkei",
   "input_type": [
     "verb"
@@ -10,6 +10,7 @@
   "output_class": "i-adj",
   "aux_verb": "ii",
   "meaning": "You do not have to do.",
+  "short": "don't have to",
   "examples": [
     {
       "japanese": "明日は来なくてもいい。",

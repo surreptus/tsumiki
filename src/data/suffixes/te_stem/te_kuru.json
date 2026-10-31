@@ -1,7 +1,7 @@
 {
   "id": "te_kuru",
   "form": "くる",
-  "romaji": "tekuru",
+  "romaji": "te kuru",
   "display": "てくる",
   "attaches_to": "te_stem",
   "input_type": [
@@ -14,6 +14,7 @@
     "te_iku"
   ],
   "meaning": "Do and come; toward now.",
+  "short": "come to, start",
   "examples": [
     {
       "japanese": "友達を連れてきた。",

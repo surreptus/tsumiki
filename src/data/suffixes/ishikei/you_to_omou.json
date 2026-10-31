@@ -1,7 +1,7 @@
 {
   "id": "you_to_omou",
   "form": "ようとおもう",
-  "romaji": "youtoomou",
+  "romaji": "you to omou",
   "attaches_to": "ishikei",
   "input_type": [
     "verb"
@@ -23,6 +23,7 @@
     "tsumori"
   ],
   "meaning": "I am thinking of doing.",
+  "short": "thinking of",
   "examples": [
     {
       "japanese": "来年日本に行こうと思う。",

@@ -8,6 +8,7 @@
   ],
   "output_type": "clause",
   "meaning": "Do (a soft command).",
+  "short": "do it (firm)",
   "examples": [
     {
       "japanese": "早く寝なさい。",

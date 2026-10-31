@@ -12,6 +12,7 @@
     "na_prohibitive"
   ],
   "meaning": "Plain command.",
+  "short": "command",
   "examples": [
     {
       "japanese": "早く食べろ！",

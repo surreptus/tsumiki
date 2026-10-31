@@ -1,7 +1,7 @@
 {
   "id": "you_ni_suru",
   "form": "ようにする",
-  "romaji": "younisuru",
+  "romaji": "you ni suru",
   "attaches_to": "dictionary",
   "input_type": [
     "verb"
@@ -14,6 +14,7 @@
     "koto_ni_suru"
   ],
   "meaning": "Make an effort to do.",
+  "short": "make sure to",
   "examples": [
     {
       "japanese": "毎日運動するようにしている。",

@@ -1,7 +1,7 @@
 {
   "id": "naru_change",
   "form": "になる",
-  "romaji": "naruchange",
+  "romaji": "ku naru, ni naru",
   "attaches_to": "gokan",
   "input_type": [
     "na-adj",
@@ -29,6 +29,7 @@
     "adverb"
   ],
   "meaning": "Become (an adjective or noun).",
+  "short": "become",
   "examples": [
     {
       "japanese": "寒くなった。",

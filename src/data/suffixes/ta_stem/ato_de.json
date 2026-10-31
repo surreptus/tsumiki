@@ -1,7 +1,7 @@
 {
   "id": "ato_de",
   "form": "あとで",
-  "romaji": "atode",
+  "romaji": "ato de",
   "attaches_to": "ta_stem",
   "input_type": [
     "verb"
@@ -14,6 +14,7 @@
     "no_ato_de"
   ],
   "meaning": "After doing.",
+  "short": "after",
   "examples": [
     {
       "japanese": "食べた後で、散歩する。",
@@ -34,7 +35,7 @@
   "usage": [
     "The た-form is required, even when the sentence is non-past.",
     "Sequence only: A happened, then B. The two actions need not be close in time.",
-    "The meaning with a noun is 食事の後で."
+    "With a noun, use の instead: 食事の後で."
   ],
   "compare": [
     {

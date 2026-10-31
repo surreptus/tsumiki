@@ -1,7 +1,7 @@
 {
   "id": "adverb",
   "form": "に",
-  "romaji": "ni",
+  "romaji": "ku, ni",
   "attaches_to": "gokan",
   "input_type": [
     "na-adj",
@@ -28,6 +28,7 @@
     "suru_change"
   ],
   "meaning": "Adverb form: 高く, 静かに.",
+  "short": "adverb (-ly)",
   "examples": [
     {
       "japanese": "この本は安く買った。",
@@ -47,7 +48,7 @@
   ],
   "usage": [
     "い-adjectives drop い and add く: 高い → 高く. な-adjectives and nouns add に: 静か → 静かに.",
-    "いい becomes よく, because いい only exists in the dictionary form.",
+    "いい becomes よく, because its inflected forms are built on よい.",
     "The adverb form is a dead end: nothing attaches to it except a verb in the sentence. It is also the stem that くなる, くする and くない build on."
   ],
   "compare": [

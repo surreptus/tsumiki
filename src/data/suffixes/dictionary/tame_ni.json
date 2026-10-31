@@ -1,7 +1,7 @@
 {
   "id": "tame_ni",
   "form": "ために",
-  "romaji": "tame-ni",
+  "romaji": "tame ni",
   "attaches_to": "dictionary",
   "input_type": [
     "verb"
@@ -9,6 +9,7 @@
   "output_type": "clause",
   "written": "ために",
   "meaning": "In order to do.",
+  "short": "in order to",
   "examples": [
     {
       "japanese": "日本語を勉強するために日本へ来た。",
