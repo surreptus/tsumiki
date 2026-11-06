@@ -4,8 +4,7 @@
 import { getEntry, getCollection } from 'astro:content';
 import { suffixHref, stemHref, slug } from '../lib/paths';
 import { suffixName } from '../lib/names';
-import Ja from './Ja.astro';
-import Construction from './Construction.astro';
+import SuffixSections from './SuffixSections.astro';
 import PracticePrompt from './PracticePrompt.astro';
 import { construction } from '../lib/construction';
 import { suffixPrompt } from '../lib/tutor-prompt';
@@ -32,6 +31,9 @@ const prompt = suffixPrompt({
   compare: s.compare.map((c) => ({ label: c.id ? nameOf(c.id) : c.label ?? '', difference: c.difference })),
   path: `/reference/suffixes/${slug(s.attaches_to)}/${slug(s.id)}/`,
 });
+// suffixes whose page is a section of this one (documented_on: "mizenkei/causative#...")
+const here = `${slug(s.attaches_to)}/${slug(s.id)}`;
+const merged = allSuffixes.filter((m) => m.documented_on?.startsWith(`${here}#`));
 const related = allSuffixes.filter((r) => s.related.includes(r.id) && !compared.has(r.id));
 ---
 <div class="suffix-card">
@@ -58,42 +60,15 @@ const related = allSuffixes.filter((r) => s.related.includes(r.id) && !compared.
     )}
   </dl>
 
-  <h2 id="construction">Construction</h2>
-  <Construction id={s.id} />
+  <SuffixSections s={s} />
 
-  {s.usage.length > 0 && (
+  {merged.map((m) => (
     <>
-      <h2 id="notes">Notes</h2>
-      <ul class="usage">{s.usage.map((u) => <li>{u}</li>)}</ul>
+      <h2 id={slug(m.id)}>{m.meaning.split(':')[0]} (<span lang="ja">{suffixName(m)}</span>)</h2>
+      <p>{m.meaning.includes(':') ? m.meaning.split(':').slice(1).join(':').trim().replace(/^./, (c) => c.toUpperCase()) : m.meaning}</p>
+      <SuffixSections s={m} level={3} prefix={`${slug(m.id)}-`} />
     </>
-  )}
-
-  {s.compare.length > 0 && (
-    <>
-      <h2 id="compare">Compared with</h2>
-      <ul class="compare">
-        {s.compare.map((c) => (
-          <li>
-            <strong lang="ja">
-              {c.id ? <a href={suffixHref(allSuffixes.find((x) => x.id === c.id)!)}>{nameOf(c.id)}</a> : c.label}
-            </strong>
-            {' '}{c.difference}
-          </li>
-        ))}
-      </ul>
-    </>
-  )}
-
-  <h2 id="examples">Examples</h2>
-  <ul class="examples">
-    {s.examples.map((ex) => (
-      <li>
-        <Ja text={ex.japanese} />
-        {ex.reading !== ex.japanese && <><br /><Ja class="reading" text={ex.reading} /></>}
-        <br /><span class="gloss">{ex.gloss}</span>
-      </li>
-    ))}
-  </ul>
+  ))}
 
   <PracticePrompt prompt={prompt} />
 </div>

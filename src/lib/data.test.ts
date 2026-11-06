@@ -25,4 +25,13 @@ describe('JSON files satisfy the Zod schemas', () => {
     const listed = meaningIndex.flatMap((g) => g.ids).sort();
     expect(listed).toEqual(data.suffixes.map((s) => s.id).sort());
   });
+  it('a suffix documented on another page points at a real page and has no page of its own', async () => {
+    const { existsSync } = await import('node:fs');
+    const slug = (x: string) => x.replace(/_/g, '-');
+    for (const s of data.suffixes.filter((x) => x.documented_on)) {
+      const [page] = s.documented_on!.split('#');
+      expect(existsSync(`src/content/docs/reference/suffixes/${page}.mdx`), s.id).toBe(true);
+      expect(existsSync(`src/content/docs/reference/suffixes/${slug(s.attaches_to)}/${slug(s.id)}.mdx`), s.id).toBe(false);
+    }
+  });
 });

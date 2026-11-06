@@ -14,6 +14,7 @@ for (const dir of readdirSync(DATA, { withFileTypes: true }).filter((d) => d.isD
   for (const file of readdirSync(join(DATA, dir.name)).filter((f) => f.endsWith('.json'))) {
     const s = JSON.parse(readFileSync(join(DATA, dir.name, file), 'utf8'));
     if (s.attaches_to !== dir.name) throw new Error(`${file}: attaches_to ${s.attaches_to} != folder ${dir.name}`);
+    if (s.documented_on) continue; // a section of another suffix's page
     const target = join(OUT, slug(dir.name), `${slug(s.id)}.mdx`);
     if (existsSync(target)) continue;
     mkdirSync(join(OUT, slug(dir.name)), { recursive: true });

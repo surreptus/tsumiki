@@ -185,6 +185,8 @@ export const SuffixSchema = z.object({
     polite: z.literal(true).optional(),
   }).optional(),
   layer: z.number().optional().describe('Canonical stacking rank; see Composition rules'),
+  /** This suffix has no page of its own: it is a section of another suffix's page, as "<attach point>/<id>#<anchor>" (hyphenated). */
+  documented_on: z.string().regex(/^[a-z-]+\/[a-z-]+#[a-z-]+$/).optional(),
   /** Only forms of these classes take this suffix (される, the short causative-passive, is for godan verbs). */
   only_classes: z.array(ClassSchema).optional(),
   /** Forms whose reading ends in one of these do not take this suffix (godan す-verbs have no short form). */

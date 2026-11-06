@@ -1,0 +1,57 @@
+---
+// The body of a suffix page: construction, notes, comparisons and examples. A suffix documented on
+// another suffix's page (documented_on) gets these as a sub-section there, one heading level lower.
+import { getCollection } from 'astro:content';
+import { suffixHref } from '../lib/paths';
+import { suffixName } from '../lib/names';
+import type { SuffixData } from '../lib/schemas';
+import Ja from './Ja.astro';
+import Construction from './Construction.astro';
+
+interface Props {
+  s: SuffixData;
+  level?: 2 | 3;
+  /** Prefix for the heading ids, so two sets of sections on one page do not clash. */
+  prefix?: string;
+}
+const { s, level = 2, prefix = '' } = Astro.props;
+const H = level === 2 ? 'h2' : 'h3';
+const allSuffixes = (await getCollection('suffixes')).map((e) => e.data);
+const nameOf = (id: string) => suffixName(allSuffixes.find((x) => x.id === id)!);
+---
+<H id={`${prefix}construction`}>Construction</H>
+<Construction id={s.id} />
+
+{s.usage.length > 0 && (
+  <>
+    <H id={`${prefix}notes`}>Notes</H>
+    <ul class="usage">{s.usage.map((u) => <li>{u}</li>)}</ul>
+  </>
+)}
+
+{s.compare.length > 0 && (
+  <>
+    <H id={`${prefix}compare`}>Compared with</H>
+    <ul class="compare">
+      {s.compare.map((c) => (
+        <li>
+          <strong lang="ja">
+            {c.id ? <a href={suffixHref(allSuffixes.find((x) => x.id === c.id)!)}>{nameOf(c.id)}</a> : c.label}
+          </strong>
+          {' '}{c.difference}
+        </li>
+      ))}
+    </ul>
+  </>
+)}
+
+<H id={`${prefix}examples`}>Examples</H>
+<ul class="examples">
+  {s.examples.map((ex) => (
+    <li>
+      <Ja text={ex.japanese} />
+      {ex.reading !== ex.japanese && <><br /><Ja class="reading" text={ex.reading} /></>}
+      <br /><span class="gloss">{ex.gloss}</span>
+    </li>
+  ))}
+</ul>
