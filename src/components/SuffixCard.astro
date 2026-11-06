@@ -23,17 +23,18 @@ const nameOf = (id: string) => {
   const r = allSuffixes.find((x) => x.id === id)!;
   return suffixName(r);
 };
+// suffixes whose page is a section of this one (documented_on: "mizenkei/causative#...")
+const here = `${slug(s.attaches_to)}/${slug(s.id)}`;
+const merged = allSuffixes.filter((m) => m.documented_on?.startsWith(`${here}#`));
 const compared = new Set(s.compare.map((c) => c.id));
 const prompt = suffixPrompt({
   suffix: { ...s, title: suffixName(s) },
   attach: attach ? `${attach.name} (${attach.label})` : s.attaches_to === 'dictionary' ? 'the dictionary form' : 'a plain clause',
   rows: construction(s.id),
   compare: s.compare.map((c) => ({ label: c.id ? nameOf(c.id) : c.label ?? '', difference: c.difference })),
+  merged: merged.map((m) => ({ title: suffixName(m), meaning: m.meaning, rows: construction(m.id), usage: m.usage, examples: m.examples })),
   path: `/reference/suffixes/${slug(s.attaches_to)}/${slug(s.id)}/`,
 });
-// suffixes whose page is a section of this one (documented_on: "mizenkei/causative#...")
-const here = `${slug(s.attaches_to)}/${slug(s.id)}`;
-const merged = allSuffixes.filter((m) => m.documented_on?.startsWith(`${here}#`));
 const related = allSuffixes.filter((r) => s.related.includes(r.id) && !compared.has(r.id));
 ---
 <div class="suffix-card">

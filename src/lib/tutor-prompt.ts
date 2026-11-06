@@ -31,14 +31,19 @@ interface SuffixInput {
   attach: string;
   rows: ConstructionRow[];
   compare: { label: string; difference: string }[];
+  /** Endings documented on this same page (a short form, say), taught alongside it. */
+  merged?: { title: string; meaning: string; rows: ConstructionRow[]; usage: string[]; examples: { japanese: string; gloss: string }[] }[];
   path: string;
 }
 
-export function suffixPrompt({ suffix: s, attach, rows, compare, path }: SuffixInput): string {
-  const built = rows.map((r) => {
+const buildLines = (rows: ConstructionRow[]) =>
+  rows.map((r) => {
     const how = r.piece === undefined ? 'irregular' : r.stem ? `${r.stem} + ${r.piece || 'nothing'}` : `plain form + ${r.piece}`;
     return `${r.words[0]} → ${r.result} (${summariseLabels(r.labels)}; ${how}; gives ${type(r.type)})`;
   });
+
+export function suffixPrompt({ suffix: s, attach, rows, compare, merged = [], path }: SuffixInput): string {
+  const built = buildLines(rows);
   const gives = s.output_type === 'same' ? 'the same type of word' : withArticle(s.output_type);
   const parts = [
     `You are a patient, demanding Japanese tutor. I am practising ${s.title} from Tsumiki, a guide that builds verb and adjective forms from small pieces, each of which takes one kind of word and returns another. (${SITE}${path})`,
@@ -47,6 +52,9 @@ export function suffixPrompt({ suffix: s, attach, rows, compare, path }: SuffixI
     `EXAMPLES\n${list(s.examples.map((e) => `${e.japanese} (${e.gloss})`))}`,
   ];
   if (s.usage.length) parts.push(`NOTES\n${list(s.usage)}`);
+  for (const m of merged) {
+    parts.push(`ALSO ON THIS PAGE: ${m.title}\n${m.meaning}\n${list(buildLines(m.rows))}\nExamples:\n${list(m.examples.map((e) => `${e.japanese} (${e.gloss})`))}${m.usage.length ? `\nNotes:\n${list(m.usage)}` : ''}`);
+  }
   if (compare.length) parts.push(`LOOK-ALIKES\n${list(compare.map((c) => `${c.label}: ${c.difference}`))}`);
   parts.push(HOW_TO_TEACH);
   return parts.join('\n\n');
