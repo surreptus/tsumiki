@@ -384,6 +384,14 @@ export function createEngine(db: EngineData) {
         { expected, got: TYPE_LABELS[form.type] });
     }
 
+    // 2b. some suffixes are for particular verbs only (される: godan verbs other than す-verbs)
+    if (
+      (suffix.only_classes && !suffix.only_classes.includes(form.cls)) ||
+      suffix.not_final?.some((f) => form.reading.endsWith(f))
+    ) {
+      return fail(suffixId, 'not-used', suffix.restriction ?? `${label} does not attach to ${form.text}.`);
+    }
+
     // 3. state (already past / already a stem-less clause)
     if (!eff.accepts.includes(form.state)) {
       return fail(suffixId, 'wrong-state',

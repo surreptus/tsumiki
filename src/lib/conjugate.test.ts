@@ -578,3 +578,39 @@ describe('data integrity', () => {
     expect(data.verbs.length).toBeGreaterThanOrEqual(40);
   });
 });
+
+describe('causative-passive', () => {
+  it('every verb has the long form: causative, then passive', () => {
+    for (const [word, expected] of [
+      ['食べる', '食べさせられる'], ['見る', '見させられる'], ['する', 'させられる'], ['来る', '来させられる'],
+      ['話す', '話させられる'], ['貸す', '貸させられる'], ['書く', '書かせられる'], ['飲む', '飲ませられる'],
+      ['待つ', '待たせられる'], ['死ぬ', '死なせられる'], ['泳ぐ', '泳がせられる'], ['買う', '買わせられる'],
+    ] as const) expect(text(word, ['causative', 'passive']), word).toBe(expected);
+  });
+  it('godan verbs other than す-verbs also have the short form', () => {
+    for (const [word, expected] of [
+      ['書く', '書かされる'], ['飲む', '飲まされる'], ['行く', '行かされる'], ['待つ', '待たされる'],
+      ['死ぬ', '死なされる'], ['泳ぐ', '泳がされる'], ['買う', '買わされる'], ['習う', '習わされる'],
+    ] as const) {
+      const w = engine.words.find((x) => x.kanji === word);
+      if (w) expect(text(w.id, ['causative_passive_short']), word).toBe(expected);
+    }
+  });
+  it('the short form is refused for す-verbs, ichidan and irregular verbs, and says what to use', () => {
+    for (const word of ['話す', '貸す', '食べる', '見る', 'する', '来る']) {
+      const d = compose(word, ['causative_passive_short']);
+      expect(d.error?.code, word).toBe('not-used');
+      expect(d.error?.message, word).toContain('させられる');
+    }
+  });
+  it('the short form is still an ichidan verb, so it takes more endings', () => {
+    expect(text('書く', ['causative_passive_short', 'neg', 'past'])).toBe('書かされなかった');
+  });
+  it('honorific verbs are not made causative', () => {
+    for (const word of ['いらっしゃる', 'なさる', 'おっしゃる', '下さる']) {
+      for (const suffix of ['causative', 'causative_passive_short']) {
+        expect(compose(word, [suffix]).error?.code, `${word} ${suffix}`).toBe('not-used');
+      }
+    }
+  });
+});

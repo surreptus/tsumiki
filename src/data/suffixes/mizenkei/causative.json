@@ -18,7 +18,8 @@
   "output_class": "ichidan",
   "layer": 10,
   "related": [
-    "passive"
+    "passive",
+    "causative_passive_short"
   ],
   "meaning": "Causative: make or let someone do.",
   "short": "make or let",
@@ -42,7 +43,7 @@
   "usage": [
     "Make someone do something, or let someone do something. Context and particles decide which.",
     "The person made to act takes に: 子供に野菜を食べさせる. With an intransitive verb it can take を: 子供を行かせる.",
-    "Combine with the passive for 'be made to': 食べさせられる. Always causative first, then passive."
+    "Combine with the passive for 'be made to': 食べさせられる. Always causative first, then passive. Godan verbs also have a shorter form, 書かされる (see される)."
   ],
   "compare": [
     {

@@ -185,6 +185,12 @@ export const SuffixSchema = z.object({
     polite: z.literal(true).optional(),
   }).optional(),
   layer: z.number().optional().describe('Canonical stacking rank; see Composition rules'),
+  /** Only forms of these classes take this suffix (される, the short causative-passive, is for godan verbs). */
+  only_classes: z.array(ClassSchema).optional(),
+  /** Forms whose reading ends in one of these do not take this suffix (godan す-verbs have no short form). */
+  not_final: z.array(z.string()).optional(),
+  /** Shown when only_classes or not_final refuses a form: what to use instead. */
+  restriction: z.string().optional(),
   /** Applying the same suffix twice in a row (食べさせさせる) is refused unless this is set. */
   repeatable: z.boolean().default(false).describe('May follow itself, as ない does in 食べなくない'),
   /** Suffixes that may not come directly before this one, with the reason shown to the learner. */

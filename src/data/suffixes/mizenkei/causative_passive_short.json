@@ -1,0 +1,58 @@
+{
+  "id": "causative_passive_short",
+  "form": "される",
+  "display": "される",
+  "romaji": "sareru",
+  "attaches_to": "mizenkei",
+  "input_type": [
+    "verb"
+  ],
+  "output_type": "verb",
+  "output_class": "ichidan",
+  "layer": 20,
+  "only_classes": [
+    "godan"
+  ],
+  "not_final": [
+    "す"
+  ],
+  "restriction": "される is the short causative-passive, and only godan verbs other than す-verbs have one: 書かされる, 飲まされる. Other verbs use causative then passive: 食べさせられる, 話させられる.",
+  "meaning": "Short causative-passive: be made to do.",
+  "short": "be made to (short)",
+  "examples": [
+    {
+      "japanese": "先生に長い時間待たされた。",
+      "reading": "せんせいにながいじかんまたされた。",
+      "gloss": "The teacher kept me waiting a long time."
+    },
+    {
+      "japanese": "子供のころ、毎日ピアノを習わされた。",
+      "reading": "こどものころ、まいにちピアノをならわされた。",
+      "gloss": "As a child, I was made to take piano lessons every day."
+    },
+    {
+      "japanese": "飲み会で無理やりお酒を飲まされた。",
+      "reading": "のみかいでむりやりおさけをのまされた。",
+      "gloss": "At the party I was forced to drink alcohol."
+    }
+  ],
+  "usage": [
+    "A shorter way to say the causative-passive for godan verbs: 書かせられる becomes 書かされる. Both are correct, and the short form is the more usual one in speech.",
+    "Only godan verbs other than す-verbs have it. 話す has just 話させられる, because 話される is the plain passive. Ichidan and irregular verbs use the long form: 食べさせられる, させられる, 来させられる.",
+    "It often carries the feeling of being forced or put out: 待たされた is 'I was kept waiting'."
+  ],
+  "compare": [
+    {
+      "label": "させられる (long form)",
+      "difference": "The long form is built from the causative and then the passive, so every verb has it: 書かせられる, 食べさせられる. It is a little more formal and takes a moment longer to say."
+    },
+    {
+      "id": "passive",
+      "difference": "The plain passive is 書かれる, 'be written'. The short causative-passive 書かされる is 'be made to write'."
+    }
+  ],
+  "related": [
+    "causative",
+    "passive"
+  ]
+}
